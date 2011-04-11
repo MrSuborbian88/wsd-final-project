@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 10, 2011 at 10:45 PM
+-- Generation Time: Apr 11, 2011 at 06:36 PM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -32,11 +32,6 @@ CREATE TABLE IF NOT EXISTS `article_keywords` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `article_keywords`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -55,11 +50,6 @@ CREATE TABLE IF NOT EXISTS `clicks` (
   KEY `article_id_2` (`article_id`),
   KEY `article_id_3` (`article_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `clicks`
---
-
 
 --
 -- Triggers `clicks`
@@ -82,15 +72,10 @@ DELIMITER ;
 CREATE TABLE IF NOT EXISTS `keywords` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `word` varchar(64) NOT NULL,
-  `appearances` int(11) NOT NULL,
+  `appearances` int(11) DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `word` (`word`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `keywords`
---
-
 
 -- --------------------------------------------------------
 
@@ -99,20 +84,16 @@ CREATE TABLE IF NOT EXISTS `keywords` (
 --
 
 CREATE TABLE IF NOT EXISTS `rss_articles` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `guid` varchar(512) NOT NULL,
   `url` varchar(512) NOT NULL,
   `title` varchar(256) NOT NULL,
   `description` varchar(1024) DEFAULT NULL,
   `pubdate` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `rss_articles`
---
-
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `guid` (`guid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 -- --------------------------------------------------------
 
@@ -127,8 +108,3 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `users`
---
-
