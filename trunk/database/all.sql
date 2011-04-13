@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 11, 2011 at 06:36 PM
+-- Generation Time: Apr 13, 2011 at 08:43 AM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -40,16 +40,15 @@ CREATE TABLE IF NOT EXISTS `article_keywords` (
 
 CREATE TABLE IF NOT EXISTS `clicks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `keyword_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `article_id` int(11) NOT NULL,
   `clicktime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `keyword_id` (`keyword_id`),
-  KEY `keyword_id_2` (`keyword_id`),
+  KEY `keyword_id_2` (`user_id`),
   KEY `article_id` (`article_id`),
   KEY `article_id_2` (`article_id`),
   KEY `article_id_3` (`article_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2011 ;
 
 --
 -- Triggers `clicks`
@@ -72,7 +71,7 @@ DELIMITER ;
 CREATE TABLE IF NOT EXISTS `keywords` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `word` varchar(64) NOT NULL,
-  `appearances` int(11) DEFAULT 1,
+  `appearances` int(11) DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `word` (`word`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -87,13 +86,13 @@ CREATE TABLE IF NOT EXISTS `rss_articles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `guid` varchar(512) NOT NULL,
   `url` varchar(512) NOT NULL,
-  `title` varchar(256) NOT NULL,
+  `title` varchar(256) DEFAULT NULL,
   `description` varchar(1024) DEFAULT NULL,
-  `pubdate` datetime NOT NULL,
+  `pubdate` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `guid` (`guid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2057 ;
 
 -- --------------------------------------------------------
 
@@ -107,4 +106,4 @@ CREATE TABLE IF NOT EXISTS `users` (
   `cluster` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2010 ;
