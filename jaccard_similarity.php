@@ -1,20 +1,20 @@
 <?PHP
 
-function keywords_similarity($keywords1, $keywords2)
+function jaccard_similarity($arr1, $arr2)
 {
 
-  $words1 = sizeof($keywords1);
-  $words2 = sizeof($keywords2);
-  $totalwords = $words1 + $words2;
+  $s1 = sizeof($arr1);
+  $s2 = sizeof($arr2);
+  $size = $s1 + $s2;
 
-  foreach ($keywords1 as $val)
+  foreach ($arr1 as $val)
   {
-      if(in_array($val, $keywords2)
+      if(in_array($val, $arr2)
         {
-          $simwords++;
+          $similar++;
         }
   }
 
-  $similarity = 1 - ($simwords/$totalwords);
+  $similarity = 1 - ($similar/$size);
 }
 ?>
