@@ -11,10 +11,10 @@ function jaccard_similarity($arr1, $arr2)
   {
       if(in_array($val, $arr2)
         {
-          $similar++;
+          $similarity++;
         }
   }
 
-  $similarity = 1 - ($similar/$size);
+  $distance = 1 - ($similarity/$size);
 }
 ?>
