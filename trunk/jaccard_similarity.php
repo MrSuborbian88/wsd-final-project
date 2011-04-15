@@ -10,11 +10,9 @@ function jaccard_similarity($arr1, $arr2)
   $union = $s1 + $d2;  //Set Difference
   $intersection = ($union) - ($d1 + $d2); //Set Intersection
   if($union == 0) //Both sets empty
-   return 0;
+   return -1;
   $distance = 1 - ($intersection/$union);
   return $distance;
 }
 ?>
-
-
 
