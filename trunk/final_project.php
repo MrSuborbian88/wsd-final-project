@@ -6,6 +6,10 @@
 </head>
 <body>
   <div id="wrap">
+  <div id = "login">
+    <a href = "http://localhost/CAS_RPI.php">Login</a>
+    <a href = "http://localhost/CAS_RPI_logout.php">Logout</a>
+  </div>
   <div id="header">
   <h1>Morning Mail Recommender <span class = "span_header">RENSSELAER POLYTECHNIC INSTITUTE - Troy, NY, USA</span></h1>
   </div>
