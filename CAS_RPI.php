@@ -10,7 +10,7 @@ phpCAS::forceAuthentication();
 
 if (phpCAS::getUser() != '')
 {
-  header('Location: http://localhost/final_project.htm');
+  header('Location: final_project.php');
 }
 
 ?>
