@@ -8,5 +8,4 @@ phpCAS::setNoCasServerValidation();
 
 phpCAS::logout();
 
-
 ?>
