@@ -1,9 +1,5 @@
 <?PHP
 
-function getKeywords ($url)
-{
-
-// Init
 $aStopWords = array (
 	'about',
 	'all',
@@ -35,10 +31,23 @@ $aStopWords = array (
 	'to',
 	'too',
 	'trough',
-	'until'
+	'until',
+	'rpi',
+	'rensselaer',
+	'polytechnic',
+	'institute',
+	'it',
+	'&nbsp;',
+	'read',
+	'more',
+	
 );
-$aWords = array ();
-$aKeywords = array ();
+
+
+function getKeywords ($url)
+{
+	global $aStopWords;
+// Init
 
 
 	$str = strip_tags(file_get_contents($url));
@@ -63,12 +72,7 @@ $aKeywords = array ();
 	$iWordCount = count($aWords);
 	$iCharCountWithout = 0;
 
-	// count words
-	for ($x = 0; $x < count($aWords); $x++) {
-		$iCharCountWithout += strlen($aWords[$x]);
-	}
 
-	unset ($aWords);
 
 	// remove stop words
 	for ($m = 0; $m < count($aStopWords); $m++) {
@@ -81,23 +85,10 @@ $aKeywords = array ();
 	// explode to array of words
 	$aWords = explode(" ", $sText);
 
-	// every word
-	for ($x = 0; $x < count($aWords); $x++) {
-		// if already in array
-		if (isset ($aKeywords[$aWords[$x]])) {
-			// then increase count of this word
-			$aKeywords[$aWords[$x]]++;
-		}
-
-		// if not counted yet
-		else {
-			if (trim($aWords[$x]) != '') {
-				$aKeywords[$aWords[$x]] = 1;
-			}
-		}
-	}
+	$aKeywords = array_count_values($aWords);
 
 	// sort
+	unset($aKeywords['']);
 	arsort($aKeywords);
 	return array($iWordCount, $aKeywords);
 }
