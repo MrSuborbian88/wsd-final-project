@@ -16,10 +16,10 @@
   <div id="content">
   <?php
  $server = 'localhost';
- $user = '';
- $password = '';
- $database = 'test';
- $db = mysql_connect($server, $user , $password);
+ $user = 'websysfinal';
+ $password = 'websysfinal';
+ $database = 'websysfinal';
+ $db = mysql_connect($server, $user , $password) or die('db error');
  mysql_select_db($database);
  echo mysql_error();
  $username = ""; //However we're getting username
@@ -37,7 +37,7 @@
  {
  $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 5';
  $results = mysql_query($sql);
- $row = mysql_fetch_array( $results);
+ $row = mysql_fetch_array($results);
   while($row != null)
 	{
 		echo '<h3>'.'<a href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
@@ -63,6 +63,10 @@
     <h4>Recently Viewed</h4>
     <ul>
 <?php
+<<<<<<< .mine
+
+=======
+>>>>>>> .r23
  /*
  //Temporary, get 5 most recent articles
  $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 5';
@@ -79,10 +83,10 @@
 	}
   */
  //Get user's most recent clicks
- $user_id = 0; //CHANGE TO GET ACTUAL USER
- $sql = 'SELECT DISTINCT user_id, article_id FROM clicks WHERE user_id = ' . strval($user_id) . ' ORDER BY clicktime DESC LIMIT 5;';
+ $user_id = 1; //CHANGE TO GET ACTUAL USER
+ $sql = 'SELECT DISTINCT user_id, article_id FROM clicks WHERE user_id = ' . strval($user_id) . ' ORDER BY clicktime DESC LIMIT 5';
  $results = mysql_query($sql);
- $row = mysql_fetch_array( $results);
+ $row = mysql_fetch_array($results);
  while($row != null)
 	{
 	$sql = 'SELECT * FROM rss_articles WHERE id = '. strval($row['article_id']) . ';';
