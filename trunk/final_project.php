@@ -1,5 +1,7 @@
 <?php include('CAS-1.2.1/CAS.php'); 
- phpCAS::client(CAS_VERSION_2_0,'login.rpi.edu',443,'/cas');?>
+ phpCAS::client(CAS_VERSION_2_0,'login.rpi.edu',443,'/cas');
+ require_once('dbcon.php');
+ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -9,53 +11,45 @@
 <body>
   <div id="wrap">
   <div id = "login">
-    <a href = "CAS_RPI.php">Login</a>
-    <a href = "CAS_RPI_logout.php">Logout</a>
+  <?php
+    if (phpCAS::isAuthenticated())
+	{
+	   $user_name=phpCAS::getUser();
+           echo '<a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a>';
+	}
+    else
+	{
+	   $user_name = '';
+	   echo '<a href = "CAS_RPI.php">Login</a>';
+	}
+  ?>
   </div>
   <div id="header">
   <h1>Morning Mail Recommender <span class = "span_header">RENSSELAER POLYTECHNIC INSTITUTE - Troy, NY, USA</span></h1>
   </div>
   <div id="content">
   <?php
-
- if (phpCAS::isAuthenticated())
+ $existing_user = mysql_query('SELECT * FROM users WHERE username=\''.$user_name.'\'');
+ if(mysql_num_rows($existing_user)==0 && $user_name != '')
  {
-   $user_id=phpCAS::getUser();
- }
- else
- {
-   $user_id = 'id';
- }
- $server = 'localhost';
- $user = 'websysfinal';
- $password = 'websysfinal';
- $database = 'websysfinal';
- $db = mysql_connect($server, $user , $password) or die('db error');
- mysql_select_db($database);
- echo mysql_error();
-<<<<<<< .mine
- $existing_user = mysql_query('SELECT * FROM users WHERE username=\''.$user_id.'\'');
- if(mysql_num_rows($existing_user)==0)
- {
-   $sql = 'INSERT INTO users(username, cluster) VALUES(\''.$user_id.'\', 0);';
+   $sql = 'INSERT INTO users(username, cluster) VALUES(\''.$user_name.'\', 0);';
    mysql_query($sql);
    echo mysql_error();
  }
-=======
- $username = ""; //However we're getting username
  $cluster = -1;
- $sql = 'SELECT cluster FROM users WHERE username=\'' . $username .'\';';
+ $user_id = -1;
+ $sql = 'SELECT id, cluster FROM users WHERE username=\'' . $user_name .'\';';
  $results = mysql_query($sql);
  $row = mysql_fetch_array( $results);
  while($row != null)
  {
+        $user_id = $row['id'];
 	$cluster = $row['cluster'];
 	$row = mysql_fetch_array( $results );
  }
  //User not clustered, show 10 most recent
  if($cluster <= 0)
  {
->>>>>>> .r23
  $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 5';
  $results = mysql_query($sql);
  $row = mysql_fetch_array($results);
@@ -84,33 +78,28 @@
     <h4>Recently Viewed</h4>
     <ul>
 <?php
-<<<<<<< .mine
-
-=======
->>>>>>> .r23
- /*
- //Temporary, get 5 most recent articles
- $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 5';                                                                                                                                                  
+ if($user_id < 0)
+ {
+ //Not logged in, get 5 most recent articles
+ $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 5;';
+ $results = mysql_query($sql);
  $row = mysql_fetch_array( $results);
  while($row != null)
 	{
-	$title = $row['title'];
+        $title = $row['title'];
+	if($title == null || $title == '')
+		$title = $row['url'];
 	$abridged_title = substr($title, 0, 27);
- $results = mysql_query($sql);
 	if(strlen($title) > 26)
 		$abridged_title .= '...';
 	echo '<li><a href="'.$row['url'].'" title="'.$title.'">'.$abridged_title."</a></li>";
-		$row = mysql_fetch_array( $results );
+	$row = mysql_fetch_array( $results );
 	}
-  */
+ }
+ else
+ {
  //Get user's most recent clicks
-<<<<<<< .mine
- $user_id = $_GET['id']; //CHANGE TO GET ACTUAL USER
- $sql = 'SELECT DISTINCT user_id, article_id FROM clicks WHERE user_id = ' . strval($user_id) . ' ORDER BY clicktime DESC LIMIT 5;';
-=======
- $user_id = 1; //CHANGE TO GET ACTUAL USER
- $sql = 'SELECT DISTINCT user_id, article_id FROM clicks WHERE user_id = ' . strval($user_id) . ' ORDER BY clicktime DESC LIMIT 5';
->>>>>>> .r25
+ $sql = 'SELECT DISTINCT user_id, article_id FROM clicks WHERE user_id = \'' . strval($user_id) . '\' ORDER BY clicktime DESC LIMIT 5;';
  $results = mysql_query($sql);
  $row = mysql_fetch_array($results);
  while($row != null)
@@ -131,6 +120,7 @@
 	}
 	$row = mysql_fetch_array( $results );
 	}
+  }
   ?>
      </ul>
   </div>
