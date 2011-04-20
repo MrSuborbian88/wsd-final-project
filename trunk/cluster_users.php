@@ -35,13 +35,8 @@
   unset($a[1]);
  }
  include 'jaccard_similarity.php';
- $server = 'localhost';
- $user = '';
- $password = '';
- $database = 'test';
- $db = mysql_connect($server, $user , $password);
- mysql_select_db($database);
- echo mysql_error();
+ set_time_limit(1000000);
+ require_once('dbcon.php');
  
  $sql = 'SELECT id FROM users';
  $user_result = mysql_query($sql);
