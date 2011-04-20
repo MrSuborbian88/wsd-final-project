@@ -1,11 +1,5 @@
 <?php
- $server = 'localhost';
- $user = 'pma';
- $password = '';
- $database = 'test';
- $db = mysql_connect($server, $user , $password);
- mysql_select_db($database);
- echo mysql_error();
+ require_once('../dbcon.php');
 
 $row = 1;
 if (($handle = fopen("dump.csv", "r")) !== FALSE) {

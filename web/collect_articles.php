@@ -3,16 +3,8 @@
  Inserts RSS articles
  into the rss_articles table.
  ************************/
- //UPDATE DATABASE INFORMATION
- $server = 'localhost';
- $user = 'pma';
- $password = '';
- $database = 'test';
+ require_once('../dbcon.php');
  $rss_address = 'http://morningmail.rpi.edu/rss';
- $db = mysql_connect($server, $user , $password);
- mysql_select_db($database);
- echo mysql_error();
-
  $rss = simplexml_load_file($rss_address);
 
  foreach($rss->channel->item as $item)
