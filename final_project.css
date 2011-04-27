@@ -23,6 +23,7 @@ body{
 
 #nav {
   position: relative;
+  border-right: 1px solid white;
   top: 150px;
   float:left;
   padding-right:10px;
@@ -69,7 +70,6 @@ body{
   text-decoration:none;
   padding-right: 10px;
   padding-left:5px;
-  border-left: 1px solid white;
 }
 #login a:hover{
   text-decoration:underline;
