@@ -55,7 +55,7 @@
  $row = mysql_fetch_array($results);
   while($row != null)
 	{
-		echo '<h3>'.'<a href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
+		echo '<h3>'.'<a id="'.$row['id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
 		echo '<p>'.$row['description'].'</p>';
 		$row = mysql_fetch_array( $results );
 	}
@@ -67,7 +67,7 @@
  $row = mysql_fetch_array( $results);
   while($row != null)
 	{
-		echo '<h3>'.'<a href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
+		echo '<h3>'.'<a id="'.$row['article_id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
 		echo '<p>'.$row['description'].'</p>';
 		$row = mysql_fetch_array( $results );
 	}
