@@ -7,6 +7,17 @@
 <head>
 <title>MorningMail Recommender</title>
 <link rel="stylesheet" type="text/css" href="final_project.css" />
+<script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script language="javascript">
+	$(document).ready(function(){
+		$('.article').live('click', function(){
+			$.post('click.php', {'id' : $(this).attr('id')});
+			alert('hi');
+			return false;
+		});
+	
+	});
+</script>
 </head>
 <body>
   <div id="wrap">
@@ -55,7 +66,7 @@
  $row = mysql_fetch_array($results);
   while($row != null)
 	{
-		echo '<h3>'.'<a id="'.$row['id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
+		echo '<h3>'.'<a class="article" id="'.$row['id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
 		echo '<p>'.$row['description'].'</p>';
 		$row = mysql_fetch_array( $results );
 	}
@@ -67,7 +78,7 @@
  $row = mysql_fetch_array( $results);
   while($row != null)
 	{
-		echo '<h3>'.'<a id="'.$row['article_id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
+		echo '<h3>'.'<a class="article" id="'.$row['article_id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
 		echo '<p>'.$row['description'].'</p>';
 		$row = mysql_fetch_array( $results );
 	}
