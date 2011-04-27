@@ -13,16 +13,7 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 <title>MorningMail Recommender</title>
 <link rel="stylesheet" type="text/css" href="final_project.css" />
 <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script language="javascript">
-	$(document).ready(function(){
-		$('.article').live('click', function(){
-			$.post('click.php', {'id' : $(this).attr('id')});
-			alert('hi');
-			return false;
-		});
-	
-	});
-</script>
+
 </head>
 <body>
   <div id="wrap">
@@ -142,4 +133,12 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
   </div>
   </div>
 </body>
+<script language="javascript">
+	$(document).ready(function(){
+		$('.article').live('click', function(){
+			$.post('click.php', {'id' : $(this).attr('id'), 'user' : <?=$user_id?>});
+		});
+	
+	});
+</script>	
 </html>
