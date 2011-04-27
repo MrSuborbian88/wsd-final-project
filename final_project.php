@@ -138,6 +138,10 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 		$('.article').live('click', function(){
 			$.post('click.php', {'id' : $(this).attr('id'), 'user' : <?=$user_id?>});
 		});
+		
+		$('#nav').filter(function () {
+    return $.trim($(this).find('ul').text()).length == 0;
+}).hide();
 	
 	});
 </script>	
