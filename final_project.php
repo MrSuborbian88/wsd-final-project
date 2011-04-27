@@ -1,16 +1,12 @@
-<?php
-if (!isset($_COOKIE['user_id'])) {
-setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not set cookie");
-echo "no cookie";
-}
-else {
-	echo  $_COOKIE['user_id'];
-	}
-?>
-<?php include('CAS-1.2.1/CAS.php'); 
+<?php include('CAS-1.2.1/CAS.php');
  phpCAS::client(CAS_VERSION_2_0,'login.rpi.edu',443,'/cas');
  require_once('dbcon.php');
  ?>
+ <?php
+if (!isset($_COOKIE['user_id'])) {
+setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not set cookie");
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -39,7 +35,7 @@ else {
 	}
     else
 	{
-	   $user_name = '$_COOKIE['user_id']';
+	   $user_name = '$_COOKIE["user_id"]';
 	   echo '<a href = "CAS_RPI.php">Login</a>';
 	}
   ?>
