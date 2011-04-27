@@ -1,3 +1,12 @@
+<?php
+if (!isset($_COOKIE['user_id'])) {
+setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not set cookie");
+echo "no cookie";
+}
+else {
+	echo  $_COOKIE['user_id'];
+	}
+?>
 <?php include('CAS-1.2.1/CAS.php'); 
  phpCAS::client(CAS_VERSION_2_0,'login.rpi.edu',443,'/cas');
  require_once('dbcon.php');
@@ -30,7 +39,7 @@
 	}
     else
 	{
-	   $user_name = '';
+	   $user_name = '$_COOKIE['user_id']';
 	   echo '<a href = "CAS_RPI.php">Login</a>';
 	}
   ?>
