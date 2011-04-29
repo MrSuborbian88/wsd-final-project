@@ -16,26 +16,32 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 
 </head>
 <body>
-  <div id="wrap">
-  <div id = "login">
+  <div id="header">
+  <h1>Morning Mail Recommender <span class = "span_header">RENSSELAER POLYTECHNIC INSTITUTE - Troy, NY, USA</span>
   <?php
     if (phpCAS::isAuthenticated())
 	{
 	   $user_name=phpCAS::getUser();
-	   $cookie_name = '$_COOKIE["user_id"]';
+<<<<<<< .mine           echo '<span class = "span_header_login"><a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a></span>';
+=======	   $cookie_name = '$_COOKIE["user_id"]';
 	   
            echo '<a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a>';
-	}
+>>>>>>> .theirs	}
     else
 	{
 	   $user_name = '$_COOKIE["user_id"]';
-	   $cookie_name = '$_COOKIE["user_id"]';
+<<<<<<< .mine	   echo '<span class = "span_header_login"><a href = "CAS_RPI.php">Login</a></span>';
+=======	   $cookie_name = '$_COOKIE["user_id"]';
 	   echo '<a href = "CAS_RPI.php">Login</a>';
-	}
+>>>>>>> .theirs	}
   ?>
+  </h1>
   </div>
-  <div id="header">
-  <h1>Morning Mail Recommender <span class = "span_header">RENSSELAER POLYTECHNIC INSTITUTE - Troy, NY, USA</span></h1>
+  <div id ="buttons">
+    <div id="align_buttons">
+      <button type="button" id="latest">Latest</button>
+      <button type="button" id="recommended">Recommended</button>
+    </div>
   </div>
   <div id="content">
   <?php
@@ -147,7 +153,6 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
   }
   ?>
      </ul>
-  </div>
   </div>
 </body>
 <script language="javascript">
