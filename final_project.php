@@ -22,11 +22,14 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
     if (phpCAS::isAuthenticated())
 	{
 	   $user_name=phpCAS::getUser();
+	   $cookie_name = '$_COOKIE["user_id"]';
+	   
            echo '<a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a>';
 	}
     else
 	{
 	   $user_name = '$_COOKIE["user_id"]';
+	   $cookie_name = '$_COOKIE["user_id"]';
 	   echo '<a href = "CAS_RPI.php">Login</a>';
 	}
   ?>
@@ -54,6 +57,18 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 	$cluster = $row['cluster'];
 	$row = mysql_fetch_array( $results );
  }
+ $cookie_id = -1;
+ $sql = 'SELECT id, cluster FROM users WHERE username=\'' . $cookie_name .'\';';
+ $results = mysql_query($sql);
+ $row = mysql_fetch_array( $results);
+ while($row != null)
+ {
+        $cookie_id = $row['id'];
+	$row = mysql_fetch_array( $results );
+ }
+ //Insert cookie links as user links
+ $sql = "INSERT INTO clicks(article_id,user_id) SELECT article_id, ". strval($user_id) . " FROM clicks c WHERE c.user_id = " . strval($cookie_id) . " AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = " . strval($user_id) . ");";
+ mysql_query($sql);
  //User not clustered, show 10 most recent
  if($cluster <= 0)
  {
@@ -69,11 +84,13 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
  }
  else
  {
- $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id WHERE EXISTS (SELECT 1 FROM users u WHERE u.cluster = '.strval($cluster).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 5';
+ $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id WHERE EXISTS (SELECT 1 FROM users u WHERE u.cluster = '.strval($cluster).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10';
  $results = mysql_query($sql);
  $row = mysql_fetch_array( $results);
   while($row != null)
 	{
+		if($row['title'] == "")
+			$row['title'] = $row['url'];
 		echo '<h3>'.'<a class="article" id="'.$row['article_id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
 		echo '<p>'.$row['description'].'</p>';
 		$row = mysql_fetch_array( $results );

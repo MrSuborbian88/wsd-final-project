@@ -37,7 +37,12 @@
  include 'jaccard_similarity.php';
  set_time_limit(1000000);
  require_once('dbcon.php');
- 
+ //reset clusters
+ $sql = 'UPDATE users SET cluster = 0;';
+ mysql_query($sql);
+ echo mysql_error(); 
+
+
  $sql = 'SELECT id FROM users';
  $user_result = mysql_query($sql);
  $user_row = mysql_fetch_array($user_result);
@@ -66,11 +71,24 @@
   }
   $user_distances[$user1] = $distances;
  }
-  $threshold = .75;
+  $total_clusters = 0;
+  $threshold = .2;
   $center = find_center($user_distances, $threshold);
-  while($center > 0 && sizeof($user_distances) > 0)
+  while($center > 0 && count($user_distances) > 0 && $threshold < 1)
   {
    $user_cluster = get_cluster_users($user_distances, $threshold, $center);
+/*
+	print_r( $user_cluster);
+	echo "<br />";
+*/
+   if(count($user_cluster) <= 5)
+     {
+	$threshold += .1;
+//	echo strval(count($user_cluster) ) . "<br />";           
+     }
+   else
+   {
+   $total_clusters += 1;
    foreach ($user_cluster as $user => $cluster_center)
    {
     $sql = 'UPDATE users SET cluster = '. strval($cluster_center) . ' WHERE id = ' . strval($user) .';';
@@ -80,7 +98,13 @@
     foreach ($user_distances as $user1 => $user1_distances)
 	unset($user1_distances[$user]);
    }
-   $threshold -= .25;
    $center = find_center($user_distances, $threshold);
+   if($center <= 0 && $threshold < .9)
+   {
+	$threshold += .1;
+	$center = find_center($user_distances, $threshold);
+   }	
+   }
   }
+  echo $total_clusters;
 ?>
