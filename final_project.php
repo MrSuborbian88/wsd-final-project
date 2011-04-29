@@ -70,7 +70,7 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 	$row = mysql_fetch_array( $results );
  }
  //Insert cookie links as user links
- $sql = "INSERT INTO clicks(article_id,user_id) SELECT article_id, ". strval($user_id) . " FROM clicks c WHERE c.user_id = " . strval($cookie_id) . " AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = " . strval($user_id) . ");";
+ $sql = "INSERT INTO clicks(article_id,user_id, clicktime) SELECT article_id, ". strval($user_id) . ", c.clicktime FROM clicks c WHERE c.user_id = " . strval($cookie_id) . " AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = " . strval($user_id) . ");";
  mysql_query($sql);
  //Get Most Recent Articles
  $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 10';
