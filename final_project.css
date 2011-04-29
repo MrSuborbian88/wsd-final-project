@@ -20,12 +20,21 @@ body{
   margin-left:150px;
   color:#ABABAB
 }
+#buttons {
+  margin: 150px auto auto 200px;
+  width: 700px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#align_buttons {
+	margin-left:285px;
+}
 
 #nav {
   position: relative;
-  border-right: 1px solid white;
   top: 150px;
   float:left;
+  border-right: 1px solid white;
   padding-right:10px;
   padding-left: 10px;
 }
@@ -46,7 +55,7 @@ body{
   background-color:white;
   padding: 2em;
   border-top: 10px solid #F7001F;
-  margin: 133px auto auto 200px;
+  margin: auto auto auto 200px;
   width: 700px;
   font-size: 14px;
   float:left;
@@ -60,18 +69,18 @@ body{
   padding-top:20px
 }
 
-#login{
+
+.span_header_login{
   float:right;
+  padding-right: 20px;
 }
 
-#login a{
-  font-size:24px;
+.span_header_login a{
+  font-size:22px;
   color:white;
   text-decoration:none;
-  padding-right: 10px;
-  padding-left:5px;
 }
-#login a:hover{
+.span_header_login a:hover{
   text-decoration:underline;
 }
 
