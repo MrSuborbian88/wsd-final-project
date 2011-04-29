@@ -22,18 +22,15 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
     if (phpCAS::isAuthenticated())
 	{
 	   $user_name=phpCAS::getUser();
-<<<<<<< .mine           echo '<span class = "span_header_login"><a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a></span>';
-=======	   $cookie_name = '$_COOKIE["user_id"]';
-	   
-           echo '<a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a>';
->>>>>>> .theirs	}
+	echo '<span class = "span_header_login"><a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a></span>';
+	$cookie_name = '$_COOKIE["user_id"]';
+	}
     else
 	{
 	   $user_name = '$_COOKIE["user_id"]';
-<<<<<<< .mine	   echo '<span class = "span_header_login"><a href = "CAS_RPI.php">Login</a></span>';
-=======	   $cookie_name = '$_COOKIE["user_id"]';
-	   echo '<a href = "CAS_RPI.php">Login</a>';
->>>>>>> .theirs	}
+	   echo '<span class = "span_header_login"><a href = "CAS_RPI.php">Login</a></span>';
+	$cookie_name = '$_COOKIE["user_id"]';
+	}
   ?>
   </h1>
   </div>
@@ -75,15 +72,32 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
  //Insert cookie links as user links
  $sql = "INSERT INTO clicks(article_id,user_id) SELECT article_id, ". strval($user_id) . " FROM clicks c WHERE c.user_id = " . strval($cookie_id) . " AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = " . strval($user_id) . ");";
  mysql_query($sql);
- //User not clustered, show 10 most recent
- if($cluster <= 0)
- {
- $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 5';
+ //Get Most Recent Articles
+ $sql = 'SELECT * FROM rss_articles ORDER BY pubdate DESC LIMIT 10';
  $results = mysql_query($sql);
  $row = mysql_fetch_array($results);
-  while($row != null)
+ echo '<div id="recent_articles">';
+ while($row != null)
 	{
 		echo '<h3>'.'<a class="article" id="'.$row['id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
+		echo '<p>'.$row['description'].'</p>';
+		$row = mysql_fetch_array( $results );
+	}
+
+ echo '</div>';
+ //Get Recommended articles
+ echo '<div id="recommended_articles">';
+ //User not clustered, show 10 most popular
+ if($cluster <= 0)
+ {
+ $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10';
+ $results = mysql_query($sql);
+ $row = mysql_fetch_array( $results);
+  while($row != null)
+	{
+		if($row['title'] == "")
+			$row['title'] = $row['url'];
+		echo '<h3>'.'<a class="article" id="'.$row['article_id'].'" href="'.$row['url'].'">'.$row['title'].'</a>'.'</h3>';
 		echo '<p>'.$row['description'].'</p>';
 		$row = mysql_fetch_array( $results );
 	}
@@ -102,6 +116,7 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 		$row = mysql_fetch_array( $results );
 	}
  }
+ echo '</div>';
   ?>
     </div>
     <div id="nav">
