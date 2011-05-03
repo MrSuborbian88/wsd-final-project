@@ -43,7 +43,8 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
   <div id="content">
   <?php
  $existing_user = mysql_query('SELECT * FROM users WHERE username=\''.$user_name.'\'');
- if(mysql_num_rows($existing_user)==0 && $user_name != '')
+ echo mysql_error();
+ if(((!$existing_user || (mysql_num_rows($existing_user)==0)) && $user_name != ''))
  {
    $sql = 'INSERT INTO users(username, cluster) VALUES(\''.$user_name.'\', 0);';
    mysql_query($sql);
