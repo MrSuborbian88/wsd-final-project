@@ -4,7 +4,7 @@
  ?>
  <?php
 if (!isset($_COOKIE['user_id'])) {
-setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not set cookie");
+setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not set cookie");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -174,6 +174,7 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 <script language="javascript">
 	$(document).ready(function(){
 		$('.article').live('click', function(){
+			$.ajaxSetup({async: false});
 			$.post('click.php', {'id' : $(this).attr('id'), 'user' : <?=$user_id?>});
 		});
 		
