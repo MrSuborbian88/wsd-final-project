@@ -175,7 +175,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
 	$(document).ready(function(){
 		$('.article').live('click', function(){
 			$.ajaxSetup({async: false});
-			$.post('click.php', {'id' : $(this).attr('id'), 'user' : <?=$user_id?>});
+			$.post('click.php', {'id' : $(this).attr('id'), 'user' : <?php echo $user_id?>});
 		});
 		
 		$('#nav').filter(function () {
