@@ -179,6 +179,20 @@ setcookie("user_id", uniqid(), mktime()+(86400*1000000), "/") or die("Could not 
 		$('#nav').filter(function () {
     return $.trim($(this).find('ul').text()).length == 0;
 }).hide();
+		
+		$('#latest').click(function () {
+			$('#recommended_articles').fadeOut();
+			$('#recent_articles').fadeIn();
+		});
+		
+		$('#recommended').click(function () {
+			$('#recent_articles').fadeOut();
+			$('#recommended_articles').fadeIn();
+		});
+		if ($.trim($('#recommended_articles').text()).length != 0)
+			$('#recommended').click();
+		else
+			$('#latest').click();
 	
 	});
 </script>	
