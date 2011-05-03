@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2011 at 08:43 AM
+-- Generation Time: May 03, 2011 at 09:28 PM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `article_keywords` (
   `article_id` int(11) NOT NULL,
   `keyword_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1737 ;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `clicks` (
   KEY `article_id` (`article_id`),
   KEY `article_id_2` (`article_id`),
   KEY `article_id_3` (`article_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2011 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4071 ;
 
 --
 -- Triggers `clicks`
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `keywords` (
   `appearances` int(11) DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `word` (`word`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=249 ;
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,18 @@ CREATE TABLE IF NOT EXISTS `rss_articles` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `guid` (`guid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2057 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2077 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `totalwords`
+--
+
+CREATE TABLE IF NOT EXISTS `totalwords` (
+  `number` int(100) NOT NULL,
+  PRIMARY KEY (`number`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -106,4 +117,4 @@ CREATE TABLE IF NOT EXISTS `users` (
   `cluster` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2010 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2016 ;
