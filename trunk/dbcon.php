@@ -1,4 +1,4 @@
-<?
+<?php
 
 $user = 'websysfinal';
 $pw = 'websysfinal';
@@ -7,4 +7,4 @@ $db = 'websysfinal';
 
 
 mysql_connect($host, $user, $pw) or die ('db error!');
-mysql_select_db($db);
+mysql_select_db($db) or die(mysql_error());
