@@ -21,15 +21,15 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
   <?php
     if (phpCAS::isAuthenticated())
 	{
-	   $user_name=phpCAS::getUser();
-	echo '<span class = "span_header_login"><a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a></span>';
-	$cookie_name = '$_COOKIE["user_id"]';
+         $user_name=phpCAS::getUser();
+	 echo '<span class = "span_header_login"><a href = "CAS_RPI_logout.php">'.$user_name.' Logout</a></span>';
+	 $cookie_name = $_COOKIE['user_id'];
 	}
     else
 	{
-	   $user_name = '$_COOKIE["user_id"]';
-	   echo '<span class = "span_header_login"><a href = "CAS_RPI.php">Login</a></span>';
-	$cookie_name = '$_COOKIE["user_id"]';
+	 $user_name = $_COOKIE['user_id'];
+	 echo '<span class = "span_header_login"><a href = "CAS_RPI.php">Login</a></span>';
+	 $cookie_name = $_COOKIE['user_id'];
 	}
   ?>
   </h1>

@@ -73,7 +73,12 @@
  }
   $total_clusters = 0;
   $threshold = .2;
-  $center = find_center($user_distances, $threshold);
+  $center = 0;
+  while($center <= 0 && $threshold < 1)
+  {
+   $center = find_center($user_distances, $threshold);
+   $threshold += .1;
+  }
   while($center > 0 && count($user_distances) > 0 && $threshold < 1)
   {
    $user_cluster = get_cluster_users($user_distances, $threshold, $center);
@@ -81,7 +86,7 @@
 	print_r( $user_cluster);
 	echo "<br />";
 */
-   if(count($user_cluster) <= 5)
+   if(count($user_cluster) <= 1)
      {
 	$threshold += .1;
 //	echo strval(count($user_cluster) ) . "<br />";           
