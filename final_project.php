@@ -176,6 +176,8 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
 			$.post('click.php', {'id' : $(this).attr('id'), 'user' : <?php echo $user_id?>});
 		});
 		
+		$('a').attr('target', "_blank'");
+		
 		$('#nav').filter(function () {
     return $.trim($(this).find('ul').text()).length == 0;
 }).hide();
@@ -193,6 +195,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
 			$('#recommended').click();
 		else
 			$('#latest').click();
+		
 	
 	});
 </script>	
