@@ -69,7 +69,6 @@ function keywords ()
 			}
 		}
 		
-		//DO SOMETHING WITH FOUND KEYWORDS HERE!
 		foreach ($keywords as $id)
 		{
 			$q = sprintf('INSERT INTO article_keywords(article_id, keyword_id) VALUES(%d, %d)', $row['id'], $id);
