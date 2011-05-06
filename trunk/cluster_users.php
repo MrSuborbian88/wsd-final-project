@@ -72,7 +72,7 @@
   $user_distances[$user1] = $distances;
  }
   $total_clusters = 0;
-  $threshold = .2;
+  $threshold = .1;
   $center = 0;
   while($center <= 0 && $threshold < 1)
   {
