@@ -89,7 +89,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
  //User not clustered, show 10 most popular
  if($cluster <= 0)
  {
- $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10';
+ $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = '.strval($user_id).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10';
  $results = mysql_query($sql);
  $row = mysql_fetch_array( $results);
   while($row != null)
@@ -103,8 +103,18 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
  }
  else
  {
- $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id WHERE EXISTS (SELECT 1 FROM users u WHERE u.cluster = '.strval($cluster).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10';
+ $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id WHERE EXISTS (SELECT 1 FROM users u WHERE u.cluster = '.strval($cluster).') AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = '.strval($user_id).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10;';
  $results = mysql_query($sql);
+ if(mysql_num_rows($results)<=0)
+ {
+  $sql = 'SELECT c.article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = '.strval($user_id).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10;';
+  $results = mysql_query($sql);
+  if(mysql_num_rows($results)<=0)
+  {
+    $sql = 'SELECT a.id AS article_id, a.title, a.url, a.description, 0 FROM rss_articles a WHERE NOT EXISTS (SELECT 1 FROM clicks c WHERE a.id = c.article_id AND c.user_id = ' . strval($user_id) .') ORDER BY pubdate DESC LIMIT 10;';
+    $results = mysql_query($sql);
+  }
+ }
  $row = mysql_fetch_array( $results);
   while($row != null)
 	{
