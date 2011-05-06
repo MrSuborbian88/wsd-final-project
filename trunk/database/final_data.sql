@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.5
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 05, 2011 at 09:16 PM
--- Server version: 5.1.44
--- PHP Version: 5.2.13
+-- Generation Time: May 06, 2011 at 06:31 PM
+-- Server version: 5.1.41
+-- PHP Version: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,1486 +16,1392 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `websysfinal`
+-- Database: `final`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `article_keywords`
---
-
-CREATE TABLE `article_keywords` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `article_id` int(11) NOT NULL,
-  `keyword_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2035 ;
 
 --
 -- Dumping data for table `article_keywords`
 --
 
-INSERT INTO `article_keywords` VALUES(1, 2026, 3);
-INSERT INTO `article_keywords` VALUES(2, 2026, 4);
-INSERT INTO `article_keywords` VALUES(3, 2026, 5);
-INSERT INTO `article_keywords` VALUES(4, 2025, 6);
-INSERT INTO `article_keywords` VALUES(5, 2025, 7);
-INSERT INTO `article_keywords` VALUES(6, 2025, 8);
-INSERT INTO `article_keywords` VALUES(7, 2024, 9);
-INSERT INTO `article_keywords` VALUES(8, 2024, 10);
-INSERT INTO `article_keywords` VALUES(9, 2024, 11);
-INSERT INTO `article_keywords` VALUES(10, 2023, 12);
-INSERT INTO `article_keywords` VALUES(11, 2023, 13);
-INSERT INTO `article_keywords` VALUES(12, 2023, 14);
-INSERT INTO `article_keywords` VALUES(13, 2023, 15);
-INSERT INTO `article_keywords` VALUES(14, 2022, 16);
-INSERT INTO `article_keywords` VALUES(15, 2022, 17);
-INSERT INTO `article_keywords` VALUES(16, 2022, 18);
-INSERT INTO `article_keywords` VALUES(17, 2022, 19);
-INSERT INTO `article_keywords` VALUES(18, 2021, 20);
-INSERT INTO `article_keywords` VALUES(19, 2021, 21);
-INSERT INTO `article_keywords` VALUES(20, 2021, 22);
-INSERT INTO `article_keywords` VALUES(21, 2021, 23);
-INSERT INTO `article_keywords` VALUES(22, 2021, 24);
-INSERT INTO `article_keywords` VALUES(23, 2020, 25);
-INSERT INTO `article_keywords` VALUES(24, 2020, 26);
-INSERT INTO `article_keywords` VALUES(25, 2020, 27);
-INSERT INTO `article_keywords` VALUES(26, 2020, 28);
-INSERT INTO `article_keywords` VALUES(27, 2020, 29);
-INSERT INTO `article_keywords` VALUES(28, 2020, 30);
-INSERT INTO `article_keywords` VALUES(29, 2019, 31);
-INSERT INTO `article_keywords` VALUES(30, 2017, 32);
-INSERT INTO `article_keywords` VALUES(31, 2017, 33);
-INSERT INTO `article_keywords` VALUES(32, 2016, 34);
-INSERT INTO `article_keywords` VALUES(33, 2016, 35);
-INSERT INTO `article_keywords` VALUES(34, 2016, 36);
-INSERT INTO `article_keywords` VALUES(35, 2016, 37);
-INSERT INTO `article_keywords` VALUES(36, 2016, 38);
-INSERT INTO `article_keywords` VALUES(37, 2015, 39);
-INSERT INTO `article_keywords` VALUES(38, 2015, 40);
-INSERT INTO `article_keywords` VALUES(39, 2015, 41);
-INSERT INTO `article_keywords` VALUES(40, 2015, 42);
-INSERT INTO `article_keywords` VALUES(41, 2015, 43);
-INSERT INTO `article_keywords` VALUES(42, 2015, 44);
-INSERT INTO `article_keywords` VALUES(43, 2015, 45);
-INSERT INTO `article_keywords` VALUES(44, 2015, 46);
-INSERT INTO `article_keywords` VALUES(45, 2014, 47);
-INSERT INTO `article_keywords` VALUES(46, 2014, 48);
-INSERT INTO `article_keywords` VALUES(47, 2013, 49);
-INSERT INTO `article_keywords` VALUES(48, 2013, 50);
-INSERT INTO `article_keywords` VALUES(49, 2013, 51);
-INSERT INTO `article_keywords` VALUES(50, 2013, 52);
-INSERT INTO `article_keywords` VALUES(51, 2013, 53);
-INSERT INTO `article_keywords` VALUES(52, 2012, 54);
-INSERT INTO `article_keywords` VALUES(53, 2012, 55);
-INSERT INTO `article_keywords` VALUES(54, 2011, 56);
-INSERT INTO `article_keywords` VALUES(55, 2011, 57);
-INSERT INTO `article_keywords` VALUES(56, 2010, 58);
-INSERT INTO `article_keywords` VALUES(57, 2010, 59);
-INSERT INTO `article_keywords` VALUES(58, 2010, 60);
-INSERT INTO `article_keywords` VALUES(59, 2010, 61);
-INSERT INTO `article_keywords` VALUES(60, 2010, 62);
-INSERT INTO `article_keywords` VALUES(61, 2009, 63);
-INSERT INTO `article_keywords` VALUES(62, 2009, 64);
-INSERT INTO `article_keywords` VALUES(63, 2009, 65);
-INSERT INTO `article_keywords` VALUES(64, 2009, 66);
-INSERT INTO `article_keywords` VALUES(65, 2008, 67);
-INSERT INTO `article_keywords` VALUES(66, 2007, 68);
-INSERT INTO `article_keywords` VALUES(67, 2007, 69);
-INSERT INTO `article_keywords` VALUES(68, 2007, 70);
-INSERT INTO `article_keywords` VALUES(69, 2007, 71);
-INSERT INTO `article_keywords` VALUES(189, 2026, 3);
-INSERT INTO `article_keywords` VALUES(190, 2026, 4);
-INSERT INTO `article_keywords` VALUES(191, 2026, 5);
-INSERT INTO `article_keywords` VALUES(192, 2025, 6);
-INSERT INTO `article_keywords` VALUES(193, 2025, 7);
-INSERT INTO `article_keywords` VALUES(194, 2025, 8);
-INSERT INTO `article_keywords` VALUES(195, 2024, 9);
-INSERT INTO `article_keywords` VALUES(196, 2024, 6);
-INSERT INTO `article_keywords` VALUES(197, 2024, 10);
-INSERT INTO `article_keywords` VALUES(198, 2024, 11);
-INSERT INTO `article_keywords` VALUES(199, 2023, 12);
-INSERT INTO `article_keywords` VALUES(200, 2023, 6);
-INSERT INTO `article_keywords` VALUES(201, 2023, 13);
-INSERT INTO `article_keywords` VALUES(202, 2023, 14);
-INSERT INTO `article_keywords` VALUES(203, 2023, 15);
-INSERT INTO `article_keywords` VALUES(204, 2022, 6);
-INSERT INTO `article_keywords` VALUES(205, 2022, 16);
-INSERT INTO `article_keywords` VALUES(206, 2022, 17);
-INSERT INTO `article_keywords` VALUES(207, 2022, 18);
-INSERT INTO `article_keywords` VALUES(208, 2022, 19);
-INSERT INTO `article_keywords` VALUES(209, 2021, 6);
-INSERT INTO `article_keywords` VALUES(210, 2021, 20);
-INSERT INTO `article_keywords` VALUES(211, 2021, 21);
-INSERT INTO `article_keywords` VALUES(212, 2021, 22);
-INSERT INTO `article_keywords` VALUES(213, 2021, 23);
-INSERT INTO `article_keywords` VALUES(214, 2021, 24);
-INSERT INTO `article_keywords` VALUES(215, 2020, 17);
-INSERT INTO `article_keywords` VALUES(216, 2020, 25);
-INSERT INTO `article_keywords` VALUES(217, 2020, 26);
-INSERT INTO `article_keywords` VALUES(218, 2020, 27);
-INSERT INTO `article_keywords` VALUES(219, 2020, 28);
-INSERT INTO `article_keywords` VALUES(220, 2020, 29);
-INSERT INTO `article_keywords` VALUES(221, 2020, 30);
-INSERT INTO `article_keywords` VALUES(222, 2019, 31);
-INSERT INTO `article_keywords` VALUES(223, 2019, 17);
-INSERT INTO `article_keywords` VALUES(224, 2018, 17);
-INSERT INTO `article_keywords` VALUES(225, 2018, 25);
-INSERT INTO `article_keywords` VALUES(226, 2018, 26);
-INSERT INTO `article_keywords` VALUES(227, 2018, 27);
-INSERT INTO `article_keywords` VALUES(228, 2018, 28);
-INSERT INTO `article_keywords` VALUES(229, 2018, 29);
-INSERT INTO `article_keywords` VALUES(230, 2018, 30);
-INSERT INTO `article_keywords` VALUES(231, 2017, 32);
-INSERT INTO `article_keywords` VALUES(232, 2017, 17);
-INSERT INTO `article_keywords` VALUES(233, 2017, 33);
-INSERT INTO `article_keywords` VALUES(234, 2016, 34);
-INSERT INTO `article_keywords` VALUES(235, 2016, 35);
-INSERT INTO `article_keywords` VALUES(236, 2016, 6);
-INSERT INTO `article_keywords` VALUES(237, 2016, 35);
-INSERT INTO `article_keywords` VALUES(238, 2016, 36);
-INSERT INTO `article_keywords` VALUES(239, 2016, 37);
-INSERT INTO `article_keywords` VALUES(240, 2016, 38);
-INSERT INTO `article_keywords` VALUES(241, 2015, 39);
-INSERT INTO `article_keywords` VALUES(242, 2015, 40);
-INSERT INTO `article_keywords` VALUES(243, 2015, 41);
-INSERT INTO `article_keywords` VALUES(244, 2015, 42);
-INSERT INTO `article_keywords` VALUES(245, 2015, 43);
-INSERT INTO `article_keywords` VALUES(246, 2015, 44);
-INSERT INTO `article_keywords` VALUES(247, 2015, 45);
-INSERT INTO `article_keywords` VALUES(248, 2015, 46);
-INSERT INTO `article_keywords` VALUES(249, 2014, 6);
-INSERT INTO `article_keywords` VALUES(250, 2014, 47);
-INSERT INTO `article_keywords` VALUES(251, 2014, 48);
-INSERT INTO `article_keywords` VALUES(252, 2013, 53);
-INSERT INTO `article_keywords` VALUES(253, 2013, 6);
-INSERT INTO `article_keywords` VALUES(254, 2013, 49);
-INSERT INTO `article_keywords` VALUES(255, 2013, 50);
-INSERT INTO `article_keywords` VALUES(256, 2013, 51);
-INSERT INTO `article_keywords` VALUES(257, 2013, 52);
-INSERT INTO `article_keywords` VALUES(258, 2013, 47);
-INSERT INTO `article_keywords` VALUES(259, 2013, 53);
-INSERT INTO `article_keywords` VALUES(260, 2012, 42);
-INSERT INTO `article_keywords` VALUES(261, 2012, 6);
-INSERT INTO `article_keywords` VALUES(262, 2012, 54);
-INSERT INTO `article_keywords` VALUES(263, 2012, 55);
-INSERT INTO `article_keywords` VALUES(264, 2011, 6);
-INSERT INTO `article_keywords` VALUES(265, 2011, 56);
-INSERT INTO `article_keywords` VALUES(266, 2011, 57);
-INSERT INTO `article_keywords` VALUES(267, 2010, 6);
-INSERT INTO `article_keywords` VALUES(268, 2010, 18);
-INSERT INTO `article_keywords` VALUES(269, 2010, 58);
-INSERT INTO `article_keywords` VALUES(270, 2010, 59);
-INSERT INTO `article_keywords` VALUES(271, 2010, 60);
-INSERT INTO `article_keywords` VALUES(272, 2010, 61);
-INSERT INTO `article_keywords` VALUES(273, 2010, 62);
-INSERT INTO `article_keywords` VALUES(274, 2009, 6);
-INSERT INTO `article_keywords` VALUES(275, 2009, 63);
-INSERT INTO `article_keywords` VALUES(276, 2009, 64);
-INSERT INTO `article_keywords` VALUES(277, 2009, 65);
-INSERT INTO `article_keywords` VALUES(278, 2009, 66);
-INSERT INTO `article_keywords` VALUES(279, 2008, 6);
-INSERT INTO `article_keywords` VALUES(280, 2008, 67);
-INSERT INTO `article_keywords` VALUES(281, 2008, 63);
-INSERT INTO `article_keywords` VALUES(282, 2007, 68);
-INSERT INTO `article_keywords` VALUES(283, 2007, 69);
-INSERT INTO `article_keywords` VALUES(284, 2007, 6);
-INSERT INTO `article_keywords` VALUES(285, 2007, 70);
-INSERT INTO `article_keywords` VALUES(286, 2007, 6);
-INSERT INTO `article_keywords` VALUES(287, 2007, 9);
-INSERT INTO `article_keywords` VALUES(288, 2007, 37);
-INSERT INTO `article_keywords` VALUES(289, 2007, 71);
-INSERT INTO `article_keywords` VALUES(612, 2036, 6);
-INSERT INTO `article_keywords` VALUES(613, 2036, 139);
-INSERT INTO `article_keywords` VALUES(614, 2036, 191);
-INSERT INTO `article_keywords` VALUES(615, 2036, 192);
-INSERT INTO `article_keywords` VALUES(616, 2036, 193);
-INSERT INTO `article_keywords` VALUES(617, 2036, 194);
-INSERT INTO `article_keywords` VALUES(618, 2035, 6);
-INSERT INTO `article_keywords` VALUES(619, 2034, 6);
-INSERT INTO `article_keywords` VALUES(620, 2033, 6);
-INSERT INTO `article_keywords` VALUES(621, 2032, 17);
-INSERT INTO `article_keywords` VALUES(622, 2032, 25);
-INSERT INTO `article_keywords` VALUES(623, 2032, 27);
-INSERT INTO `article_keywords` VALUES(624, 2032, 26);
-INSERT INTO `article_keywords` VALUES(625, 2032, 28);
-INSERT INTO `article_keywords` VALUES(626, 2032, 29);
-INSERT INTO `article_keywords` VALUES(627, 2032, 30);
-INSERT INTO `article_keywords` VALUES(628, 2032, 3);
-INSERT INTO `article_keywords` VALUES(629, 2031, 17);
-INSERT INTO `article_keywords` VALUES(630, 2031, 32);
-INSERT INTO `article_keywords` VALUES(631, 2031, 195);
-INSERT INTO `article_keywords` VALUES(632, 2031, 196);
-INSERT INTO `article_keywords` VALUES(633, 2031, 197);
-INSERT INTO `article_keywords` VALUES(634, 2030, 6);
-INSERT INTO `article_keywords` VALUES(635, 2030, 84);
-INSERT INTO `article_keywords` VALUES(636, 2030, 18);
-INSERT INTO `article_keywords` VALUES(637, 2030, 198);
-INSERT INTO `article_keywords` VALUES(638, 2030, 199);
-INSERT INTO `article_keywords` VALUES(639, 2030, 200);
-INSERT INTO `article_keywords` VALUES(640, 2030, 201);
-INSERT INTO `article_keywords` VALUES(641, 2029, 17);
-INSERT INTO `article_keywords` VALUES(642, 2029, 17);
-INSERT INTO `article_keywords` VALUES(643, 2029, 92);
-INSERT INTO `article_keywords` VALUES(644, 2029, 42);
-INSERT INTO `article_keywords` VALUES(645, 2029, 37);
-INSERT INTO `article_keywords` VALUES(646, 2029, 49);
-INSERT INTO `article_keywords` VALUES(647, 2029, 32);
-INSERT INTO `article_keywords` VALUES(648, 2029, 202);
-INSERT INTO `article_keywords` VALUES(649, 2029, 203);
-INSERT INTO `article_keywords` VALUES(650, 2028, 6);
-INSERT INTO `article_keywords` VALUES(651, 2028, 52);
-INSERT INTO `article_keywords` VALUES(652, 2028, 202);
-INSERT INTO `article_keywords` VALUES(653, 2028, 49);
-INSERT INTO `article_keywords` VALUES(654, 2027, 6);
-INSERT INTO `article_keywords` VALUES(655, 2027, 111);
-INSERT INTO `article_keywords` VALUES(656, 2027, 204);
-INSERT INTO `article_keywords` VALUES(657, 2026, 3);
-INSERT INTO `article_keywords` VALUES(658, 2026, 4);
-INSERT INTO `article_keywords` VALUES(659, 2026, 5);
-INSERT INTO `article_keywords` VALUES(660, 2025, 6);
-INSERT INTO `article_keywords` VALUES(661, 2025, 8);
-INSERT INTO `article_keywords` VALUES(662, 2024, 9);
-INSERT INTO `article_keywords` VALUES(663, 2024, 6);
-INSERT INTO `article_keywords` VALUES(664, 2024, 10);
-INSERT INTO `article_keywords` VALUES(665, 2024, 11);
-INSERT INTO `article_keywords` VALUES(666, 2023, 12);
-INSERT INTO `article_keywords` VALUES(667, 2023, 6);
-INSERT INTO `article_keywords` VALUES(668, 2023, 13);
-INSERT INTO `article_keywords` VALUES(669, 2023, 14);
-INSERT INTO `article_keywords` VALUES(670, 2023, 15);
-INSERT INTO `article_keywords` VALUES(671, 2022, 6);
-INSERT INTO `article_keywords` VALUES(672, 2022, 16);
-INSERT INTO `article_keywords` VALUES(673, 2022, 17);
-INSERT INTO `article_keywords` VALUES(674, 2022, 18);
-INSERT INTO `article_keywords` VALUES(675, 2022, 19);
-INSERT INTO `article_keywords` VALUES(676, 2021, 6);
-INSERT INTO `article_keywords` VALUES(677, 2021, 20);
-INSERT INTO `article_keywords` VALUES(678, 2021, 21);
-INSERT INTO `article_keywords` VALUES(679, 2021, 22);
-INSERT INTO `article_keywords` VALUES(680, 2021, 23);
-INSERT INTO `article_keywords` VALUES(681, 2021, 24);
-INSERT INTO `article_keywords` VALUES(682, 2020, 17);
-INSERT INTO `article_keywords` VALUES(683, 2020, 25);
-INSERT INTO `article_keywords` VALUES(684, 2020, 26);
-INSERT INTO `article_keywords` VALUES(685, 2020, 27);
-INSERT INTO `article_keywords` VALUES(686, 2020, 28);
-INSERT INTO `article_keywords` VALUES(687, 2020, 29);
-INSERT INTO `article_keywords` VALUES(688, 2020, 3);
-INSERT INTO `article_keywords` VALUES(689, 2020, 30);
-INSERT INTO `article_keywords` VALUES(690, 2019, 31);
-INSERT INTO `article_keywords` VALUES(691, 2019, 17);
-INSERT INTO `article_keywords` VALUES(692, 2018, 17);
-INSERT INTO `article_keywords` VALUES(693, 2018, 25);
-INSERT INTO `article_keywords` VALUES(694, 2018, 27);
-INSERT INTO `article_keywords` VALUES(695, 2018, 26);
-INSERT INTO `article_keywords` VALUES(696, 2018, 28);
-INSERT INTO `article_keywords` VALUES(697, 2018, 29);
-INSERT INTO `article_keywords` VALUES(698, 2018, 30);
-INSERT INTO `article_keywords` VALUES(699, 2018, 3);
-INSERT INTO `article_keywords` VALUES(700, 2017, 32);
-INSERT INTO `article_keywords` VALUES(701, 2017, 17);
-INSERT INTO `article_keywords` VALUES(702, 2016, 34);
-INSERT INTO `article_keywords` VALUES(703, 2016, 35);
-INSERT INTO `article_keywords` VALUES(704, 2016, 6);
-INSERT INTO `article_keywords` VALUES(705, 2016, 35);
-INSERT INTO `article_keywords` VALUES(706, 2016, 36);
-INSERT INTO `article_keywords` VALUES(707, 2016, 37);
-INSERT INTO `article_keywords` VALUES(708, 2016, 38);
-INSERT INTO `article_keywords` VALUES(709, 2015, 39);
-INSERT INTO `article_keywords` VALUES(710, 2015, 40);
-INSERT INTO `article_keywords` VALUES(711, 2015, 41);
-INSERT INTO `article_keywords` VALUES(712, 2015, 42);
-INSERT INTO `article_keywords` VALUES(713, 2015, 43);
-INSERT INTO `article_keywords` VALUES(714, 2015, 44);
-INSERT INTO `article_keywords` VALUES(715, 2015, 45);
-INSERT INTO `article_keywords` VALUES(716, 2015, 46);
-INSERT INTO `article_keywords` VALUES(717, 2014, 6);
-INSERT INTO `article_keywords` VALUES(718, 2014, 47);
-INSERT INTO `article_keywords` VALUES(719, 2014, 48);
-INSERT INTO `article_keywords` VALUES(720, 2013, 53);
-INSERT INTO `article_keywords` VALUES(721, 2013, 6);
-INSERT INTO `article_keywords` VALUES(722, 2013, 49);
-INSERT INTO `article_keywords` VALUES(723, 2013, 50);
-INSERT INTO `article_keywords` VALUES(724, 2013, 51);
-INSERT INTO `article_keywords` VALUES(725, 2013, 52);
-INSERT INTO `article_keywords` VALUES(726, 2013, 47);
-INSERT INTO `article_keywords` VALUES(727, 2013, 53);
-INSERT INTO `article_keywords` VALUES(728, 2012, 42);
-INSERT INTO `article_keywords` VALUES(729, 2012, 6);
-INSERT INTO `article_keywords` VALUES(730, 2012, 54);
-INSERT INTO `article_keywords` VALUES(731, 2012, 55);
-INSERT INTO `article_keywords` VALUES(732, 2011, 6);
-INSERT INTO `article_keywords` VALUES(733, 2011, 56);
-INSERT INTO `article_keywords` VALUES(734, 2011, 57);
-INSERT INTO `article_keywords` VALUES(735, 2010, 6);
-INSERT INTO `article_keywords` VALUES(736, 2010, 18);
-INSERT INTO `article_keywords` VALUES(737, 2010, 58);
-INSERT INTO `article_keywords` VALUES(738, 2010, 59);
-INSERT INTO `article_keywords` VALUES(739, 2010, 60);
-INSERT INTO `article_keywords` VALUES(740, 2010, 61);
-INSERT INTO `article_keywords` VALUES(741, 2010, 62);
-INSERT INTO `article_keywords` VALUES(742, 2009, 6);
-INSERT INTO `article_keywords` VALUES(743, 2009, 63);
-INSERT INTO `article_keywords` VALUES(744, 2009, 66);
-INSERT INTO `article_keywords` VALUES(745, 2009, 64);
-INSERT INTO `article_keywords` VALUES(746, 2009, 65);
-INSERT INTO `article_keywords` VALUES(747, 2008, 6);
-INSERT INTO `article_keywords` VALUES(748, 2008, 63);
-INSERT INTO `article_keywords` VALUES(749, 2008, 67);
-INSERT INTO `article_keywords` VALUES(750, 2008, 32);
-INSERT INTO `article_keywords` VALUES(751, 2007, 68);
-INSERT INTO `article_keywords` VALUES(752, 2007, 69);
-INSERT INTO `article_keywords` VALUES(753, 2007, 6);
-INSERT INTO `article_keywords` VALUES(754, 2007, 70);
-INSERT INTO `article_keywords` VALUES(755, 2007, 6);
-INSERT INTO `article_keywords` VALUES(756, 2007, 9);
-INSERT INTO `article_keywords` VALUES(757, 2007, 37);
-INSERT INTO `article_keywords` VALUES(758, 2007, 71);
-INSERT INTO `article_keywords` VALUES(1055, 2036, 6);
-INSERT INTO `article_keywords` VALUES(1056, 2036, 191);
-INSERT INTO `article_keywords` VALUES(1057, 2036, 192);
-INSERT INTO `article_keywords` VALUES(1058, 2036, 193);
-INSERT INTO `article_keywords` VALUES(1059, 2036, 194);
-INSERT INTO `article_keywords` VALUES(1060, 2036, 139);
-INSERT INTO `article_keywords` VALUES(1061, 2035, 6);
-INSERT INTO `article_keywords` VALUES(1062, 2034, 6);
-INSERT INTO `article_keywords` VALUES(1063, 2033, 6);
-INSERT INTO `article_keywords` VALUES(1064, 2032, 17);
-INSERT INTO `article_keywords` VALUES(1065, 2032, 25);
-INSERT INTO `article_keywords` VALUES(1066, 2032, 27);
-INSERT INTO `article_keywords` VALUES(1067, 2032, 26);
-INSERT INTO `article_keywords` VALUES(1068, 2032, 28);
-INSERT INTO `article_keywords` VALUES(1069, 2032, 29);
-INSERT INTO `article_keywords` VALUES(1070, 2032, 30);
-INSERT INTO `article_keywords` VALUES(1071, 2032, 3);
-INSERT INTO `article_keywords` VALUES(1072, 2031, 17);
-INSERT INTO `article_keywords` VALUES(1073, 2031, 195);
-INSERT INTO `article_keywords` VALUES(1074, 2031, 32);
-INSERT INTO `article_keywords` VALUES(1075, 2031, 196);
-INSERT INTO `article_keywords` VALUES(1076, 2031, 197);
-INSERT INTO `article_keywords` VALUES(1077, 2030, 198);
-INSERT INTO `article_keywords` VALUES(1078, 2030, 6);
-INSERT INTO `article_keywords` VALUES(1079, 2030, 84);
-INSERT INTO `article_keywords` VALUES(1080, 2030, 199);
-INSERT INTO `article_keywords` VALUES(1081, 2030, 18);
-INSERT INTO `article_keywords` VALUES(1082, 2030, 200);
-INSERT INTO `article_keywords` VALUES(1083, 2030, 201);
-INSERT INTO `article_keywords` VALUES(1084, 2029, 202);
-INSERT INTO `article_keywords` VALUES(1085, 2029, 17);
-INSERT INTO `article_keywords` VALUES(1086, 2029, 203);
-INSERT INTO `article_keywords` VALUES(1087, 2029, 17);
-INSERT INTO `article_keywords` VALUES(1088, 2029, 92);
-INSERT INTO `article_keywords` VALUES(1089, 2029, 42);
-INSERT INTO `article_keywords` VALUES(1090, 2029, 37);
-INSERT INTO `article_keywords` VALUES(1091, 2029, 49);
-INSERT INTO `article_keywords` VALUES(1092, 2029, 32);
-INSERT INTO `article_keywords` VALUES(1093, 2028, 6);
-INSERT INTO `article_keywords` VALUES(1094, 2028, 52);
-INSERT INTO `article_keywords` VALUES(1095, 2028, 202);
-INSERT INTO `article_keywords` VALUES(1096, 2028, 49);
-INSERT INTO `article_keywords` VALUES(1097, 2027, 204);
-INSERT INTO `article_keywords` VALUES(1098, 2027, 6);
-INSERT INTO `article_keywords` VALUES(1099, 2027, 111);
-INSERT INTO `article_keywords` VALUES(1100, 2026, 3);
-INSERT INTO `article_keywords` VALUES(1101, 2026, 4);
-INSERT INTO `article_keywords` VALUES(1102, 2026, 5);
-INSERT INTO `article_keywords` VALUES(1103, 2025, 6);
-INSERT INTO `article_keywords` VALUES(1104, 2025, 8);
-INSERT INTO `article_keywords` VALUES(1105, 2024, 9);
-INSERT INTO `article_keywords` VALUES(1106, 2024, 6);
-INSERT INTO `article_keywords` VALUES(1107, 2024, 10);
-INSERT INTO `article_keywords` VALUES(1108, 2024, 11);
-INSERT INTO `article_keywords` VALUES(1109, 2023, 12);
-INSERT INTO `article_keywords` VALUES(1110, 2023, 6);
-INSERT INTO `article_keywords` VALUES(1111, 2023, 13);
-INSERT INTO `article_keywords` VALUES(1112, 2023, 14);
-INSERT INTO `article_keywords` VALUES(1113, 2023, 15);
-INSERT INTO `article_keywords` VALUES(1114, 2022, 6);
-INSERT INTO `article_keywords` VALUES(1115, 2022, 16);
-INSERT INTO `article_keywords` VALUES(1116, 2022, 17);
-INSERT INTO `article_keywords` VALUES(1117, 2022, 18);
-INSERT INTO `article_keywords` VALUES(1118, 2022, 19);
-INSERT INTO `article_keywords` VALUES(1119, 2021, 6);
-INSERT INTO `article_keywords` VALUES(1120, 2021, 20);
-INSERT INTO `article_keywords` VALUES(1121, 2021, 21);
-INSERT INTO `article_keywords` VALUES(1122, 2021, 22);
-INSERT INTO `article_keywords` VALUES(1123, 2021, 23);
-INSERT INTO `article_keywords` VALUES(1124, 2021, 24);
-INSERT INTO `article_keywords` VALUES(1125, 2020, 17);
-INSERT INTO `article_keywords` VALUES(1126, 2020, 25);
-INSERT INTO `article_keywords` VALUES(1127, 2020, 26);
-INSERT INTO `article_keywords` VALUES(1128, 2020, 27);
-INSERT INTO `article_keywords` VALUES(1129, 2020, 28);
-INSERT INTO `article_keywords` VALUES(1130, 2020, 29);
-INSERT INTO `article_keywords` VALUES(1131, 2020, 3);
-INSERT INTO `article_keywords` VALUES(1132, 2020, 30);
-INSERT INTO `article_keywords` VALUES(1133, 2019, 31);
-INSERT INTO `article_keywords` VALUES(1134, 2019, 17);
-INSERT INTO `article_keywords` VALUES(1135, 2018, 17);
-INSERT INTO `article_keywords` VALUES(1136, 2018, 25);
-INSERT INTO `article_keywords` VALUES(1137, 2018, 27);
-INSERT INTO `article_keywords` VALUES(1138, 2018, 26);
-INSERT INTO `article_keywords` VALUES(1139, 2018, 28);
-INSERT INTO `article_keywords` VALUES(1140, 2018, 29);
-INSERT INTO `article_keywords` VALUES(1141, 2018, 30);
-INSERT INTO `article_keywords` VALUES(1142, 2018, 3);
-INSERT INTO `article_keywords` VALUES(1143, 2017, 32);
-INSERT INTO `article_keywords` VALUES(1144, 2017, 17);
-INSERT INTO `article_keywords` VALUES(1145, 2016, 34);
-INSERT INTO `article_keywords` VALUES(1146, 2016, 35);
-INSERT INTO `article_keywords` VALUES(1147, 2016, 6);
-INSERT INTO `article_keywords` VALUES(1148, 2016, 35);
-INSERT INTO `article_keywords` VALUES(1149, 2016, 36);
-INSERT INTO `article_keywords` VALUES(1150, 2016, 37);
-INSERT INTO `article_keywords` VALUES(1151, 2016, 38);
-INSERT INTO `article_keywords` VALUES(1152, 2015, 39);
-INSERT INTO `article_keywords` VALUES(1153, 2015, 40);
-INSERT INTO `article_keywords` VALUES(1154, 2015, 41);
-INSERT INTO `article_keywords` VALUES(1155, 2015, 42);
-INSERT INTO `article_keywords` VALUES(1156, 2015, 43);
-INSERT INTO `article_keywords` VALUES(1157, 2015, 44);
-INSERT INTO `article_keywords` VALUES(1158, 2015, 45);
-INSERT INTO `article_keywords` VALUES(1159, 2015, 46);
-INSERT INTO `article_keywords` VALUES(1160, 2014, 6);
-INSERT INTO `article_keywords` VALUES(1161, 2014, 47);
-INSERT INTO `article_keywords` VALUES(1162, 2014, 48);
-INSERT INTO `article_keywords` VALUES(1163, 2013, 53);
-INSERT INTO `article_keywords` VALUES(1164, 2013, 6);
-INSERT INTO `article_keywords` VALUES(1165, 2013, 49);
-INSERT INTO `article_keywords` VALUES(1166, 2013, 50);
-INSERT INTO `article_keywords` VALUES(1167, 2013, 51);
-INSERT INTO `article_keywords` VALUES(1168, 2013, 52);
-INSERT INTO `article_keywords` VALUES(1169, 2013, 47);
-INSERT INTO `article_keywords` VALUES(1170, 2013, 53);
-INSERT INTO `article_keywords` VALUES(1171, 2012, 42);
-INSERT INTO `article_keywords` VALUES(1172, 2012, 6);
-INSERT INTO `article_keywords` VALUES(1173, 2012, 54);
-INSERT INTO `article_keywords` VALUES(1174, 2012, 55);
-INSERT INTO `article_keywords` VALUES(1175, 2011, 6);
-INSERT INTO `article_keywords` VALUES(1176, 2011, 56);
-INSERT INTO `article_keywords` VALUES(1177, 2011, 57);
-INSERT INTO `article_keywords` VALUES(1178, 2010, 6);
-INSERT INTO `article_keywords` VALUES(1179, 2010, 18);
-INSERT INTO `article_keywords` VALUES(1180, 2010, 58);
-INSERT INTO `article_keywords` VALUES(1181, 2010, 59);
-INSERT INTO `article_keywords` VALUES(1182, 2010, 60);
-INSERT INTO `article_keywords` VALUES(1183, 2010, 61);
-INSERT INTO `article_keywords` VALUES(1184, 2010, 62);
-INSERT INTO `article_keywords` VALUES(1185, 2009, 6);
-INSERT INTO `article_keywords` VALUES(1186, 2009, 63);
-INSERT INTO `article_keywords` VALUES(1187, 2009, 66);
-INSERT INTO `article_keywords` VALUES(1188, 2009, 64);
-INSERT INTO `article_keywords` VALUES(1189, 2009, 65);
-INSERT INTO `article_keywords` VALUES(1190, 2008, 6);
-INSERT INTO `article_keywords` VALUES(1191, 2008, 63);
-INSERT INTO `article_keywords` VALUES(1192, 2008, 67);
-INSERT INTO `article_keywords` VALUES(1193, 2008, 32);
-INSERT INTO `article_keywords` VALUES(1194, 2007, 68);
-INSERT INTO `article_keywords` VALUES(1195, 2007, 69);
-INSERT INTO `article_keywords` VALUES(1196, 2007, 6);
-INSERT INTO `article_keywords` VALUES(1197, 2007, 70);
-INSERT INTO `article_keywords` VALUES(1198, 2007, 6);
-INSERT INTO `article_keywords` VALUES(1199, 2007, 9);
-INSERT INTO `article_keywords` VALUES(1200, 2007, 37);
-INSERT INTO `article_keywords` VALUES(1201, 2007, 71);
-INSERT INTO `article_keywords` VALUES(1498, 2067, 17);
-INSERT INTO `article_keywords` VALUES(1499, 2067, 92);
-INSERT INTO `article_keywords` VALUES(1500, 2067, 205);
-INSERT INTO `article_keywords` VALUES(1501, 2051, 6);
-INSERT INTO `article_keywords` VALUES(1502, 2051, 46);
-INSERT INTO `article_keywords` VALUES(1503, 2051, 206);
-INSERT INTO `article_keywords` VALUES(1504, 2051, 207);
-INSERT INTO `article_keywords` VALUES(1505, 2051, 208);
-INSERT INTO `article_keywords` VALUES(1506, 2051, 209);
-INSERT INTO `article_keywords` VALUES(1507, 2050, 6);
-INSERT INTO `article_keywords` VALUES(1508, 2050, 165);
-INSERT INTO `article_keywords` VALUES(1509, 2050, 207);
-INSERT INTO `article_keywords` VALUES(1510, 2049, 17);
-INSERT INTO `article_keywords` VALUES(1511, 2049, 92);
-INSERT INTO `article_keywords` VALUES(1512, 2049, 32);
-INSERT INTO `article_keywords` VALUES(1513, 2049, 84);
-INSERT INTO `article_keywords` VALUES(1514, 2049, 210);
-INSERT INTO `article_keywords` VALUES(1515, 2049, 211);
-INSERT INTO `article_keywords` VALUES(1516, 2049, 212);
-INSERT INTO `article_keywords` VALUES(1517, 2049, 213);
-INSERT INTO `article_keywords` VALUES(1518, 2048, 17);
-INSERT INTO `article_keywords` VALUES(1519, 2048, 25);
-INSERT INTO `article_keywords` VALUES(1520, 2048, 27);
-INSERT INTO `article_keywords` VALUES(1521, 2048, 26);
-INSERT INTO `article_keywords` VALUES(1522, 2048, 28);
-INSERT INTO `article_keywords` VALUES(1523, 2048, 29);
-INSERT INTO `article_keywords` VALUES(1524, 2048, 30);
-INSERT INTO `article_keywords` VALUES(1525, 2048, 3);
-INSERT INTO `article_keywords` VALUES(1526, 2047, 53);
-INSERT INTO `article_keywords` VALUES(1527, 2047, 92);
-INSERT INTO `article_keywords` VALUES(1528, 2047, 10);
-INSERT INTO `article_keywords` VALUES(1529, 2047, 166);
-INSERT INTO `article_keywords` VALUES(1530, 2047, 36);
-INSERT INTO `article_keywords` VALUES(1531, 2047, 214);
-INSERT INTO `article_keywords` VALUES(1532, 2047, 215);
-INSERT INTO `article_keywords` VALUES(1533, 2047, 216);
-INSERT INTO `article_keywords` VALUES(1534, 2047, 217);
-INSERT INTO `article_keywords` VALUES(1535, 2047, 218);
-INSERT INTO `article_keywords` VALUES(1536, 2046, 6);
-INSERT INTO `article_keywords` VALUES(1537, 2045, 6);
-INSERT INTO `article_keywords` VALUES(1538, 2045, 219);
-INSERT INTO `article_keywords` VALUES(1539, 2045, 220);
-INSERT INTO `article_keywords` VALUES(1540, 2045, 221);
-INSERT INTO `article_keywords` VALUES(1541, 2044, 6);
-INSERT INTO `article_keywords` VALUES(1542, 2044, 32);
-INSERT INTO `article_keywords` VALUES(1543, 2044, 42);
-INSERT INTO `article_keywords` VALUES(1544, 2044, 222);
-INSERT INTO `article_keywords` VALUES(1545, 2044, 223);
-INSERT INTO `article_keywords` VALUES(1546, 2044, 224);
-INSERT INTO `article_keywords` VALUES(1547, 2044, 225);
-INSERT INTO `article_keywords` VALUES(1548, 2044, 226);
-INSERT INTO `article_keywords` VALUES(1549, 2044, 227);
-INSERT INTO `article_keywords` VALUES(1550, 2044, 228);
-INSERT INTO `article_keywords` VALUES(1551, 2043, 92);
-INSERT INTO `article_keywords` VALUES(1552, 2043, 6);
-INSERT INTO `article_keywords` VALUES(1553, 2043, 100);
-INSERT INTO `article_keywords` VALUES(1554, 2043, 101);
-INSERT INTO `article_keywords` VALUES(1555, 2043, 102);
-INSERT INTO `article_keywords` VALUES(1556, 2042, 6);
-INSERT INTO `article_keywords` VALUES(1557, 2042, 80);
-INSERT INTO `article_keywords` VALUES(1558, 2042, 229);
-INSERT INTO `article_keywords` VALUES(1559, 2042, 230);
-INSERT INTO `article_keywords` VALUES(1560, 2042, 231);
-INSERT INTO `article_keywords` VALUES(1561, 2042, 232);
-INSERT INTO `article_keywords` VALUES(1562, 2042, 233);
-INSERT INTO `article_keywords` VALUES(1563, 2041, 6);
-INSERT INTO `article_keywords` VALUES(1564, 2041, 234);
-INSERT INTO `article_keywords` VALUES(1565, 2041, 235);
-INSERT INTO `article_keywords` VALUES(1566, 2040, 6);
-INSERT INTO `article_keywords` VALUES(1567, 2040, 6);
-INSERT INTO `article_keywords` VALUES(1568, 2040, 236);
-INSERT INTO `article_keywords` VALUES(1569, 2040, 237);
-INSERT INTO `article_keywords` VALUES(1570, 2040, 238);
-INSERT INTO `article_keywords` VALUES(1571, 2040, 239);
-INSERT INTO `article_keywords` VALUES(1572, 2039, 52);
-INSERT INTO `article_keywords` VALUES(1573, 2039, 32);
-INSERT INTO `article_keywords` VALUES(1574, 2039, 240);
-INSERT INTO `article_keywords` VALUES(1575, 2039, 241);
-INSERT INTO `article_keywords` VALUES(1576, 2038, 17);
-INSERT INTO `article_keywords` VALUES(1577, 2038, 32);
-INSERT INTO `article_keywords` VALUES(1578, 2038, 242);
-INSERT INTO `article_keywords` VALUES(1579, 2037, 17);
-INSERT INTO `article_keywords` VALUES(1580, 2037, 17);
-INSERT INTO `article_keywords` VALUES(1581, 2037, 87);
-INSERT INTO `article_keywords` VALUES(1582, 2037, 37);
-INSERT INTO `article_keywords` VALUES(1583, 2037, 243);
-INSERT INTO `article_keywords` VALUES(1584, 2037, 244);
-INSERT INTO `article_keywords` VALUES(1585, 2037, 245);
-INSERT INTO `article_keywords` VALUES(1586, 2037, 246);
-INSERT INTO `article_keywords` VALUES(1587, 2037, 247);
-INSERT INTO `article_keywords` VALUES(1588, 2037, 248);
-INSERT INTO `article_keywords` VALUES(1589, 2036, 6);
-INSERT INTO `article_keywords` VALUES(1590, 2036, 191);
-INSERT INTO `article_keywords` VALUES(1591, 2036, 192);
-INSERT INTO `article_keywords` VALUES(1592, 2036, 193);
-INSERT INTO `article_keywords` VALUES(1593, 2036, 194);
-INSERT INTO `article_keywords` VALUES(1594, 2036, 139);
-INSERT INTO `article_keywords` VALUES(1595, 2035, 6);
-INSERT INTO `article_keywords` VALUES(1596, 2034, 6);
-INSERT INTO `article_keywords` VALUES(1597, 2034, 46);
-INSERT INTO `article_keywords` VALUES(1598, 2033, 6);
-INSERT INTO `article_keywords` VALUES(1599, 2032, 17);
-INSERT INTO `article_keywords` VALUES(1600, 2032, 25);
-INSERT INTO `article_keywords` VALUES(1601, 2032, 27);
-INSERT INTO `article_keywords` VALUES(1602, 2032, 26);
-INSERT INTO `article_keywords` VALUES(1603, 2032, 28);
-INSERT INTO `article_keywords` VALUES(1604, 2032, 29);
-INSERT INTO `article_keywords` VALUES(1605, 2032, 30);
-INSERT INTO `article_keywords` VALUES(1606, 2032, 3);
-INSERT INTO `article_keywords` VALUES(1607, 2031, 17);
-INSERT INTO `article_keywords` VALUES(1608, 2031, 195);
-INSERT INTO `article_keywords` VALUES(1609, 2031, 32);
-INSERT INTO `article_keywords` VALUES(1610, 2031, 196);
-INSERT INTO `article_keywords` VALUES(1611, 2031, 197);
-INSERT INTO `article_keywords` VALUES(1612, 2030, 198);
-INSERT INTO `article_keywords` VALUES(1613, 2030, 6);
-INSERT INTO `article_keywords` VALUES(1614, 2030, 84);
-INSERT INTO `article_keywords` VALUES(1615, 2030, 199);
-INSERT INTO `article_keywords` VALUES(1616, 2030, 18);
-INSERT INTO `article_keywords` VALUES(1617, 2030, 200);
-INSERT INTO `article_keywords` VALUES(1618, 2030, 201);
-INSERT INTO `article_keywords` VALUES(1619, 2029, 202);
-INSERT INTO `article_keywords` VALUES(1620, 2029, 17);
-INSERT INTO `article_keywords` VALUES(1621, 2029, 203);
-INSERT INTO `article_keywords` VALUES(1622, 2029, 17);
-INSERT INTO `article_keywords` VALUES(1623, 2029, 92);
-INSERT INTO `article_keywords` VALUES(1624, 2029, 42);
-INSERT INTO `article_keywords` VALUES(1625, 2029, 37);
-INSERT INTO `article_keywords` VALUES(1626, 2029, 49);
-INSERT INTO `article_keywords` VALUES(1627, 2029, 32);
-INSERT INTO `article_keywords` VALUES(1628, 2028, 6);
-INSERT INTO `article_keywords` VALUES(1629, 2028, 52);
-INSERT INTO `article_keywords` VALUES(1630, 2028, 202);
-INSERT INTO `article_keywords` VALUES(1631, 2028, 49);
-INSERT INTO `article_keywords` VALUES(1632, 2027, 204);
-INSERT INTO `article_keywords` VALUES(1633, 2027, 6);
-INSERT INTO `article_keywords` VALUES(1634, 2027, 111);
-INSERT INTO `article_keywords` VALUES(1635, 2026, 3);
-INSERT INTO `article_keywords` VALUES(1636, 2026, 4);
-INSERT INTO `article_keywords` VALUES(1637, 2026, 5);
-INSERT INTO `article_keywords` VALUES(1638, 2025, 6);
-INSERT INTO `article_keywords` VALUES(1639, 2025, 8);
-INSERT INTO `article_keywords` VALUES(1640, 2024, 9);
-INSERT INTO `article_keywords` VALUES(1641, 2024, 6);
-INSERT INTO `article_keywords` VALUES(1642, 2024, 10);
-INSERT INTO `article_keywords` VALUES(1643, 2024, 11);
-INSERT INTO `article_keywords` VALUES(1644, 2023, 12);
-INSERT INTO `article_keywords` VALUES(1645, 2023, 6);
-INSERT INTO `article_keywords` VALUES(1646, 2023, 13);
-INSERT INTO `article_keywords` VALUES(1647, 2023, 14);
-INSERT INTO `article_keywords` VALUES(1648, 2023, 15);
-INSERT INTO `article_keywords` VALUES(1649, 2022, 6);
-INSERT INTO `article_keywords` VALUES(1650, 2022, 16);
-INSERT INTO `article_keywords` VALUES(1651, 2022, 17);
-INSERT INTO `article_keywords` VALUES(1652, 2022, 18);
-INSERT INTO `article_keywords` VALUES(1653, 2022, 19);
-INSERT INTO `article_keywords` VALUES(1654, 2021, 6);
-INSERT INTO `article_keywords` VALUES(1655, 2021, 20);
-INSERT INTO `article_keywords` VALUES(1656, 2021, 21);
-INSERT INTO `article_keywords` VALUES(1657, 2021, 22);
-INSERT INTO `article_keywords` VALUES(1658, 2021, 23);
-INSERT INTO `article_keywords` VALUES(1659, 2021, 24);
-INSERT INTO `article_keywords` VALUES(1660, 2020, 17);
-INSERT INTO `article_keywords` VALUES(1661, 2020, 25);
-INSERT INTO `article_keywords` VALUES(1662, 2020, 26);
-INSERT INTO `article_keywords` VALUES(1663, 2020, 27);
-INSERT INTO `article_keywords` VALUES(1664, 2020, 28);
-INSERT INTO `article_keywords` VALUES(1665, 2020, 29);
-INSERT INTO `article_keywords` VALUES(1666, 2020, 3);
-INSERT INTO `article_keywords` VALUES(1667, 2020, 30);
-INSERT INTO `article_keywords` VALUES(1668, 2019, 31);
-INSERT INTO `article_keywords` VALUES(1669, 2019, 17);
-INSERT INTO `article_keywords` VALUES(1670, 2018, 17);
-INSERT INTO `article_keywords` VALUES(1671, 2018, 25);
-INSERT INTO `article_keywords` VALUES(1672, 2018, 27);
-INSERT INTO `article_keywords` VALUES(1673, 2018, 26);
-INSERT INTO `article_keywords` VALUES(1674, 2018, 28);
-INSERT INTO `article_keywords` VALUES(1675, 2018, 29);
-INSERT INTO `article_keywords` VALUES(1676, 2018, 30);
-INSERT INTO `article_keywords` VALUES(1677, 2018, 3);
-INSERT INTO `article_keywords` VALUES(1678, 2017, 32);
-INSERT INTO `article_keywords` VALUES(1679, 2017, 17);
-INSERT INTO `article_keywords` VALUES(1680, 2016, 34);
-INSERT INTO `article_keywords` VALUES(1681, 2016, 35);
-INSERT INTO `article_keywords` VALUES(1682, 2016, 6);
-INSERT INTO `article_keywords` VALUES(1683, 2016, 35);
-INSERT INTO `article_keywords` VALUES(1684, 2016, 36);
-INSERT INTO `article_keywords` VALUES(1685, 2016, 37);
-INSERT INTO `article_keywords` VALUES(1686, 2016, 38);
-INSERT INTO `article_keywords` VALUES(1687, 2015, 39);
-INSERT INTO `article_keywords` VALUES(1688, 2015, 40);
-INSERT INTO `article_keywords` VALUES(1689, 2015, 41);
-INSERT INTO `article_keywords` VALUES(1690, 2015, 42);
-INSERT INTO `article_keywords` VALUES(1691, 2015, 43);
-INSERT INTO `article_keywords` VALUES(1692, 2015, 44);
-INSERT INTO `article_keywords` VALUES(1693, 2015, 45);
-INSERT INTO `article_keywords` VALUES(1694, 2015, 46);
-INSERT INTO `article_keywords` VALUES(1695, 2014, 6);
-INSERT INTO `article_keywords` VALUES(1696, 2014, 47);
-INSERT INTO `article_keywords` VALUES(1697, 2014, 48);
-INSERT INTO `article_keywords` VALUES(1698, 2013, 53);
-INSERT INTO `article_keywords` VALUES(1699, 2013, 6);
-INSERT INTO `article_keywords` VALUES(1700, 2013, 49);
-INSERT INTO `article_keywords` VALUES(1701, 2013, 50);
-INSERT INTO `article_keywords` VALUES(1702, 2013, 51);
-INSERT INTO `article_keywords` VALUES(1703, 2013, 52);
-INSERT INTO `article_keywords` VALUES(1704, 2013, 47);
-INSERT INTO `article_keywords` VALUES(1705, 2013, 53);
-INSERT INTO `article_keywords` VALUES(1706, 2012, 42);
-INSERT INTO `article_keywords` VALUES(1707, 2012, 6);
-INSERT INTO `article_keywords` VALUES(1708, 2012, 54);
-INSERT INTO `article_keywords` VALUES(1709, 2012, 55);
-INSERT INTO `article_keywords` VALUES(1710, 2011, 6);
-INSERT INTO `article_keywords` VALUES(1711, 2011, 56);
-INSERT INTO `article_keywords` VALUES(1712, 2011, 57);
-INSERT INTO `article_keywords` VALUES(1713, 2010, 6);
-INSERT INTO `article_keywords` VALUES(1714, 2010, 18);
-INSERT INTO `article_keywords` VALUES(1715, 2010, 58);
-INSERT INTO `article_keywords` VALUES(1716, 2010, 59);
-INSERT INTO `article_keywords` VALUES(1717, 2010, 60);
-INSERT INTO `article_keywords` VALUES(1718, 2010, 61);
-INSERT INTO `article_keywords` VALUES(1719, 2010, 62);
-INSERT INTO `article_keywords` VALUES(1720, 2009, 6);
-INSERT INTO `article_keywords` VALUES(1721, 2009, 63);
-INSERT INTO `article_keywords` VALUES(1722, 2009, 66);
-INSERT INTO `article_keywords` VALUES(1723, 2009, 64);
-INSERT INTO `article_keywords` VALUES(1724, 2009, 65);
-INSERT INTO `article_keywords` VALUES(1725, 2008, 6);
-INSERT INTO `article_keywords` VALUES(1726, 2008, 63);
-INSERT INTO `article_keywords` VALUES(1727, 2008, 67);
-INSERT INTO `article_keywords` VALUES(1728, 2008, 32);
-INSERT INTO `article_keywords` VALUES(1729, 2007, 68);
-INSERT INTO `article_keywords` VALUES(1730, 2007, 69);
-INSERT INTO `article_keywords` VALUES(1731, 2007, 6);
-INSERT INTO `article_keywords` VALUES(1732, 2007, 70);
-INSERT INTO `article_keywords` VALUES(1733, 2007, 6);
-INSERT INTO `article_keywords` VALUES(1734, 2007, 9);
-INSERT INTO `article_keywords` VALUES(1735, 2007, 37);
-INSERT INTO `article_keywords` VALUES(1736, 2007, 71);
-INSERT INTO `article_keywords` VALUES(1737, 2077, 17);
-INSERT INTO `article_keywords` VALUES(1738, 2077, 183);
-INSERT INTO `article_keywords` VALUES(1739, 2077, 32);
-INSERT INTO `article_keywords` VALUES(1740, 2077, 37);
-INSERT INTO `article_keywords` VALUES(1741, 2077, 17);
-INSERT INTO `article_keywords` VALUES(1742, 2077, 91);
-INSERT INTO `article_keywords` VALUES(1743, 2077, 93);
-INSERT INTO `article_keywords` VALUES(1744, 2077, 134);
-INSERT INTO `article_keywords` VALUES(1745, 2077, 249);
-INSERT INTO `article_keywords` VALUES(1746, 2077, 250);
-INSERT INTO `article_keywords` VALUES(1747, 2076, 65);
-INSERT INTO `article_keywords` VALUES(1748, 2076, 6);
-INSERT INTO `article_keywords` VALUES(1749, 2076, 65);
-INSERT INTO `article_keywords` VALUES(1750, 2076, 191);
-INSERT INTO `article_keywords` VALUES(1751, 2076, 37);
-INSERT INTO `article_keywords` VALUES(1752, 2076, 91);
-INSERT INTO `article_keywords` VALUES(1753, 2076, 251);
-INSERT INTO `article_keywords` VALUES(1754, 2075, 3);
-INSERT INTO `article_keywords` VALUES(1755, 2073, 111);
-INSERT INTO `article_keywords` VALUES(1756, 2073, 37);
-INSERT INTO `article_keywords` VALUES(1757, 2073, 206);
-INSERT INTO `article_keywords` VALUES(1758, 2073, 111);
-INSERT INTO `article_keywords` VALUES(1759, 2073, 252);
-INSERT INTO `article_keywords` VALUES(1760, 2073, 253);
-INSERT INTO `article_keywords` VALUES(1761, 2073, 254);
-INSERT INTO `article_keywords` VALUES(1762, 2073, 255);
-INSERT INTO `article_keywords` VALUES(1763, 2073, 256);
-INSERT INTO `article_keywords` VALUES(1764, 2072, 17);
-INSERT INTO `article_keywords` VALUES(1765, 2072, 25);
-INSERT INTO `article_keywords` VALUES(1766, 2072, 26);
-INSERT INTO `article_keywords` VALUES(1767, 2072, 27);
-INSERT INTO `article_keywords` VALUES(1768, 2072, 28);
-INSERT INTO `article_keywords` VALUES(1769, 2072, 29);
-INSERT INTO `article_keywords` VALUES(1770, 2072, 3);
-INSERT INTO `article_keywords` VALUES(1771, 2072, 30);
-INSERT INTO `article_keywords` VALUES(1772, 2071, 132);
-INSERT INTO `article_keywords` VALUES(1773, 2071, 207);
-INSERT INTO `article_keywords` VALUES(1774, 2071, 98);
-INSERT INTO `article_keywords` VALUES(1775, 2071, 257);
-INSERT INTO `article_keywords` VALUES(1776, 2071, 258);
-INSERT INTO `article_keywords` VALUES(1777, 2071, 259);
-INSERT INTO `article_keywords` VALUES(1778, 2071, 260);
-INSERT INTO `article_keywords` VALUES(1779, 2070, 6);
-INSERT INTO `article_keywords` VALUES(1780, 2070, 261);
-INSERT INTO `article_keywords` VALUES(1781, 2069, 17);
-INSERT INTO `article_keywords` VALUES(1782, 2069, 25);
-INSERT INTO `article_keywords` VALUES(1783, 2069, 27);
-INSERT INTO `article_keywords` VALUES(1784, 2069, 26);
-INSERT INTO `article_keywords` VALUES(1785, 2069, 28);
-INSERT INTO `article_keywords` VALUES(1786, 2069, 29);
-INSERT INTO `article_keywords` VALUES(1787, 2069, 3);
-INSERT INTO `article_keywords` VALUES(1788, 2069, 30);
-INSERT INTO `article_keywords` VALUES(1789, 2068, 3);
-INSERT INTO `article_keywords` VALUES(1790, 2068, 3);
-INSERT INTO `article_keywords` VALUES(1791, 2068, 188);
-INSERT INTO `article_keywords` VALUES(1792, 2068, 254);
-INSERT INTO `article_keywords` VALUES(1793, 2068, 42);
-INSERT INTO `article_keywords` VALUES(1794, 2068, 262);
-INSERT INTO `article_keywords` VALUES(1795, 2068, 263);
-INSERT INTO `article_keywords` VALUES(1796, 2068, 264);
-INSERT INTO `article_keywords` VALUES(1797, 2068, 265);
-INSERT INTO `article_keywords` VALUES(1798, 2068, 266);
-INSERT INTO `article_keywords` VALUES(1799, 2067, 17);
-INSERT INTO `article_keywords` VALUES(1800, 2067, 205);
-INSERT INTO `article_keywords` VALUES(1801, 2067, 92);
-INSERT INTO `article_keywords` VALUES(1802, 2051, 206);
-INSERT INTO `article_keywords` VALUES(1803, 2051, 6);
-INSERT INTO `article_keywords` VALUES(1804, 2051, 46);
-INSERT INTO `article_keywords` VALUES(1805, 2051, 207);
-INSERT INTO `article_keywords` VALUES(1806, 2051, 208);
-INSERT INTO `article_keywords` VALUES(1807, 2051, 209);
-INSERT INTO `article_keywords` VALUES(1808, 2050, 6);
-INSERT INTO `article_keywords` VALUES(1809, 2050, 165);
-INSERT INTO `article_keywords` VALUES(1810, 2050, 207);
-INSERT INTO `article_keywords` VALUES(1811, 2049, 17);
-INSERT INTO `article_keywords` VALUES(1812, 2049, 210);
-INSERT INTO `article_keywords` VALUES(1813, 2049, 211);
-INSERT INTO `article_keywords` VALUES(1814, 2049, 92);
-INSERT INTO `article_keywords` VALUES(1815, 2049, 32);
-INSERT INTO `article_keywords` VALUES(1816, 2049, 212);
-INSERT INTO `article_keywords` VALUES(1817, 2049, 84);
-INSERT INTO `article_keywords` VALUES(1818, 2049, 213);
-INSERT INTO `article_keywords` VALUES(1819, 2048, 17);
-INSERT INTO `article_keywords` VALUES(1820, 2048, 25);
-INSERT INTO `article_keywords` VALUES(1821, 2048, 27);
-INSERT INTO `article_keywords` VALUES(1822, 2048, 26);
-INSERT INTO `article_keywords` VALUES(1823, 2048, 28);
-INSERT INTO `article_keywords` VALUES(1824, 2048, 29);
-INSERT INTO `article_keywords` VALUES(1825, 2048, 30);
-INSERT INTO `article_keywords` VALUES(1826, 2048, 3);
-INSERT INTO `article_keywords` VALUES(1827, 2047, 53);
-INSERT INTO `article_keywords` VALUES(1828, 2047, 214);
-INSERT INTO `article_keywords` VALUES(1829, 2047, 215);
-INSERT INTO `article_keywords` VALUES(1830, 2047, 216);
-INSERT INTO `article_keywords` VALUES(1831, 2047, 92);
-INSERT INTO `article_keywords` VALUES(1832, 2047, 10);
-INSERT INTO `article_keywords` VALUES(1833, 2047, 166);
-INSERT INTO `article_keywords` VALUES(1834, 2047, 36);
-INSERT INTO `article_keywords` VALUES(1835, 2047, 217);
-INSERT INTO `article_keywords` VALUES(1836, 2047, 218);
-INSERT INTO `article_keywords` VALUES(1837, 2046, 6);
-INSERT INTO `article_keywords` VALUES(1838, 2045, 6);
-INSERT INTO `article_keywords` VALUES(1839, 2045, 219);
-INSERT INTO `article_keywords` VALUES(1840, 2045, 220);
-INSERT INTO `article_keywords` VALUES(1841, 2045, 221);
-INSERT INTO `article_keywords` VALUES(1842, 2044, 6);
-INSERT INTO `article_keywords` VALUES(1843, 2044, 222);
-INSERT INTO `article_keywords` VALUES(1844, 2044, 223);
-INSERT INTO `article_keywords` VALUES(1845, 2044, 32);
-INSERT INTO `article_keywords` VALUES(1846, 2044, 224);
-INSERT INTO `article_keywords` VALUES(1847, 2044, 42);
-INSERT INTO `article_keywords` VALUES(1848, 2044, 225);
-INSERT INTO `article_keywords` VALUES(1849, 2044, 226);
-INSERT INTO `article_keywords` VALUES(1850, 2044, 227);
-INSERT INTO `article_keywords` VALUES(1851, 2044, 228);
-INSERT INTO `article_keywords` VALUES(1852, 2043, 92);
-INSERT INTO `article_keywords` VALUES(1853, 2043, 6);
-INSERT INTO `article_keywords` VALUES(1854, 2043, 100);
-INSERT INTO `article_keywords` VALUES(1855, 2043, 101);
-INSERT INTO `article_keywords` VALUES(1856, 2043, 102);
-INSERT INTO `article_keywords` VALUES(1857, 2042, 6);
-INSERT INTO `article_keywords` VALUES(1858, 2042, 229);
-INSERT INTO `article_keywords` VALUES(1859, 2042, 80);
-INSERT INTO `article_keywords` VALUES(1860, 2042, 230);
-INSERT INTO `article_keywords` VALUES(1861, 2042, 231);
-INSERT INTO `article_keywords` VALUES(1862, 2042, 232);
-INSERT INTO `article_keywords` VALUES(1863, 2042, 233);
-INSERT INTO `article_keywords` VALUES(1864, 2041, 234);
-INSERT INTO `article_keywords` VALUES(1865, 2041, 6);
-INSERT INTO `article_keywords` VALUES(1866, 2041, 235);
-INSERT INTO `article_keywords` VALUES(1867, 2040, 239);
-INSERT INTO `article_keywords` VALUES(1868, 2040, 6);
-INSERT INTO `article_keywords` VALUES(1869, 2040, 236);
-INSERT INTO `article_keywords` VALUES(1870, 2039, 240);
-INSERT INTO `article_keywords` VALUES(1871, 2039, 241);
-INSERT INTO `article_keywords` VALUES(1872, 2039, 52);
-INSERT INTO `article_keywords` VALUES(1873, 2039, 32);
-INSERT INTO `article_keywords` VALUES(1874, 2038, 17);
-INSERT INTO `article_keywords` VALUES(1875, 2038, 242);
-INSERT INTO `article_keywords` VALUES(1876, 2038, 32);
-INSERT INTO `article_keywords` VALUES(1877, 2037, 243);
-INSERT INTO `article_keywords` VALUES(1878, 2037, 244);
-INSERT INTO `article_keywords` VALUES(1879, 2037, 17);
-INSERT INTO `article_keywords` VALUES(1880, 2037, 17);
-INSERT INTO `article_keywords` VALUES(1881, 2037, 245);
-INSERT INTO `article_keywords` VALUES(1882, 2037, 246);
-INSERT INTO `article_keywords` VALUES(1883, 2037, 87);
-INSERT INTO `article_keywords` VALUES(1884, 2037, 247);
-INSERT INTO `article_keywords` VALUES(1885, 2037, 248);
-INSERT INTO `article_keywords` VALUES(1886, 2037, 37);
-INSERT INTO `article_keywords` VALUES(1887, 2036, 6);
-INSERT INTO `article_keywords` VALUES(1888, 2036, 191);
-INSERT INTO `article_keywords` VALUES(1889, 2036, 192);
-INSERT INTO `article_keywords` VALUES(1890, 2036, 193);
-INSERT INTO `article_keywords` VALUES(1891, 2036, 194);
-INSERT INTO `article_keywords` VALUES(1892, 2036, 139);
-INSERT INTO `article_keywords` VALUES(1893, 2035, 6);
-INSERT INTO `article_keywords` VALUES(1894, 2034, 6);
-INSERT INTO `article_keywords` VALUES(1895, 2034, 46);
-INSERT INTO `article_keywords` VALUES(1896, 2033, 6);
-INSERT INTO `article_keywords` VALUES(1897, 2032, 17);
-INSERT INTO `article_keywords` VALUES(1898, 2032, 25);
-INSERT INTO `article_keywords` VALUES(1899, 2032, 27);
-INSERT INTO `article_keywords` VALUES(1900, 2032, 26);
-INSERT INTO `article_keywords` VALUES(1901, 2032, 28);
-INSERT INTO `article_keywords` VALUES(1902, 2032, 29);
-INSERT INTO `article_keywords` VALUES(1903, 2032, 30);
-INSERT INTO `article_keywords` VALUES(1904, 2032, 3);
-INSERT INTO `article_keywords` VALUES(1905, 2031, 17);
-INSERT INTO `article_keywords` VALUES(1906, 2031, 195);
-INSERT INTO `article_keywords` VALUES(1907, 2031, 32);
-INSERT INTO `article_keywords` VALUES(1908, 2031, 196);
-INSERT INTO `article_keywords` VALUES(1909, 2031, 197);
-INSERT INTO `article_keywords` VALUES(1910, 2030, 198);
-INSERT INTO `article_keywords` VALUES(1911, 2030, 6);
-INSERT INTO `article_keywords` VALUES(1912, 2030, 84);
-INSERT INTO `article_keywords` VALUES(1913, 2030, 199);
-INSERT INTO `article_keywords` VALUES(1914, 2030, 18);
-INSERT INTO `article_keywords` VALUES(1915, 2030, 200);
-INSERT INTO `article_keywords` VALUES(1916, 2030, 201);
-INSERT INTO `article_keywords` VALUES(1917, 2029, 202);
-INSERT INTO `article_keywords` VALUES(1918, 2029, 17);
-INSERT INTO `article_keywords` VALUES(1919, 2029, 203);
-INSERT INTO `article_keywords` VALUES(1920, 2029, 17);
-INSERT INTO `article_keywords` VALUES(1921, 2029, 92);
-INSERT INTO `article_keywords` VALUES(1922, 2029, 42);
-INSERT INTO `article_keywords` VALUES(1923, 2029, 37);
-INSERT INTO `article_keywords` VALUES(1924, 2029, 49);
-INSERT INTO `article_keywords` VALUES(1925, 2029, 32);
-INSERT INTO `article_keywords` VALUES(1926, 2028, 6);
-INSERT INTO `article_keywords` VALUES(1927, 2028, 52);
-INSERT INTO `article_keywords` VALUES(1928, 2028, 202);
-INSERT INTO `article_keywords` VALUES(1929, 2028, 49);
-INSERT INTO `article_keywords` VALUES(1930, 2027, 204);
-INSERT INTO `article_keywords` VALUES(1931, 2027, 6);
-INSERT INTO `article_keywords` VALUES(1932, 2027, 111);
-INSERT INTO `article_keywords` VALUES(1933, 2026, 3);
-INSERT INTO `article_keywords` VALUES(1934, 2026, 4);
-INSERT INTO `article_keywords` VALUES(1935, 2026, 5);
-INSERT INTO `article_keywords` VALUES(1936, 2025, 6);
-INSERT INTO `article_keywords` VALUES(1937, 2025, 8);
-INSERT INTO `article_keywords` VALUES(1938, 2024, 9);
-INSERT INTO `article_keywords` VALUES(1939, 2024, 6);
-INSERT INTO `article_keywords` VALUES(1940, 2024, 10);
-INSERT INTO `article_keywords` VALUES(1941, 2024, 11);
-INSERT INTO `article_keywords` VALUES(1942, 2023, 12);
-INSERT INTO `article_keywords` VALUES(1943, 2023, 6);
-INSERT INTO `article_keywords` VALUES(1944, 2023, 13);
-INSERT INTO `article_keywords` VALUES(1945, 2023, 14);
-INSERT INTO `article_keywords` VALUES(1946, 2023, 15);
-INSERT INTO `article_keywords` VALUES(1947, 2022, 6);
-INSERT INTO `article_keywords` VALUES(1948, 2022, 16);
-INSERT INTO `article_keywords` VALUES(1949, 2022, 17);
-INSERT INTO `article_keywords` VALUES(1950, 2022, 18);
-INSERT INTO `article_keywords` VALUES(1951, 2022, 19);
-INSERT INTO `article_keywords` VALUES(1952, 2021, 6);
-INSERT INTO `article_keywords` VALUES(1953, 2021, 20);
-INSERT INTO `article_keywords` VALUES(1954, 2021, 21);
-INSERT INTO `article_keywords` VALUES(1955, 2021, 22);
-INSERT INTO `article_keywords` VALUES(1956, 2021, 23);
-INSERT INTO `article_keywords` VALUES(1957, 2021, 24);
-INSERT INTO `article_keywords` VALUES(1958, 2020, 17);
-INSERT INTO `article_keywords` VALUES(1959, 2020, 25);
-INSERT INTO `article_keywords` VALUES(1960, 2020, 26);
-INSERT INTO `article_keywords` VALUES(1961, 2020, 27);
-INSERT INTO `article_keywords` VALUES(1962, 2020, 28);
-INSERT INTO `article_keywords` VALUES(1963, 2020, 29);
-INSERT INTO `article_keywords` VALUES(1964, 2020, 3);
-INSERT INTO `article_keywords` VALUES(1965, 2020, 30);
-INSERT INTO `article_keywords` VALUES(1966, 2019, 31);
-INSERT INTO `article_keywords` VALUES(1967, 2019, 17);
-INSERT INTO `article_keywords` VALUES(1968, 2018, 17);
-INSERT INTO `article_keywords` VALUES(1969, 2018, 25);
-INSERT INTO `article_keywords` VALUES(1970, 2018, 27);
-INSERT INTO `article_keywords` VALUES(1971, 2018, 26);
-INSERT INTO `article_keywords` VALUES(1972, 2018, 28);
-INSERT INTO `article_keywords` VALUES(1973, 2018, 29);
-INSERT INTO `article_keywords` VALUES(1974, 2018, 30);
-INSERT INTO `article_keywords` VALUES(1975, 2018, 3);
-INSERT INTO `article_keywords` VALUES(1976, 2017, 32);
-INSERT INTO `article_keywords` VALUES(1977, 2017, 17);
-INSERT INTO `article_keywords` VALUES(1978, 2016, 34);
-INSERT INTO `article_keywords` VALUES(1979, 2016, 35);
-INSERT INTO `article_keywords` VALUES(1980, 2016, 6);
-INSERT INTO `article_keywords` VALUES(1981, 2016, 35);
-INSERT INTO `article_keywords` VALUES(1982, 2016, 36);
-INSERT INTO `article_keywords` VALUES(1983, 2016, 37);
-INSERT INTO `article_keywords` VALUES(1984, 2016, 38);
-INSERT INTO `article_keywords` VALUES(1985, 2015, 39);
-INSERT INTO `article_keywords` VALUES(1986, 2015, 40);
-INSERT INTO `article_keywords` VALUES(1987, 2015, 41);
-INSERT INTO `article_keywords` VALUES(1988, 2015, 42);
-INSERT INTO `article_keywords` VALUES(1989, 2015, 43);
-INSERT INTO `article_keywords` VALUES(1990, 2015, 44);
-INSERT INTO `article_keywords` VALUES(1991, 2015, 45);
-INSERT INTO `article_keywords` VALUES(1992, 2015, 46);
-INSERT INTO `article_keywords` VALUES(1993, 2014, 6);
-INSERT INTO `article_keywords` VALUES(1994, 2014, 47);
-INSERT INTO `article_keywords` VALUES(1995, 2014, 48);
-INSERT INTO `article_keywords` VALUES(1996, 2013, 53);
-INSERT INTO `article_keywords` VALUES(1997, 2013, 6);
-INSERT INTO `article_keywords` VALUES(1998, 2013, 49);
-INSERT INTO `article_keywords` VALUES(1999, 2013, 50);
-INSERT INTO `article_keywords` VALUES(2000, 2013, 51);
-INSERT INTO `article_keywords` VALUES(2001, 2013, 52);
-INSERT INTO `article_keywords` VALUES(2002, 2013, 47);
-INSERT INTO `article_keywords` VALUES(2003, 2013, 53);
-INSERT INTO `article_keywords` VALUES(2004, 2012, 42);
-INSERT INTO `article_keywords` VALUES(2005, 2012, 6);
-INSERT INTO `article_keywords` VALUES(2006, 2012, 54);
-INSERT INTO `article_keywords` VALUES(2007, 2012, 55);
-INSERT INTO `article_keywords` VALUES(2008, 2011, 6);
-INSERT INTO `article_keywords` VALUES(2009, 2011, 56);
-INSERT INTO `article_keywords` VALUES(2010, 2011, 57);
-INSERT INTO `article_keywords` VALUES(2011, 2010, 6);
-INSERT INTO `article_keywords` VALUES(2012, 2010, 18);
-INSERT INTO `article_keywords` VALUES(2013, 2010, 58);
-INSERT INTO `article_keywords` VALUES(2014, 2010, 59);
-INSERT INTO `article_keywords` VALUES(2015, 2010, 60);
-INSERT INTO `article_keywords` VALUES(2016, 2010, 61);
-INSERT INTO `article_keywords` VALUES(2017, 2010, 62);
-INSERT INTO `article_keywords` VALUES(2018, 2009, 6);
-INSERT INTO `article_keywords` VALUES(2019, 2009, 63);
-INSERT INTO `article_keywords` VALUES(2020, 2009, 66);
-INSERT INTO `article_keywords` VALUES(2021, 2009, 64);
-INSERT INTO `article_keywords` VALUES(2022, 2009, 65);
-INSERT INTO `article_keywords` VALUES(2023, 2008, 6);
-INSERT INTO `article_keywords` VALUES(2024, 2008, 63);
-INSERT INTO `article_keywords` VALUES(2025, 2008, 67);
-INSERT INTO `article_keywords` VALUES(2026, 2008, 32);
-INSERT INTO `article_keywords` VALUES(2027, 2007, 68);
-INSERT INTO `article_keywords` VALUES(2028, 2007, 69);
-INSERT INTO `article_keywords` VALUES(2029, 2007, 6);
-INSERT INTO `article_keywords` VALUES(2030, 2007, 70);
-INSERT INTO `article_keywords` VALUES(2031, 2007, 6);
-INSERT INTO `article_keywords` VALUES(2032, 2007, 9);
-INSERT INTO `article_keywords` VALUES(2033, 2007, 37);
-INSERT INTO `article_keywords` VALUES(2034, 2007, 71);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `clicks`
---
-
-CREATE TABLE `clicks` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `article_id` int(11) NOT NULL,
-  `clicktime` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `keyword_id_2` (`user_id`),
-  KEY `article_id` (`article_id`),
-  KEY `article_id_2` (`article_id`),
-  KEY `article_id_3` (`article_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4079 ;
+INSERT INTO `article_keywords` (`id`, `article_id`, `keyword_id`) VALUES
+(1, 2026, 3),
+(2, 2026, 4),
+(3, 2026, 5),
+(4, 2025, 6),
+(5, 2025, 7),
+(6, 2025, 8),
+(7, 2024, 9),
+(8, 2024, 10),
+(9, 2024, 11),
+(10, 2023, 12),
+(11, 2023, 13),
+(12, 2023, 14),
+(13, 2023, 15),
+(14, 2022, 16),
+(15, 2022, 17),
+(16, 2022, 18),
+(17, 2022, 19),
+(18, 2021, 20),
+(19, 2021, 21),
+(20, 2021, 22),
+(21, 2021, 23),
+(22, 2021, 24),
+(23, 2020, 25),
+(24, 2020, 26),
+(25, 2020, 27),
+(26, 2020, 28),
+(27, 2020, 29),
+(28, 2020, 30),
+(29, 2019, 31),
+(30, 2017, 32),
+(31, 2017, 33),
+(32, 2016, 34),
+(33, 2016, 35),
+(34, 2016, 36),
+(35, 2016, 37),
+(36, 2016, 38),
+(37, 2015, 39),
+(38, 2015, 40),
+(39, 2015, 41),
+(40, 2015, 42),
+(41, 2015, 43),
+(42, 2015, 44),
+(43, 2015, 45),
+(44, 2015, 46),
+(45, 2014, 47),
+(46, 2014, 48),
+(47, 2013, 49),
+(48, 2013, 50),
+(49, 2013, 51),
+(50, 2013, 52),
+(51, 2013, 53),
+(52, 2012, 54),
+(53, 2012, 55),
+(54, 2011, 56),
+(55, 2011, 57),
+(56, 2010, 58),
+(57, 2010, 59),
+(58, 2010, 60),
+(59, 2010, 61),
+(60, 2010, 62),
+(61, 2009, 63),
+(62, 2009, 64),
+(63, 2009, 65),
+(64, 2009, 66),
+(65, 2008, 67),
+(66, 2007, 68),
+(67, 2007, 69),
+(68, 2007, 70),
+(69, 2007, 71),
+(189, 2026, 3),
+(190, 2026, 4),
+(191, 2026, 5),
+(192, 2025, 6),
+(193, 2025, 7),
+(194, 2025, 8),
+(195, 2024, 9),
+(196, 2024, 6),
+(197, 2024, 10),
+(198, 2024, 11),
+(199, 2023, 12),
+(200, 2023, 6),
+(201, 2023, 13),
+(202, 2023, 14),
+(203, 2023, 15),
+(204, 2022, 6),
+(205, 2022, 16),
+(206, 2022, 17),
+(207, 2022, 18),
+(208, 2022, 19),
+(209, 2021, 6),
+(210, 2021, 20),
+(211, 2021, 21),
+(212, 2021, 22),
+(213, 2021, 23),
+(214, 2021, 24),
+(215, 2020, 17),
+(216, 2020, 25),
+(217, 2020, 26),
+(218, 2020, 27),
+(219, 2020, 28),
+(220, 2020, 29),
+(221, 2020, 30),
+(222, 2019, 31),
+(223, 2019, 17),
+(224, 2018, 17),
+(225, 2018, 25),
+(226, 2018, 26),
+(227, 2018, 27),
+(228, 2018, 28),
+(229, 2018, 29),
+(230, 2018, 30),
+(231, 2017, 32),
+(232, 2017, 17),
+(233, 2017, 33),
+(234, 2016, 34),
+(235, 2016, 35),
+(236, 2016, 6),
+(237, 2016, 35),
+(238, 2016, 36),
+(239, 2016, 37),
+(240, 2016, 38),
+(241, 2015, 39),
+(242, 2015, 40),
+(243, 2015, 41),
+(244, 2015, 42),
+(245, 2015, 43),
+(246, 2015, 44),
+(247, 2015, 45),
+(248, 2015, 46),
+(249, 2014, 6),
+(250, 2014, 47),
+(251, 2014, 48),
+(252, 2013, 53),
+(253, 2013, 6),
+(254, 2013, 49),
+(255, 2013, 50),
+(256, 2013, 51),
+(257, 2013, 52),
+(258, 2013, 47),
+(259, 2013, 53),
+(260, 2012, 42),
+(261, 2012, 6),
+(262, 2012, 54),
+(263, 2012, 55),
+(264, 2011, 6),
+(265, 2011, 56),
+(266, 2011, 57),
+(267, 2010, 6),
+(268, 2010, 18),
+(269, 2010, 58),
+(270, 2010, 59),
+(271, 2010, 60),
+(272, 2010, 61),
+(273, 2010, 62),
+(274, 2009, 6),
+(275, 2009, 63),
+(276, 2009, 64),
+(277, 2009, 65),
+(278, 2009, 66),
+(279, 2008, 6),
+(280, 2008, 67),
+(281, 2008, 63),
+(282, 2007, 68),
+(283, 2007, 69),
+(284, 2007, 6),
+(285, 2007, 70),
+(286, 2007, 6),
+(287, 2007, 9),
+(288, 2007, 37),
+(289, 2007, 71),
+(612, 2036, 6),
+(613, 2036, 139),
+(614, 2036, 191),
+(615, 2036, 192),
+(616, 2036, 193),
+(617, 2036, 194),
+(618, 2035, 6),
+(619, 2034, 6),
+(620, 2033, 6),
+(621, 2032, 17),
+(622, 2032, 25),
+(623, 2032, 27),
+(624, 2032, 26),
+(625, 2032, 28),
+(626, 2032, 29),
+(627, 2032, 30),
+(628, 2032, 3),
+(629, 2031, 17),
+(630, 2031, 32),
+(631, 2031, 195),
+(632, 2031, 196),
+(633, 2031, 197),
+(634, 2030, 6),
+(635, 2030, 84),
+(636, 2030, 18),
+(637, 2030, 198),
+(638, 2030, 199),
+(639, 2030, 200),
+(640, 2030, 201),
+(641, 2029, 17),
+(642, 2029, 17),
+(643, 2029, 92),
+(644, 2029, 42),
+(645, 2029, 37),
+(646, 2029, 49),
+(647, 2029, 32),
+(648, 2029, 202),
+(649, 2029, 203),
+(650, 2028, 6),
+(651, 2028, 52),
+(652, 2028, 202),
+(653, 2028, 49),
+(654, 2027, 6),
+(655, 2027, 111),
+(656, 2027, 204),
+(657, 2026, 3),
+(658, 2026, 4),
+(659, 2026, 5),
+(660, 2025, 6),
+(661, 2025, 8),
+(662, 2024, 9),
+(663, 2024, 6),
+(664, 2024, 10),
+(665, 2024, 11),
+(666, 2023, 12),
+(667, 2023, 6),
+(668, 2023, 13),
+(669, 2023, 14),
+(670, 2023, 15),
+(671, 2022, 6),
+(672, 2022, 16),
+(673, 2022, 17),
+(674, 2022, 18),
+(675, 2022, 19),
+(676, 2021, 6),
+(677, 2021, 20),
+(678, 2021, 21),
+(679, 2021, 22),
+(680, 2021, 23),
+(681, 2021, 24),
+(682, 2020, 17),
+(683, 2020, 25),
+(684, 2020, 26),
+(685, 2020, 27),
+(686, 2020, 28),
+(687, 2020, 29),
+(688, 2020, 3),
+(689, 2020, 30),
+(690, 2019, 31),
+(691, 2019, 17),
+(692, 2018, 17),
+(693, 2018, 25),
+(694, 2018, 27),
+(695, 2018, 26),
+(696, 2018, 28),
+(697, 2018, 29),
+(698, 2018, 30),
+(699, 2018, 3),
+(700, 2017, 32),
+(701, 2017, 17),
+(702, 2016, 34),
+(703, 2016, 35),
+(704, 2016, 6),
+(705, 2016, 35),
+(706, 2016, 36),
+(707, 2016, 37),
+(708, 2016, 38),
+(709, 2015, 39),
+(710, 2015, 40),
+(711, 2015, 41),
+(712, 2015, 42),
+(713, 2015, 43),
+(714, 2015, 44),
+(715, 2015, 45),
+(716, 2015, 46),
+(717, 2014, 6),
+(718, 2014, 47),
+(719, 2014, 48),
+(720, 2013, 53),
+(721, 2013, 6),
+(722, 2013, 49),
+(723, 2013, 50),
+(724, 2013, 51),
+(725, 2013, 52),
+(726, 2013, 47),
+(727, 2013, 53),
+(728, 2012, 42),
+(729, 2012, 6),
+(730, 2012, 54),
+(731, 2012, 55),
+(732, 2011, 6),
+(733, 2011, 56),
+(734, 2011, 57),
+(735, 2010, 6),
+(736, 2010, 18),
+(737, 2010, 58),
+(738, 2010, 59),
+(739, 2010, 60),
+(740, 2010, 61),
+(741, 2010, 62),
+(742, 2009, 6),
+(743, 2009, 63),
+(744, 2009, 66),
+(745, 2009, 64),
+(746, 2009, 65),
+(747, 2008, 6),
+(748, 2008, 63),
+(749, 2008, 67),
+(750, 2008, 32),
+(751, 2007, 68),
+(752, 2007, 69),
+(753, 2007, 6),
+(754, 2007, 70),
+(755, 2007, 6),
+(756, 2007, 9),
+(757, 2007, 37),
+(758, 2007, 71),
+(1055, 2036, 6),
+(1056, 2036, 191),
+(1057, 2036, 192),
+(1058, 2036, 193),
+(1059, 2036, 194),
+(1060, 2036, 139),
+(1061, 2035, 6),
+(1062, 2034, 6),
+(1063, 2033, 6),
+(1064, 2032, 17),
+(1065, 2032, 25),
+(1066, 2032, 27),
+(1067, 2032, 26),
+(1068, 2032, 28),
+(1069, 2032, 29),
+(1070, 2032, 30),
+(1071, 2032, 3),
+(1072, 2031, 17),
+(1073, 2031, 195),
+(1074, 2031, 32),
+(1075, 2031, 196),
+(1076, 2031, 197),
+(1077, 2030, 198),
+(1078, 2030, 6),
+(1079, 2030, 84),
+(1080, 2030, 199),
+(1081, 2030, 18),
+(1082, 2030, 200),
+(1083, 2030, 201),
+(1084, 2029, 202),
+(1085, 2029, 17),
+(1086, 2029, 203),
+(1087, 2029, 17),
+(1088, 2029, 92),
+(1089, 2029, 42),
+(1090, 2029, 37),
+(1091, 2029, 49),
+(1092, 2029, 32),
+(1093, 2028, 6),
+(1094, 2028, 52),
+(1095, 2028, 202),
+(1096, 2028, 49),
+(1097, 2027, 204),
+(1098, 2027, 6),
+(1099, 2027, 111),
+(1100, 2026, 3),
+(1101, 2026, 4),
+(1102, 2026, 5),
+(1103, 2025, 6),
+(1104, 2025, 8),
+(1105, 2024, 9),
+(1106, 2024, 6),
+(1107, 2024, 10),
+(1108, 2024, 11),
+(1109, 2023, 12),
+(1110, 2023, 6),
+(1111, 2023, 13),
+(1112, 2023, 14),
+(1113, 2023, 15),
+(1114, 2022, 6),
+(1115, 2022, 16),
+(1116, 2022, 17),
+(1117, 2022, 18),
+(1118, 2022, 19),
+(1119, 2021, 6),
+(1120, 2021, 20),
+(1121, 2021, 21),
+(1122, 2021, 22),
+(1123, 2021, 23),
+(1124, 2021, 24),
+(1125, 2020, 17),
+(1126, 2020, 25),
+(1127, 2020, 26),
+(1128, 2020, 27),
+(1129, 2020, 28),
+(1130, 2020, 29),
+(1131, 2020, 3),
+(1132, 2020, 30),
+(1133, 2019, 31),
+(1134, 2019, 17),
+(1135, 2018, 17),
+(1136, 2018, 25),
+(1137, 2018, 27),
+(1138, 2018, 26),
+(1139, 2018, 28),
+(1140, 2018, 29),
+(1141, 2018, 30),
+(1142, 2018, 3),
+(1143, 2017, 32),
+(1144, 2017, 17),
+(1145, 2016, 34),
+(1146, 2016, 35),
+(1147, 2016, 6),
+(1148, 2016, 35),
+(1149, 2016, 36),
+(1150, 2016, 37),
+(1151, 2016, 38),
+(1152, 2015, 39),
+(1153, 2015, 40),
+(1154, 2015, 41),
+(1155, 2015, 42),
+(1156, 2015, 43),
+(1157, 2015, 44),
+(1158, 2015, 45),
+(1159, 2015, 46),
+(1160, 2014, 6),
+(1161, 2014, 47),
+(1162, 2014, 48),
+(1163, 2013, 53),
+(1164, 2013, 6),
+(1165, 2013, 49),
+(1166, 2013, 50),
+(1167, 2013, 51),
+(1168, 2013, 52),
+(1169, 2013, 47),
+(1170, 2013, 53),
+(1171, 2012, 42),
+(1172, 2012, 6),
+(1173, 2012, 54),
+(1174, 2012, 55),
+(1175, 2011, 6),
+(1176, 2011, 56),
+(1177, 2011, 57),
+(1178, 2010, 6),
+(1179, 2010, 18),
+(1180, 2010, 58),
+(1181, 2010, 59),
+(1182, 2010, 60),
+(1183, 2010, 61),
+(1184, 2010, 62),
+(1185, 2009, 6),
+(1186, 2009, 63),
+(1187, 2009, 66),
+(1188, 2009, 64),
+(1189, 2009, 65),
+(1190, 2008, 6),
+(1191, 2008, 63),
+(1192, 2008, 67),
+(1193, 2008, 32),
+(1194, 2007, 68),
+(1195, 2007, 69),
+(1196, 2007, 6),
+(1197, 2007, 70),
+(1198, 2007, 6),
+(1199, 2007, 9),
+(1200, 2007, 37),
+(1201, 2007, 71),
+(1498, 2067, 17),
+(1499, 2067, 92),
+(1500, 2067, 205),
+(1501, 2051, 6),
+(1502, 2051, 46),
+(1503, 2051, 206),
+(1504, 2051, 207),
+(1505, 2051, 208),
+(1506, 2051, 209),
+(1507, 2050, 6),
+(1508, 2050, 165),
+(1509, 2050, 207),
+(1510, 2049, 17),
+(1511, 2049, 92),
+(1512, 2049, 32),
+(1513, 2049, 84),
+(1514, 2049, 210),
+(1515, 2049, 211),
+(1516, 2049, 212),
+(1517, 2049, 213),
+(1518, 2048, 17),
+(1519, 2048, 25),
+(1520, 2048, 27),
+(1521, 2048, 26),
+(1522, 2048, 28),
+(1523, 2048, 29),
+(1524, 2048, 30),
+(1525, 2048, 3),
+(1526, 2047, 53),
+(1527, 2047, 92),
+(1528, 2047, 10),
+(1529, 2047, 166),
+(1530, 2047, 36),
+(1531, 2047, 214),
+(1532, 2047, 215),
+(1533, 2047, 216),
+(1534, 2047, 217),
+(1535, 2047, 218),
+(1536, 2046, 6),
+(1537, 2045, 6),
+(1538, 2045, 219),
+(1539, 2045, 220),
+(1540, 2045, 221),
+(1541, 2044, 6),
+(1542, 2044, 32),
+(1543, 2044, 42),
+(1544, 2044, 222),
+(1545, 2044, 223),
+(1546, 2044, 224),
+(1547, 2044, 225),
+(1548, 2044, 226),
+(1549, 2044, 227),
+(1550, 2044, 228),
+(1551, 2043, 92),
+(1552, 2043, 6),
+(1553, 2043, 100),
+(1554, 2043, 101),
+(1555, 2043, 102),
+(1556, 2042, 6),
+(1557, 2042, 80),
+(1558, 2042, 229),
+(1559, 2042, 230),
+(1560, 2042, 231),
+(1561, 2042, 232),
+(1562, 2042, 233),
+(1563, 2041, 6),
+(1564, 2041, 234),
+(1565, 2041, 235),
+(1566, 2040, 6),
+(1567, 2040, 6),
+(1568, 2040, 236),
+(1569, 2040, 237),
+(1570, 2040, 238),
+(1571, 2040, 239),
+(1572, 2039, 52),
+(1573, 2039, 32),
+(1574, 2039, 240),
+(1575, 2039, 241),
+(1576, 2038, 17),
+(1577, 2038, 32),
+(1578, 2038, 242),
+(1579, 2037, 17),
+(1580, 2037, 17),
+(1581, 2037, 87),
+(1582, 2037, 37),
+(1583, 2037, 243),
+(1584, 2037, 244),
+(1585, 2037, 245),
+(1586, 2037, 246),
+(1587, 2037, 247),
+(1588, 2037, 248),
+(1589, 2036, 6),
+(1590, 2036, 191),
+(1591, 2036, 192),
+(1592, 2036, 193),
+(1593, 2036, 194),
+(1594, 2036, 139),
+(1595, 2035, 6),
+(1596, 2034, 6),
+(1597, 2034, 46),
+(1598, 2033, 6),
+(1599, 2032, 17),
+(1600, 2032, 25),
+(1601, 2032, 27),
+(1602, 2032, 26),
+(1603, 2032, 28),
+(1604, 2032, 29),
+(1605, 2032, 30),
+(1606, 2032, 3),
+(1607, 2031, 17),
+(1608, 2031, 195),
+(1609, 2031, 32),
+(1610, 2031, 196),
+(1611, 2031, 197),
+(1612, 2030, 198),
+(1613, 2030, 6),
+(1614, 2030, 84),
+(1615, 2030, 199),
+(1616, 2030, 18),
+(1617, 2030, 200),
+(1618, 2030, 201),
+(1619, 2029, 202),
+(1620, 2029, 17),
+(1621, 2029, 203),
+(1622, 2029, 17),
+(1623, 2029, 92),
+(1624, 2029, 42),
+(1625, 2029, 37),
+(1626, 2029, 49),
+(1627, 2029, 32),
+(1628, 2028, 6),
+(1629, 2028, 52),
+(1630, 2028, 202),
+(1631, 2028, 49),
+(1632, 2027, 204),
+(1633, 2027, 6),
+(1634, 2027, 111),
+(1635, 2026, 3),
+(1636, 2026, 4),
+(1637, 2026, 5),
+(1638, 2025, 6),
+(1639, 2025, 8),
+(1640, 2024, 9),
+(1641, 2024, 6),
+(1642, 2024, 10),
+(1643, 2024, 11),
+(1644, 2023, 12),
+(1645, 2023, 6),
+(1646, 2023, 13),
+(1647, 2023, 14),
+(1648, 2023, 15),
+(1649, 2022, 6),
+(1650, 2022, 16),
+(1651, 2022, 17),
+(1652, 2022, 18),
+(1653, 2022, 19),
+(1654, 2021, 6),
+(1655, 2021, 20),
+(1656, 2021, 21),
+(1657, 2021, 22),
+(1658, 2021, 23),
+(1659, 2021, 24),
+(1660, 2020, 17),
+(1661, 2020, 25),
+(1662, 2020, 26),
+(1663, 2020, 27),
+(1664, 2020, 28),
+(1665, 2020, 29),
+(1666, 2020, 3),
+(1667, 2020, 30),
+(1668, 2019, 31),
+(1669, 2019, 17),
+(1670, 2018, 17),
+(1671, 2018, 25),
+(1672, 2018, 27),
+(1673, 2018, 26),
+(1674, 2018, 28),
+(1675, 2018, 29),
+(1676, 2018, 30),
+(1677, 2018, 3),
+(1678, 2017, 32),
+(1679, 2017, 17),
+(1680, 2016, 34),
+(1681, 2016, 35),
+(1682, 2016, 6),
+(1683, 2016, 35),
+(1684, 2016, 36),
+(1685, 2016, 37),
+(1686, 2016, 38),
+(1687, 2015, 39),
+(1688, 2015, 40),
+(1689, 2015, 41),
+(1690, 2015, 42),
+(1691, 2015, 43),
+(1692, 2015, 44),
+(1693, 2015, 45),
+(1694, 2015, 46),
+(1695, 2014, 6),
+(1696, 2014, 47),
+(1697, 2014, 48),
+(1698, 2013, 53),
+(1699, 2013, 6),
+(1700, 2013, 49),
+(1701, 2013, 50),
+(1702, 2013, 51),
+(1703, 2013, 52),
+(1704, 2013, 47),
+(1705, 2013, 53),
+(1706, 2012, 42),
+(1707, 2012, 6),
+(1708, 2012, 54),
+(1709, 2012, 55),
+(1710, 2011, 6),
+(1711, 2011, 56),
+(1712, 2011, 57),
+(1713, 2010, 6),
+(1714, 2010, 18),
+(1715, 2010, 58),
+(1716, 2010, 59),
+(1717, 2010, 60),
+(1718, 2010, 61),
+(1719, 2010, 62),
+(1720, 2009, 6),
+(1721, 2009, 63),
+(1722, 2009, 66),
+(1723, 2009, 64),
+(1724, 2009, 65),
+(1725, 2008, 6),
+(1726, 2008, 63),
+(1727, 2008, 67),
+(1728, 2008, 32),
+(1729, 2007, 68),
+(1730, 2007, 69),
+(1731, 2007, 6),
+(1732, 2007, 70),
+(1733, 2007, 6),
+(1734, 2007, 9),
+(1735, 2007, 37),
+(1736, 2007, 71),
+(1737, 2077, 17),
+(1738, 2077, 183),
+(1739, 2077, 32),
+(1740, 2077, 37),
+(1741, 2077, 17),
+(1742, 2077, 91),
+(1743, 2077, 93),
+(1744, 2077, 134),
+(1745, 2077, 249),
+(1746, 2077, 250),
+(1747, 2076, 65),
+(1748, 2076, 6),
+(1749, 2076, 65),
+(1750, 2076, 191),
+(1751, 2076, 37),
+(1752, 2076, 91),
+(1753, 2076, 251),
+(1754, 2075, 3),
+(1755, 2073, 111),
+(1756, 2073, 37),
+(1757, 2073, 206),
+(1758, 2073, 111),
+(1759, 2073, 252),
+(1760, 2073, 253),
+(1761, 2073, 254),
+(1762, 2073, 255),
+(1763, 2073, 256),
+(1764, 2072, 17),
+(1765, 2072, 25),
+(1766, 2072, 26),
+(1767, 2072, 27),
+(1768, 2072, 28),
+(1769, 2072, 29),
+(1770, 2072, 3),
+(1771, 2072, 30),
+(1772, 2071, 132),
+(1773, 2071, 207),
+(1774, 2071, 98),
+(1775, 2071, 257),
+(1776, 2071, 258),
+(1777, 2071, 259),
+(1778, 2071, 260),
+(1779, 2070, 6),
+(1780, 2070, 261),
+(1781, 2069, 17),
+(1782, 2069, 25),
+(1783, 2069, 27),
+(1784, 2069, 26),
+(1785, 2069, 28),
+(1786, 2069, 29),
+(1787, 2069, 3),
+(1788, 2069, 30),
+(1789, 2068, 3),
+(1790, 2068, 3),
+(1791, 2068, 188),
+(1792, 2068, 254),
+(1793, 2068, 42),
+(1794, 2068, 262),
+(1795, 2068, 263),
+(1796, 2068, 264),
+(1797, 2068, 265),
+(1798, 2068, 266),
+(1799, 2067, 17),
+(1800, 2067, 205),
+(1801, 2067, 92),
+(1802, 2051, 206),
+(1803, 2051, 6),
+(1804, 2051, 46),
+(1805, 2051, 207),
+(1806, 2051, 208),
+(1807, 2051, 209),
+(1808, 2050, 6),
+(1809, 2050, 165),
+(1810, 2050, 207),
+(1811, 2049, 17),
+(1812, 2049, 210),
+(1813, 2049, 211),
+(1814, 2049, 92),
+(1815, 2049, 32),
+(1816, 2049, 212),
+(1817, 2049, 84),
+(1818, 2049, 213),
+(1819, 2048, 17),
+(1820, 2048, 25),
+(1821, 2048, 27),
+(1822, 2048, 26),
+(1823, 2048, 28),
+(1824, 2048, 29),
+(1825, 2048, 30),
+(1826, 2048, 3),
+(1827, 2047, 53),
+(1828, 2047, 214),
+(1829, 2047, 215),
+(1830, 2047, 216),
+(1831, 2047, 92),
+(1832, 2047, 10),
+(1833, 2047, 166),
+(1834, 2047, 36),
+(1835, 2047, 217),
+(1836, 2047, 218),
+(1837, 2046, 6),
+(1838, 2045, 6),
+(1839, 2045, 219),
+(1840, 2045, 220),
+(1841, 2045, 221),
+(1842, 2044, 6),
+(1843, 2044, 222),
+(1844, 2044, 223),
+(1845, 2044, 32),
+(1846, 2044, 224),
+(1847, 2044, 42),
+(1848, 2044, 225),
+(1849, 2044, 226),
+(1850, 2044, 227),
+(1851, 2044, 228),
+(1852, 2043, 92),
+(1853, 2043, 6),
+(1854, 2043, 100),
+(1855, 2043, 101),
+(1856, 2043, 102),
+(1857, 2042, 6),
+(1858, 2042, 229),
+(1859, 2042, 80),
+(1860, 2042, 230),
+(1861, 2042, 231),
+(1862, 2042, 232),
+(1863, 2042, 233),
+(1864, 2041, 234),
+(1865, 2041, 6),
+(1866, 2041, 235),
+(1867, 2040, 239),
+(1868, 2040, 6),
+(1869, 2040, 236),
+(1870, 2039, 240),
+(1871, 2039, 241),
+(1872, 2039, 52),
+(1873, 2039, 32),
+(1874, 2038, 17),
+(1875, 2038, 242),
+(1876, 2038, 32),
+(1877, 2037, 243),
+(1878, 2037, 244),
+(1879, 2037, 17),
+(1880, 2037, 17),
+(1881, 2037, 245),
+(1882, 2037, 246),
+(1883, 2037, 87),
+(1884, 2037, 247),
+(1885, 2037, 248),
+(1886, 2037, 37),
+(1887, 2036, 6),
+(1888, 2036, 191),
+(1889, 2036, 192),
+(1890, 2036, 193),
+(1891, 2036, 194),
+(1892, 2036, 139),
+(1893, 2035, 6),
+(1894, 2034, 6),
+(1895, 2034, 46),
+(1896, 2033, 6),
+(1897, 2032, 17),
+(1898, 2032, 25),
+(1899, 2032, 27),
+(1900, 2032, 26),
+(1901, 2032, 28),
+(1902, 2032, 29),
+(1903, 2032, 30),
+(1904, 2032, 3),
+(1905, 2031, 17),
+(1906, 2031, 195),
+(1907, 2031, 32),
+(1908, 2031, 196),
+(1909, 2031, 197),
+(1910, 2030, 198),
+(1911, 2030, 6),
+(1912, 2030, 84),
+(1913, 2030, 199),
+(1914, 2030, 18),
+(1915, 2030, 200),
+(1916, 2030, 201),
+(1917, 2029, 202),
+(1918, 2029, 17),
+(1919, 2029, 203),
+(1920, 2029, 17),
+(1921, 2029, 92),
+(1922, 2029, 42),
+(1923, 2029, 37),
+(1924, 2029, 49),
+(1925, 2029, 32),
+(1926, 2028, 6),
+(1927, 2028, 52),
+(1928, 2028, 202),
+(1929, 2028, 49),
+(1930, 2027, 204),
+(1931, 2027, 6),
+(1932, 2027, 111),
+(1933, 2026, 3),
+(1934, 2026, 4),
+(1935, 2026, 5),
+(1936, 2025, 6),
+(1937, 2025, 8),
+(1938, 2024, 9),
+(1939, 2024, 6),
+(1940, 2024, 10),
+(1941, 2024, 11),
+(1942, 2023, 12),
+(1943, 2023, 6),
+(1944, 2023, 13),
+(1945, 2023, 14),
+(1946, 2023, 15),
+(1947, 2022, 6),
+(1948, 2022, 16),
+(1949, 2022, 17),
+(1950, 2022, 18),
+(1951, 2022, 19),
+(1952, 2021, 6),
+(1953, 2021, 20),
+(1954, 2021, 21),
+(1955, 2021, 22),
+(1956, 2021, 23),
+(1957, 2021, 24),
+(1958, 2020, 17),
+(1959, 2020, 25),
+(1960, 2020, 26),
+(1961, 2020, 27),
+(1962, 2020, 28),
+(1963, 2020, 29),
+(1964, 2020, 3),
+(1965, 2020, 30),
+(1966, 2019, 31),
+(1967, 2019, 17),
+(1968, 2018, 17),
+(1969, 2018, 25),
+(1970, 2018, 27),
+(1971, 2018, 26),
+(1972, 2018, 28),
+(1973, 2018, 29),
+(1974, 2018, 30),
+(1975, 2018, 3),
+(1976, 2017, 32),
+(1977, 2017, 17),
+(1978, 2016, 34),
+(1979, 2016, 35),
+(1980, 2016, 6),
+(1981, 2016, 35),
+(1982, 2016, 36),
+(1983, 2016, 37),
+(1984, 2016, 38),
+(1985, 2015, 39),
+(1986, 2015, 40),
+(1987, 2015, 41),
+(1988, 2015, 42),
+(1989, 2015, 43),
+(1990, 2015, 44),
+(1991, 2015, 45),
+(1992, 2015, 46),
+(1993, 2014, 6),
+(1994, 2014, 47),
+(1995, 2014, 48),
+(1996, 2013, 53),
+(1997, 2013, 6),
+(1998, 2013, 49),
+(1999, 2013, 50),
+(2000, 2013, 51),
+(2001, 2013, 52),
+(2002, 2013, 47),
+(2003, 2013, 53),
+(2004, 2012, 42),
+(2005, 2012, 6),
+(2006, 2012, 54),
+(2007, 2012, 55),
+(2008, 2011, 6),
+(2009, 2011, 56),
+(2010, 2011, 57),
+(2011, 2010, 6),
+(2012, 2010, 18),
+(2013, 2010, 58),
+(2014, 2010, 59),
+(2015, 2010, 60),
+(2016, 2010, 61),
+(2017, 2010, 62),
+(2018, 2009, 6),
+(2019, 2009, 63),
+(2020, 2009, 66),
+(2021, 2009, 64),
+(2022, 2009, 65),
+(2023, 2008, 6),
+(2024, 2008, 63),
+(2025, 2008, 67),
+(2026, 2008, 32),
+(2027, 2007, 68),
+(2028, 2007, 69),
+(2029, 2007, 6),
+(2030, 2007, 70),
+(2031, 2007, 6),
+(2032, 2007, 9),
+(2033, 2007, 37),
+(2034, 2007, 71);
 
 --
 -- Dumping data for table `clicks`
 --
 
-INSERT INTO `clicks` VALUES(4056, 2014, 2067, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4057, 2014, 2050, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4058, 2015, 2067, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4059, 2015, 2015, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4060, 2015, 2051, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4061, 2015, 2050, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4062, 2015, 2016, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4063, 2014, 2015, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4064, 2014, 2051, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4065, 2014, 2016, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4066, 2014, 2011, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4067, 2015, 2047, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4068, 2015, 2049, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4069, 2015, 2038, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4070, 2015, 2031, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4071, 2015, 2011, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4072, 2015, 2077, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4073, 2015, 2074, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4074, 2015, 2068, '2011-05-05 20:57:35');
-INSERT INTO `clicks` VALUES(4075, 2017, 2011, '2011-05-05 21:00:32');
-INSERT INTO `clicks` VALUES(4076, 2017, 2016, '2011-05-05 21:00:44');
-INSERT INTO `clicks` VALUES(4077, 2017, 2074, '2011-05-05 21:01:20');
-INSERT INTO `clicks` VALUES(4078, 2017, 2015, '2011-05-05 21:13:43');
-
---
--- Triggers `clicks`
---
-DROP TRIGGER IF EXISTS `clicks_INSERT`;
-DELIMITER //
-CREATE TRIGGER `clicks_INSERT` BEFORE INSERT ON `clicks`
- FOR EACH ROW BEGIN
-    Set new.clicktime = now();
-END
-//
-DELIMITER ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `keywords`
---
-
-CREATE TABLE `keywords` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `word` varchar(64) NOT NULL,
-  `appearances` int(11) DEFAULT '1',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `word` (`word`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=267 ;
+INSERT INTO `clicks` (`id`, `user_id`, `article_id`, `clicktime`) VALUES
+(4056, 2014, 2067, '2011-05-05 20:57:35'),
+(4057, 2014, 2050, '2011-05-05 20:57:35'),
+(4058, 2015, 2067, '2011-05-05 20:57:35'),
+(4059, 2015, 2015, '2011-05-05 20:57:35'),
+(4060, 2015, 2051, '2011-05-05 20:57:35'),
+(4061, 2015, 2050, '2011-05-05 20:57:35'),
+(4062, 2015, 2016, '2011-05-05 20:57:35'),
+(4063, 2014, 2015, '2011-05-05 20:57:35'),
+(4064, 2014, 2051, '2011-05-05 20:57:35'),
+(4065, 2014, 2016, '2011-05-05 20:57:35'),
+(4066, 2014, 2011, '2011-05-05 20:57:35'),
+(4067, 2015, 2047, '2011-05-05 20:57:35'),
+(4068, 2015, 2049, '2011-05-05 20:57:35'),
+(4069, 2015, 2038, '2011-05-05 20:57:35'),
+(4070, 2015, 2031, '2011-05-05 20:57:35'),
+(4071, 2015, 2011, '2011-05-05 20:57:35'),
+(4072, 2015, 2077, '2011-05-05 20:57:35'),
+(4073, 2015, 2074, '2011-05-05 20:57:35'),
+(4074, 2015, 2068, '2011-05-05 20:57:35'),
+(4075, 2017, 2011, '2011-05-05 21:00:32'),
+(4076, 2017, 2016, '2011-05-05 21:00:44'),
+(4077, 2017, 2074, '2011-05-05 21:01:20'),
+(4078, 2017, 2015, '2011-05-05 21:13:43');
 
 --
 -- Dumping data for table `keywords`
 --
 
-INSERT INTO `keywords` VALUES(1, 'hockey', 1);
-INSERT INTO `keywords` VALUES(2, 'sports', 1);
-INSERT INTO `keywords` VALUES(3, ';', 47);
-INSERT INTO `keywords` VALUES(4, 'font', 26);
-INSERT INTO `keywords` VALUES(5, 'color', 19);
-INSERT INTO `keywords` VALUES(6, 'calendar', 8);
-INSERT INTO `keywords` VALUES(7, 'airplanes', 6);
-INSERT INTO `keywords` VALUES(8, 'see', 6);
-INSERT INTO `keywords` VALUES(9, 'will', 8);
-INSERT INTO `keywords` VALUES(10, 'be', 6);
-INSERT INTO `keywords` VALUES(11, 'festival', 6);
-INSERT INTO `keywords` VALUES(12, 'tiaa', 8);
-INSERT INTO `keywords` VALUES(13, 'cref', 8);
-INSERT INTO `keywords` VALUES(14, 'individual', 7);
-INSERT INTO `keywords` VALUES(15, 'retirement', 6);
-INSERT INTO `keywords` VALUES(16, 'confidential', 7);
-INSERT INTO `keywords` VALUES(17, 'a', 6);
-INSERT INTO `keywords` VALUES(18, 'events', 5);
-INSERT INTO `keywords` VALUES(19, 'fidelity', 5);
-INSERT INTO `keywords` VALUES(20, 'evening', 5);
-INSERT INTO `keywords` VALUES(21, 'last', 5);
-INSERT INTO `keywords` VALUES(22, 'classes', 5);
-INSERT INTO `keywords` VALUES(23, 'end', 5);
-INSERT INTO `keywords` VALUES(24, 'after', 5);
-INSERT INTO `keywords` VALUES(25, '#side', 24);
-INSERT INTO `keywords` VALUES(26, 'li', 17);
-INSERT INTO `keywords` VALUES(27, '#content', 17);
-INSERT INTO `keywords` VALUES(28, 'hover', 16);
-INSERT INTO `keywords` VALUES(29, 'span', 13);
-INSERT INTO `keywords` VALUES(30, 'list', 11);
-INSERT INTO `keywords` VALUES(31, 'nuclear', 31);
-INSERT INTO `keywords` VALUES(32, 'in', 60);
-INSERT INTO `keywords` VALUES(33, 'health', 21);
-INSERT INTO `keywords` VALUES(34, 'parking', 10);
-INSERT INTO `keywords` VALUES(35, 'april', 8);
-INSERT INTO `keywords` VALUES(36, 'may', 6);
-INSERT INTO `keywords` VALUES(37, '1', 5);
-INSERT INTO `keywords` VALUES(38, 'garage', 5);
-INSERT INTO `keywords` VALUES(39, 'studentclub', 133);
-INSERT INTO `keywords` VALUES(40, 'association', 40);
-INSERT INTO `keywords` VALUES(41, 'club', 36);
-INSERT INTO `keywords` VALUES(42, 'students', 34);
-INSERT INTO `keywords` VALUES(43, 'upac', 16);
-INSERT INTO `keywords` VALUES(44, 'society', 14);
-INSERT INTO `keywords` VALUES(45, 'council', 12);
-INSERT INTO `keywords` VALUES(46, 'union', 12);
-INSERT INTO `keywords` VALUES(47, 'edu', 7);
-INSERT INTO `keywords` VALUES(48, 'connect', 7);
-INSERT INTO `keywords` VALUES(49, 'science', 6);
-INSERT INTO `keywords` VALUES(50, 'nano', 5);
-INSERT INTO `keywords` VALUES(51, 'medicine', 5);
-INSERT INTO `keywords` VALUES(52, 'engineering', 5);
-INSERT INTO `keywords` VALUES(53, 'alumni', 5);
-INSERT INTO `keywords` VALUES(54, 'student', 7);
-INSERT INTO `keywords` VALUES(55, 'who', 6);
-INSERT INTO `keywords` VALUES(56, 'http', 5);
-INSERT INTO `keywords` VALUES(57, 'gas', 5);
-INSERT INTO `keywords` VALUES(58, 'emergency', 5);
-INSERT INTO `keywords` VALUES(59, 'large', 5);
-INSERT INTO `keywords` VALUES(60, 'scale', 5);
-INSERT INTO `keywords` VALUES(61, 'unprecedented', 5);
-INSERT INTO `keywords` VALUES(62, 'response', 5);
-INSERT INTO `keywords` VALUES(63, 'school', 6);
-INSERT INTO `keywords` VALUES(64, 'management', 5);
-INSERT INTO `keywords` VALUES(65, '&amp;', 5);
-INSERT INTO `keywords` VALUES(66, 'lally', 5);
-INSERT INTO `keywords` VALUES(67, 'jets', 6);
-INSERT INTO `keywords` VALUES(68, 'system', 10);
-INSERT INTO `keywords` VALUES(69, 'telephone', 9);
-INSERT INTO `keywords` VALUES(70, 'ip', 7);
-INSERT INTO `keywords` VALUES(71, 'cisco', 5);
-INSERT INTO `keywords` VALUES(72, 'photo', 10);
-INSERT INTO `keywords` VALUES(73, 'gallery', 6);
-INSERT INTO `keywords` VALUES(74, 'member', 5);
-INSERT INTO `keywords` VALUES(75, 'faculty', 7);
-INSERT INTO `keywords` VALUES(76, 'our', 6);
-INSERT INTO `keywords` VALUES(77, 'due', 5);
-INSERT INTO `keywords` VALUES(78, 'doctoral', 5);
-INSERT INTO `keywords` VALUES(79, 'dissertations', 5);
-INSERT INTO `keywords` VALUES(80, 'empac', 8);
-INSERT INTO `keywords` VALUES(81, 'matlab', 9);
-INSERT INTO `keywords` VALUES(82, 'code', 6);
-INSERT INTO `keywords` VALUES(83, 'terra', 6);
-INSERT INTO `keywords` VALUES(84, 'with', 5);
-INSERT INTO `keywords` VALUES(85, 'cafe', 5);
-INSERT INTO `keywords` VALUES(86, 'eat', 5);
-INSERT INTO `keywords` VALUES(87, 's', 5);
-INSERT INTO `keywords` VALUES(88, 'local', 5);
-INSERT INTO `keywords` VALUES(89, 'car', 9);
-INSERT INTO `keywords` VALUES(90, 'team', 8);
-INSERT INTO `keywords` VALUES(91, '2', 8);
-INSERT INTO `keywords` VALUES(92, 'is', 7);
-INSERT INTO `keywords` VALUES(93, '3', 6);
-INSERT INTO `keywords` VALUES(94, 'formula', 6);
-INSERT INTO `keywords` VALUES(95, 'ring', 34);
-INSERT INTO `keywords` VALUES(96, 'class', 24);
-INSERT INTO `keywords` VALUES(97, 'data', 5);
-INSERT INTO `keywords` VALUES(98, 'please', 6);
-INSERT INTO `keywords` VALUES(99, 'machines', 6);
-INSERT INTO `keywords` VALUES(100, 'observatory', 7);
-INSERT INTO `keywords` VALUES(101, 'observing', 7);
-INSERT INTO `keywords` VALUES(102, 'hirsch', 6);
-INSERT INTO `keywords` VALUES(103, '3d', 33);
-INSERT INTO `keywords` VALUES(104, 'research', 5);
-INSERT INTO `keywords` VALUES(105, 'office', 6);
-INSERT INTO `keywords` VALUES(106, 'graduate', 6);
-INSERT INTO `keywords` VALUES(107, 'master', 5);
-INSERT INTO `keywords` VALUES(108, 'theses', 5);
-INSERT INTO `keywords` VALUES(109, 'workplace', 12);
-INSERT INTO `keywords` VALUES(110, 'stress', 7);
-INSERT INTO `keywords` VALUES(111, '00', 6);
-INSERT INTO `keywords` VALUES(112, 'undergraduate', 6);
-INSERT INTO `keywords` VALUES(113, 'symposium', 5);
-INSERT INTO `keywords` VALUES(114, 'annual', 5);
-INSERT INTO `keywords` VALUES(115, 'radio', 6);
-INSERT INTO `keywords` VALUES(116, 'amateur', 5);
-INSERT INTO `keywords` VALUES(117, 'social', 9);
-INSERT INTO `keywords` VALUES(118, 'media', 8);
-INSERT INTO `keywords` VALUES(119, 'art', 7);
-INSERT INTO `keywords` VALUES(120, 'week', 6);
-INSERT INTO `keywords` VALUES(121, 'series', 6);
-INSERT INTO `keywords` VALUES(122, 'rma', 7);
-INSERT INTO `keywords` VALUES(123, 'deangelo', 6);
-INSERT INTO `keywords` VALUES(124, 'tv', 5);
-INSERT INTO `keywords` VALUES(125, 'projects', 5);
-INSERT INTO `keywords` VALUES(126, 'mane', 6);
-INSERT INTO `keywords` VALUES(127, 'soccer', 10);
-INSERT INTO `keywords` VALUES(128, 'gm', 6);
-INSERT INTO `keywords` VALUES(129, 'farmers', 6);
-INSERT INTO `keywords` VALUES(130, 'course', 11);
-INSERT INTO `keywords` VALUES(131, 'rpilms', 6);
-INSERT INTO `keywords` VALUES(132, 'rpinfo', 6);
-INSERT INTO `keywords` VALUES(133, 'your', 5);
-INSERT INTO `keywords` VALUES(134, 'you', 4);
-INSERT INTO `keywords` VALUES(135, 'site', 4);
-INSERT INTO `keywords` VALUES(136, 'new', 86);
-INSERT INTO `keywords` VALUES(137, 'professor', 64);
-INSERT INTO `keywords` VALUES(138, 'quirk', 9);
-INSERT INTO `keywords` VALUES(139, 'biology', 9);
-INSERT INTO `keywords` VALUES(140, 'relationships', 6);
-INSERT INTO `keywords` VALUES(141, 'financial', 11);
-INSERT INTO `keywords` VALUES(142, 'markets', 9);
-INSERT INTO `keywords` VALUES(143, 'current', 6);
-INSERT INTO `keywords` VALUES(144, 'discussion', 5);
-INSERT INTO `keywords` VALUES(145, 'bwjswidgetoptions', 12);
-INSERT INTO `keywords` VALUES(146, '37th', 5);
-INSERT INTO `keywords` VALUES(147, 'northeast', 5);
-INSERT INTO `keywords` VALUES(148, 'ieee', 5);
-INSERT INTO `keywords` VALUES(149, 'bioengineering', 5);
-INSERT INTO `keywords` VALUES(150, 'benelogic', 13);
-INSERT INTO `keywords` VALUES(151, 'login', 7);
-INSERT INTO `keywords` VALUES(152, 'portal', 6);
-INSERT INTO `keywords` VALUES(153, 'chemistry', 5);
-INSERT INTO `keywords` VALUES(154, 'department', 5);
-INSERT INTO `keywords` VALUES(155, 'seminar', 5);
-INSERT INTO `keywords` VALUES(156, 'chemical', 5);
-INSERT INTO `keywords` VALUES(157, 'finance', 8);
-INSERT INTO `keywords` VALUES(158, 'www', 5);
-INSERT INTO `keywords` VALUES(159, 'green', 6);
-INSERT INTO `keywords` VALUES(160, 'fall', 5);
-INSERT INTO `keywords` VALUES(161, '04', 5);
-INSERT INTO `keywords` VALUES(162, 'change', 15);
-INSERT INTO `keywords` VALUES(163, 'safety', 8);
-INSERT INTO `keywords` VALUES(164, 'information', 6);
-INSERT INTO `keywords` VALUES(165, 'session', 6);
-INSERT INTO `keywords` VALUES(166, 'this', 6);
-INSERT INTO `keywords` VALUES(167, 'associated', 6);
-INSERT INTO `keywords` VALUES(168, 'dye', 9);
-INSERT INTO `keywords` VALUES(169, 'tgif', 8);
-INSERT INTO `keywords` VALUES(170, 'shirt', 7);
-INSERT INTO `keywords` VALUES(171, 'tie', 7);
-INSERT INTO `keywords` VALUES(172, 'fund', 7);
-INSERT INTO `keywords` VALUES(173, 'ffa', 6);
-INSERT INTO `keywords` VALUES(174, 'severino', 6);
-INSERT INTO `keywords` VALUES(175, '0a', 7);
-INSERT INTO `keywords` VALUES(176, 'life', 7);
-INSERT INTO `keywords` VALUES(177, 'relay', 7);
-INSERT INTO `keywords` VALUES(178, 'house', 6);
-INSERT INTO `keywords` VALUES(179, 'has', 5);
-INSERT INTO `keywords` VALUES(180, 'lane', 3);
-INSERT INTO `keywords` VALUES(181, 'there', 3);
-INSERT INTO `keywords` VALUES(182, 'replaced', 5);
-INSERT INTO `keywords` VALUES(183, 'room', 4);
-INSERT INTO `keywords` VALUES(184, 'right', 3);
-INSERT INTO `keywords` VALUES(185, 'road', 3);
-INSERT INTO `keywords` VALUES(186, 'semi', 5);
-INSERT INTO `keywords` VALUES(187, 'greek', 10);
-INSERT INTO `keywords` VALUES(188, 'arts', 9);
-INSERT INTO `keywords` VALUES(189, 'month', 10);
-INSERT INTO `keywords` VALUES(190, 'testing', 6);
-INSERT INTO `keywords` VALUES(191, '05', 5);
-INSERT INTO `keywords` VALUES(192, 'poster', 5);
-INSERT INTO `keywords` VALUES(193, 'introduction', 5);
-INSERT INTO `keywords` VALUES(194, 'cell', 5);
-INSERT INTO `keywords` VALUES(195, 'games', 27);
-INSERT INTO `keywords` VALUES(196, 'game', 17);
-INSERT INTO `keywords` VALUES(197, 'gamefest', 15);
-INSERT INTO `keywords` VALUES(198, 'national', 12);
-INSERT INTO `keywords` VALUES(199, 'sandia', 7);
-INSERT INTO `keywords` VALUES(200, 'dr', 7);
-INSERT INTO `keywords` VALUES(201, 'laboratories', 6);
-INSERT INTO `keywords` VALUES(202, 'materials', 18);
-INSERT INTO `keywords` VALUES(203, 'fuel', 13);
-INSERT INTO `keywords` VALUES(204, 'rensselyrics', 8);
-INSERT INTO `keywords` VALUES(205, 'ideas', 14);
-INSERT INTO `keywords` VALUES(206, 'hours', 8);
-INSERT INTO `keywords` VALUES(207, 'summer', 7);
-INSERT INTO `keywords` VALUES(208, 'substation', 5);
-INSERT INTO `keywords` VALUES(209, 'postal', 5);
-INSERT INTO `keywords` VALUES(210, 'duenyas', 19);
-INSERT INTO `keywords` VALUES(211, '&rdquo;', 19);
-INSERT INTO `keywords` VALUES(212, 'said', 14);
-INSERT INTO `keywords` VALUES(213, '&mdash;', 13);
-INSERT INTO `keywords` VALUES(214, 'award', 13);
-INSERT INTO `keywords` VALUES(215, 'raa', 9);
-INSERT INTO `keywords` VALUES(216, 'awards', 9);
-INSERT INTO `keywords` VALUES(217, 'or', 6);
-INSERT INTO `keywords` VALUES(218, 'year', 6);
-INSERT INTO `keywords` VALUES(219, 'performance', 7);
-INSERT INTO `keywords` VALUES(220, 'human', 6);
-INSERT INTO `keywords` VALUES(221, 'resources', 6);
-INSERT INTO `keywords` VALUES(222, 'residence', 6);
-INSERT INTO `keywords` VALUES(223, 'participating', 5);
-INSERT INTO `keywords` VALUES(224, 'not', 5);
-INSERT INTO `keywords` VALUES(225, 'halls', 5);
-INSERT INTO `keywords` VALUES(226, 'apartments', 5);
-INSERT INTO `keywords` VALUES(227, 'close', 5);
-INSERT INTO `keywords` VALUES(228, '5pm', 5);
-INSERT INTO `keywords` VALUES(229, 'orchestra', 7);
-INSERT INTO `keywords` VALUES(230, 'youth', 5);
-INSERT INTO `keywords` VALUES(231, 'state', 5);
-INSERT INTO `keywords` VALUES(232, 'empire', 5);
-INSERT INTO `keywords` VALUES(233, 'albany', 5);
-INSERT INTO `keywords` VALUES(234, 'rio', 10);
-INSERT INTO `keywords` VALUES(235, 'screening', 7);
-INSERT INTO `keywords` VALUES(236, 'tournament', 7);
-INSERT INTO `keywords` VALUES(237, 'medical', 6);
-INSERT INTO `keywords` VALUES(238, 'global', 6);
-INSERT INTO `keywords` VALUES(239, 'brigades', 6);
-INSERT INTO `keywords` VALUES(240, 'snow', 15);
-INSERT INTO `keywords` VALUES(241, 'o&rsquo;rourke', 13);
-INSERT INTO `keywords` VALUES(242, 'business', 19);
-INSERT INTO `keywords` VALUES(243, 'k', 23);
-INSERT INTO `keywords` VALUES(244, 'z', 19);
-INSERT INTO `keywords` VALUES(245, 'e', 16);
-INSERT INTO `keywords` VALUES(246, 'u', 16);
-INSERT INTO `keywords` VALUES(247, 'r', 15);
-INSERT INTO `keywords` VALUES(248, 'v', 15);
-INSERT INTO `keywords` VALUES(249, 'clean', 12);
-INSERT INTO `keywords` VALUES(250, 'particles', 6);
-INSERT INTO `keywords` VALUES(251, 'day', 5);
-INSERT INTO `keywords` VALUES(252, 'inches', 49);
-INSERT INTO `keywords` VALUES(253, 'mainform', 39);
-INSERT INTO `keywords` VALUES(254, 'document', 39);
-INSERT INTO `keywords` VALUES(255, 'noresponse', 32);
-INSERT INTO `keywords` VALUES(256, 'n', 27);
-INSERT INTO `keywords` VALUES(257, 'home', 3);
-INSERT INTO `keywords` VALUES(258, 'equipment', 3);
-INSERT INTO `keywords` VALUES(259, 'us', 3);
-INSERT INTO `keywords` VALUES(260, 'contact', 3);
-INSERT INTO `keywords` VALUES(261, 'training', 13);
-INSERT INTO `keywords` VALUES(262, 'ga', 12);
-INSERT INTO `keywords` VALUES(263, 'mckinney', 11);
-INSERT INTO `keywords` VALUES(264, 'gaq', 10);
-INSERT INTO `keywords` VALUES(265, 'electronic', 8);
-INSERT INTO `keywords` VALUES(266, 'push', 6);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rss_articles`
---
-
-CREATE TABLE `rss_articles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `guid` varchar(512) NOT NULL,
-  `url` varchar(512) NOT NULL,
-  `title` varchar(256) DEFAULT NULL,
-  `description` varchar(1024) DEFAULT NULL,
-  `pubdate` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
-  UNIQUE KEY `guid` (`guid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2078 ;
+INSERT INTO `keywords` (`id`, `word`, `appearances`) VALUES
+(1, 'hockey', 1),
+(2, 'sports', 1),
+(3, ';', 47),
+(4, 'font', 26),
+(5, 'color', 19),
+(6, 'calendar', 8),
+(7, 'airplanes', 6),
+(8, 'see', 6),
+(9, 'will', 8),
+(10, 'be', 6),
+(11, 'festival', 6),
+(12, 'tiaa', 8),
+(13, 'cref', 8),
+(14, 'individual', 7),
+(15, 'retirement', 6),
+(16, 'confidential', 7),
+(17, 'a', 6),
+(18, 'events', 5),
+(19, 'fidelity', 5),
+(20, 'evening', 5),
+(21, 'last', 5),
+(22, 'classes', 5),
+(23, 'end', 5),
+(24, 'after', 5),
+(25, '#side', 24),
+(26, 'li', 17),
+(27, '#content', 17),
+(28, 'hover', 16),
+(29, 'span', 13),
+(30, 'list', 11),
+(31, 'nuclear', 31),
+(32, 'in', 60),
+(33, 'health', 21),
+(34, 'parking', 10),
+(35, 'april', 8),
+(36, 'may', 6),
+(37, '1', 5),
+(38, 'garage', 5),
+(39, 'studentclub', 133),
+(40, 'association', 40),
+(41, 'club', 36),
+(42, 'students', 34),
+(43, 'upac', 16),
+(44, 'society', 14),
+(45, 'council', 12),
+(46, 'union', 12),
+(47, 'edu', 7),
+(48, 'connect', 7),
+(49, 'science', 6),
+(50, 'nano', 5),
+(51, 'medicine', 5),
+(52, 'engineering', 5),
+(53, 'alumni', 5),
+(54, 'student', 7),
+(55, 'who', 6),
+(56, 'http', 5),
+(57, 'gas', 5),
+(58, 'emergency', 5),
+(59, 'large', 5),
+(60, 'scale', 5),
+(61, 'unprecedented', 5),
+(62, 'response', 5),
+(63, 'school', 6),
+(64, 'management', 5),
+(65, '&amp;', 5),
+(66, 'lally', 5),
+(67, 'jets', 6),
+(68, 'system', 10),
+(69, 'telephone', 9),
+(70, 'ip', 7),
+(71, 'cisco', 5),
+(72, 'photo', 10),
+(73, 'gallery', 6),
+(74, 'member', 5),
+(75, 'faculty', 7),
+(76, 'our', 6),
+(77, 'due', 5),
+(78, 'doctoral', 5),
+(79, 'dissertations', 5),
+(80, 'empac', 8),
+(81, 'matlab', 9),
+(82, 'code', 6),
+(83, 'terra', 6),
+(84, 'with', 5),
+(85, 'cafe', 5),
+(86, 'eat', 5),
+(87, 's', 5),
+(88, 'local', 5),
+(89, 'car', 9),
+(90, 'team', 8),
+(91, '2', 8),
+(92, 'is', 7),
+(93, '3', 6),
+(94, 'formula', 6),
+(95, 'ring', 34),
+(96, 'class', 24),
+(97, 'data', 5),
+(98, 'please', 6),
+(99, 'machines', 6),
+(100, 'observatory', 7),
+(101, 'observing', 7),
+(102, 'hirsch', 6),
+(103, '3d', 33),
+(104, 'research', 5),
+(105, 'office', 6),
+(106, 'graduate', 6),
+(107, 'master', 5),
+(108, 'theses', 5),
+(109, 'workplace', 12),
+(110, 'stress', 7),
+(111, '00', 6),
+(112, 'undergraduate', 6),
+(113, 'symposium', 5),
+(114, 'annual', 5),
+(115, 'radio', 6),
+(116, 'amateur', 5),
+(117, 'social', 9),
+(118, 'media', 8),
+(119, 'art', 7),
+(120, 'week', 6),
+(121, 'series', 6),
+(122, 'rma', 7),
+(123, 'deangelo', 6),
+(124, 'tv', 5),
+(125, 'projects', 5),
+(126, 'mane', 6),
+(127, 'soccer', 10),
+(128, 'gm', 6),
+(129, 'farmers', 6),
+(130, 'course', 11),
+(131, 'rpilms', 6),
+(132, 'rpinfo', 6),
+(133, 'your', 5),
+(134, 'you', 4),
+(135, 'site', 4),
+(136, 'new', 86),
+(137, 'professor', 64),
+(138, 'quirk', 9),
+(139, 'biology', 9),
+(140, 'relationships', 6),
+(141, 'financial', 11),
+(142, 'markets', 9),
+(143, 'current', 6),
+(144, 'discussion', 5),
+(145, 'bwjswidgetoptions', 12),
+(146, '37th', 5),
+(147, 'northeast', 5),
+(148, 'ieee', 5),
+(149, 'bioengineering', 5),
+(150, 'benelogic', 13),
+(151, 'login', 7),
+(152, 'portal', 6),
+(153, 'chemistry', 5),
+(154, 'department', 5),
+(155, 'seminar', 5),
+(156, 'chemical', 5),
+(157, 'finance', 8),
+(158, 'www', 5),
+(159, 'green', 6),
+(160, 'fall', 5),
+(161, '04', 5),
+(162, 'change', 15),
+(163, 'safety', 8),
+(164, 'information', 6),
+(165, 'session', 6),
+(166, 'this', 6),
+(167, 'associated', 6),
+(168, 'dye', 9),
+(169, 'tgif', 8),
+(170, 'shirt', 7),
+(171, 'tie', 7),
+(172, 'fund', 7),
+(173, 'ffa', 6),
+(174, 'severino', 6),
+(175, '0a', 7),
+(176, 'life', 7),
+(177, 'relay', 7),
+(178, 'house', 6),
+(179, 'has', 5),
+(180, 'lane', 3),
+(181, 'there', 3),
+(182, 'replaced', 5),
+(183, 'room', 4),
+(184, 'right', 3),
+(185, 'road', 3),
+(186, 'semi', 5),
+(187, 'greek', 10),
+(188, 'arts', 9),
+(189, 'month', 10),
+(190, 'testing', 6),
+(191, '05', 5),
+(192, 'poster', 5),
+(193, 'introduction', 5),
+(194, 'cell', 5),
+(195, 'games', 27),
+(196, 'game', 17),
+(197, 'gamefest', 15),
+(198, 'national', 12),
+(199, 'sandia', 7),
+(200, 'dr', 7),
+(201, 'laboratories', 6),
+(202, 'materials', 18),
+(203, 'fuel', 13),
+(204, 'rensselyrics', 8),
+(205, 'ideas', 14),
+(206, 'hours', 8),
+(207, 'summer', 7),
+(208, 'substation', 5),
+(209, 'postal', 5),
+(210, 'duenyas', 19),
+(211, '&rdquo;', 19),
+(212, 'said', 14),
+(213, '&mdash;', 13),
+(214, 'award', 13),
+(215, 'raa', 9),
+(216, 'awards', 9),
+(217, 'or', 6),
+(218, 'year', 6),
+(219, 'performance', 7),
+(220, 'human', 6),
+(221, 'resources', 6),
+(222, 'residence', 6),
+(223, 'participating', 5),
+(224, 'not', 5),
+(225, 'halls', 5),
+(226, 'apartments', 5),
+(227, 'close', 5),
+(228, '5pm', 5),
+(229, 'orchestra', 7),
+(230, 'youth', 5),
+(231, 'state', 5),
+(232, 'empire', 5),
+(233, 'albany', 5),
+(234, 'rio', 10),
+(235, 'screening', 7),
+(236, 'tournament', 7),
+(237, 'medical', 6),
+(238, 'global', 6),
+(239, 'brigades', 6),
+(240, 'snow', 15),
+(241, 'o&rsquo;rourke', 13),
+(242, 'business', 19),
+(243, 'k', 23),
+(244, 'z', 19),
+(245, 'e', 16),
+(246, 'u', 16),
+(247, 'r', 15),
+(248, 'v', 15),
+(249, 'clean', 12),
+(250, 'particles', 6),
+(251, 'day', 5),
+(252, 'inches', 49),
+(253, 'mainform', 39),
+(254, 'document', 39),
+(255, 'noresponse', 32),
+(256, 'n', 27),
+(257, 'home', 3),
+(258, 'equipment', 3),
+(259, 'us', 3),
+(260, 'contact', 3),
+(261, 'training', 13),
+(262, 'ga', 12),
+(263, 'mckinney', 11),
+(264, 'gaq', 10),
+(265, 'electronic', 8),
+(266, 'push', 6);
 
 --
 -- Dumping data for table `rss_articles`
 --
 
-INSERT INTO `rss_articles` VALUES(2007, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b419e54-00006ce0calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b419e54-00006ce0calendars@rpi.edu&recurrenceId=', 'Cisco IP Telephone System Maintenance Scheduled for Friday, April 15', '\nFriday,        April 15, 2011 6:30 AM          -        7:30 AM                                  Where: Campus-wide                                   Description: On Friday April 15, 2011 from 6:30am until 7:30am, maintenance will be performed on the Cisco IP Telephone system.  IP telephone service will not be available during this time, but the IBX telephone system and the campus voice mail system will continue to function.                                  Contact: Telecommunications 518-276-6609 Nancy Williams', '2011-04-12 10:25:05');
-INSERT INTO `rss_articles` VALUES(2008, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b2e3710-00003841calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b2e3710-00003841calendars@rpi.edu&recurrenceId=', 'Mathematical Sciences Colloquium -- Dynamics of Multiple Zonal Jets in the Oceans and Atmospheres', '\nThursday,        April 28, 2011 4:00 PM          -        5:00 PM                                  Where: Amos Eaton 214                                   Description: Speaker: Dr. Pavel Berloff (Woods Hole Oceanographic Institution)"Dynamics of multiple zonal jets in the oceans and atmospheres"Abstract: Multiple zonal jets in the atmospheres of giant gas planets have been known for a long time, and, recently, dozens of somewhat similar jets have been discovered in the Earth''s oceans.Host: Yuri Lvov                                  Contact: Fengyan Li 518-276-3201', '2011-04-12 09:30:02');
-INSERT INTO `rss_articles` VALUES(2009, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a631d61-00007fd5calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a631d61-00007fd5calendars@rpi.edu&recurrenceId=', 'Lally School to Hold Management and Organization Research Seminar', '\nFriday,        April 22, 2011 12:00 PM          -        1:30 PM                                  Where: Pittsburgh 5114                                   Description: Shyam KumarAssistant Professor, The Lally School                                  Contact: Jessica Nash 276-2637', '2011-04-12 05:50:03');
-INSERT INTO `rss_articles` VALUES(2010, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a53011c-00005fd5calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a53011c-00005fd5calendars@rpi.edu&recurrenceId=', 'Seminar to Discuss Coordination of Emergency Response to Unprecedented Large-Scale Events', '\nWednesday,        April 20, 2011 3:00 PM          -        4:30 PM                                  Where: CII 5003                                   Cost: free                                        Description: SeminarDr. Graham Coates, Durham University, UKCoordination of Emergency Response to Unprecedented Large-Scale Events                                  Contact: Mary S. Wagner 2895', '2011-04-12 05:50:03');
-INSERT INTO `rss_articles` VALUES(2011, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a19a7ca-00003565calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a19a7ca-00003565calendars@rpi.edu&recurrenceId=', 'Rensselaer Carpooling Service Already Showing Results', '\nWednesday,        April 13, 2011 10:00 AM                                  Where: Various campus buildings/locations                                   Description: As fuel prices continue to rise, in just two weeks Rensselaer carpoolers have saved 16 gallons of gas, 335 vehicle miles, 272 pounds of emissions, and $199 in total savings. Please go to http://www.ipool2.org/en-US to start saving!                                  Contact: Parking and Transportation 518-276-6616', '2011-04-12 04:55:03');
-INSERT INTO `rss_articles` VALUES(2012, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a13f0a9-00002abbcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a13f0a9-00002abbcalendars@rpi.edu&recurrenceId=', 'Help Sponsor Students for the 15th Annual Student Appreciation Dinner!', '\nTuesday,        April 12, 2011 5:30 PM          -        Tue          ,          April 26, 2011 7:30 PM                                  Where: Russell Sage Dining Hall                                   Cost: $10 per sponsored student                                        Description: This special event on April 26 (Tuesday) honors those Rensselaer students who who are valued on campus for their work as TAs, LAs, RAs, work-study students, student employees, and student leaders and who provide dedicated service to the campus.The deadline for reservations is Monday, April 25. Departments which want to sponsor students for the dinner should contact Patti at ext 2874.                                  Contact: Community Service - DOSO 518-276-3098', '2011-04-12 04:55:03');
-INSERT INTO `rss_articles` VALUES(2013, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-154a6b18-00004cf5calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-154a6b18-00004cf5calendars@rpi.edu&recurrenceId=', 'Nano 2011 Conference, "Medicine, Science and Engineering," Scheduled for May 2', '\nMonday,        May 2, 2011 8:00 AM          -        5:00 PM                                  Where: Biotech Auditorium                                   Description: Nano 2011 - Medicine, Science and Engineering, 8am-5pm                                  Contact: Alumni Relations 518-276-6205', '2011-04-12 06:05:04');
-INSERT INTO `rss_articles` VALUES(2014, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-465510d7-00007d59calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-465510d7-00007d59calendars@rpi.edu&recurrenceId=', 'Counseling Center to Offer Suicide Prevention Training', '\nWednesday,        April 27, 2011 10:00 AM          -        12:00 PM                                  Where: Other - See Text                                   Description: Suicide Prevention: Campus Connect Gatekeeper Training Wednesday, April 27, 10 am-12 pm Rensselaer Student Union Room 2424 (Patroon Room) Presenter: Heidi Riello, LCSWCampus Connect is a two-hour interactive program designed to train potential gatekeepers, including students, faculty, and staff, to identify and refer students who are experiencing suicidal or other mental health concerns. Please contact Heidi Riello in the Counseling Center at 276-6479 or spruch@rpi.edu to register.                                  Contact: Counseling Center 518-276-6479', '2011-04-11 11:45:04');
-INSERT INTO `rss_articles` VALUES(2015, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-45f9a774-00000a0ecalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-45f9a774-00000a0ecalendars@rpi.edu&recurrenceId=', 'Union Executive Board Application 2011 Release', '\nTuesday,        April 12, 2011           -        Fri          ,          April 22, 2011 (all day)                                  Where: Rensselaer Union                                   Description: One of the first and most important jobs for the next President of the Union will be to put together a strong Executive Board to guide the Rensselaer Union through the next fiscal year. Interested students should fill out and submit the attached questionnaire. This is an excellent opportunity for any active RPI student (graduate or undergraduate). The next PU will conduct the interviews and appointments.                                  Contact: Rensselaer Union 518-276-6505', '2011-04-11 09:55:03');
-INSERT INTO `rss_articles` VALUES(2016, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-453e31fc-00001967calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-453e31fc-00001967calendars@rpi.edu&recurrenceId=', 'Parking Garage to Close April 29-May 1', '\nFriday,        April 29, 2011 11:00 AM          -        Sun          ,          May 1, 2011 11:00 AM                                  Where: Various campus buildings/locations                                   Description: The Parking Garage on College Avenue will be closed the weekend of April 29 through May 1 for annual cleaning.  All who park in the garage should please remove their vehicles by 6:00pm on Friday, April 29. Alternate parking will be available in the Academy Hall lot.                                  Contact: Parking and Transportation 518-276-6616', '2011-04-11 06:20:06');
-INSERT INTO `rss_articles` VALUES(2017, 'http://news.rpi.edu/update.do?artcenterkey=2857', 'http://news.rpi.edu/update.do?artcenterkey=2857', 'Leading Worldwide Health and Wellness Expert and U.S. Surgeon General Regina M. Benjamin Will Speak at 205th Rensselaer Polytechnic Institute Commencement May 28', '\n          U.S. Surgeon General and Vice Admiral Regina M. Benjamin     one of the worlds leading experts on public health and a key    player in the national debate on health care reform  will    deliver the main address at the 205th Rensselaer Polytechnic    Institute Commencement on May 28.      ', '2011-04-20 07:25:00');
-INSERT INTO `rss_articles` VALUES(2018, 'http://twitter.com/RPInews/statuses/60751805776273408', 'http://twitter.com/RPInews/statuses/60751805776273408', 'RPInews: Smithsonian Leader W. Clough and Retired #RPI Board Chmn.-Alumnus S. Heffner Also Will be Honored at 205th Commencement:http://bit.ly/h2DWHc', '\nRPInews: Smithsonian leader W. Clough and retired #RPI Board Chmn.-alumnus S. Heffner also will be honored at 205th Commencement:http://bit.ly/h2DWHc', '2011-04-20 07:08:53');
-INSERT INTO `rss_articles` VALUES(2019, 'http://news.rpi.edu/update.do?artcenterkey=2856', 'http://news.rpi.edu/update.do?artcenterkey=2856', 'Rensselaer Secures $1.5 Million From the National Nuclear Security Administration To Launch New Nuclear Safety Research Program and Lab', '\n          The funds will support a new nuclear engineering research    program and laboratory at Rensselaer, dedicated to the careful    measurement and analysis of high-accuracy nuclear interaction    data.      ', '2011-04-20 03:14:00');
-INSERT INTO `rss_articles` VALUES(2020, 'http://twitter.com/RPInews/statuses/60688913664192512', 'http://twitter.com/RPInews/statuses/60688913664192512', '#RPInews', '\nCongrats to #RPI senior Brent Solina and his company MICROrganic for 2nd place in Loyola Univ. bus. plan competition: http://bit.ly/dPIG55', '2011-04-20 02:58:59');
-INSERT INTO `rss_articles` VALUES(2021, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28bb53b3-0128-bc6b84ef-00001629calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28bb53b3-0128-bc6b84ef-00001629calendars@rpi.edu&recurrenceId=', 'Spring Classes End after Last Evening Class on May 10', '\nTuesday,        May 10, 2011 (all day)                                  Where: Campus-wide                                   Description: Classes end after last evening class                                  Contact: Registrar 518-276-6231', '2011-04-20 06:20:06');
-INSERT INTO `rss_articles` VALUES(2022, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f0b09a9-012f-0d6d238d-00004afdcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f0b09a9-012f-0d6d238d-00004afdcalendars@rpi.edu&recurrenceId=', 'Fidelity Investments to Offer Retirement Consultations May 10', '\nTuesday,        May 10, 2011 (all day)                                  Where: HR, Gurley Building, Second Floor                                   Description: Schedule a confidential consultation to help you become better informed and more confident about your workplace retirement savings plan benefits. To schedule an appointment for a confidential one-on-one consultation, please visit the Fidelity website.  TTY service for the hearing impaired is available at 1-800-259-9743, Monday through Friday, 8:00 a.m. to midnight ET.                                  Contact: Human Resources 518-276-6302', '2011-04-20 06:20:06');
-INSERT INTO `rss_articles` VALUES(2023, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e51dbbd-012e-52daa900-00001e72calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e51dbbd-012e-52daa900-00001e72calendars@rpi.edu&recurrenceId=', 'TIAA-CREF to Offer Retirement Counseling May 10', '\nTuesday,        May 10, 2011 9:00 AM          -        5:00 PM                                  Where: HR, Gurley Building, Second Floor                                   Description: Peter Crehan, Consultant - Individual Client Services, from TIAA-CREF will be on campus on Tuesday, May 10, for one-on-one consultations on a broad range of retirement topics.  Attend this upcoming event to help you become better informed and more confident about Rensselaer''s retirement plan benefits. Consultations will be conducted in 60 minute increments. To schedule your individual retirement counseling, please call TIAA-CREF at 1-800-732-8353.                                  Contact: Human Resources 518-276-6302', '2011-04-20 06:20:06');
-INSERT INTO `rss_articles` VALUES(2024, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-70a1a719-000041a9calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-70a1a719-000041a9calendars@rpi.edu&recurrenceId=', 'Rensselaer Bengali Community to Hold Spring Festival: Bhoishaki Mela', '\nSaturday,        April 23, 2011 11:00 AM          -        3:00 PM                                  Where: Commons Field                                   Cost: FREE                                        Description: Shubho Noboborsho!! That means Happy New Year in Bengali!! So come help us celebrate the New Year at RBC Spring Festival: Bhoishaki Mela!! We will be serving free food: burgers (beef), hotdogs (turkey), veggie burgers, and we will feature a bhel puri bar! Play games, listen to music, and have fun!! Invite your friends!!We will be in commons field from 11am-3pm this Saturday April 23rd. If it is raining the location will be the Armory.                                  Contact: Jaya Pattem', '2011-04-20 04:45:12');
-INSERT INTO `rss_articles` VALUES(2025, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-6f3a2ddb-0000664ecalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-6f3a2ddb-0000664ecalendars@rpi.edu&recurrenceId=', 'RAF to Sponsor Lawrence H.R.Thiers Memorial Fly-In', '\nSaturday,        April 23, 2011 10:00 AM          -        5:00 PM                                  Where: Off-campus (see description)                                   Cost: See description                                        Description: Airplanes- Airplanes- Airplanes- come and see all kinds - entertainment, food, raffles- Dinosaur BBQ on sale. Great for kids of all ages. Admissions- $10 for adults; $5 students and free to kids under 5 years of age. Schenectady County Airport- route 50- Schenectady (at Richmor Aviation) See web site for directions. Rides provided to students if needed, check web site for information.                                  Contact: Rensselaer Union 518-276-6505', '2011-04-19 10:15:08');
-INSERT INTO `rss_articles` VALUES(2026, 'http://us1.campaign-archive.com/?u=9fda259e30370acf119e27745&id=15a543efcc', 'http://us1.campaign-archive.com/?u=9fda259e30370acf119e27745&id=15a543efcc', 'EMPAC to Offer Summer Workshops in Music and Audio', '\nEMPAC will be offering two unique one-week workshops this summer, each suited for advanced undergrads, graduate students, and professionals.', '2011-04-19 07:31:09');
-INSERT INTO `rss_articles` VALUES(2027, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-9845a57f-00007ebbcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-9845a57f-00007ebbcalendars@rpi.edu&recurrenceId=', 'Rensselyrics to Hold Spring Invitational Concert', '\nSaturday,        May 7, 2011 8:00 PM          -        10:00 PM                                  Where: Chapel + Cultural Center  2125 Burdett Avenue, Troy, NY                                  Cost: $4 in advance or $5 at the door                                        Description: The Chapel + Cultural Center at RPI is proud to present:The Rensselyrics Spring Invitational Concert. Tickets are on sale for $4.00 at DCC Great Hall and the RPI Student Union West Lobby.Tickets will also be sold at the door for $5.00 on the evening of the performance.The Rensselyrics will be performing dynamic, contemporary,a cappella songs with guest performances by The Chordials of Cornell University and The Golden Notes of St. Rose College.                                  Contact: Anne Tory 518-274-7793', '2011-04-27 09:05:11');
-INSERT INTO `rss_articles` VALUES(2028, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-985416aa-0000204dcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-985416aa-0000204dcalendars@rpi.edu&recurrenceId=', 'MSE Seminar -- Opto-Electronic Properties of Solution Processable Chemically Derived Graphene', '\nMonday,        May 16, 2011 11:00 AM          -        12:00 PM                                  Where: Folsom Library Fischbach Room                                   Description: "Opto-electronic properties of solution processable chemically derived graphene"Manish Chhowalla, Materials Science and Engineering, Rutgers University                                  Contact: Materials Science and Engineering 518-276-6372', '2011-04-27 09:05:11');
-INSERT INTO `rss_articles` VALUES(2029, 'http://feedproxy.google.com/~r/TheApproach/~3/ffsdOsfsmI8/', 'http://feedproxy.google.com/~r/TheApproach/~3/ffsdOsfsmI8/', '3Ã‚Â° with Dan Lewis', '\nProfessor Dan Lewis, in the Department of Materials Science and Engineering, recently won an NSF CAREER Award for his research into the structure and performance of metals and ceramics. He also leads the Fuel Cell and Hydrogen Research Lab at Rensselaer. We asked Dan about his work:Q: So, whats a fuel cell?A: A fuel cell is an energy conversion device the produces electrical power and heat for use in many different applications. Unlike batteries, as long as fuel is supplied, the fuel cell will continue to operate.When will fuel cells and hydrogen fuel start to be integrated into commercialized products?They already are in some products! For example, some truck manufacturers are using fuel cells for auxiliary power needs rather than using the diesel engine. This is done for increased fuel efficiency. Other manufacturers are producing fuel cell systems to produce electricity and hot water for homes. The most notable company is Bloom Energy. They are building a business in supplying power for industrial custome', '2011-04-27 06:57:52');
-INSERT INTO `rss_articles` VALUES(2030, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-97b1ce58-000054c1calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-97b1ce58-000054c1calendars@rpi.edu&recurrenceId=', 'Dr. Paul Hommert Ã¢Â€Â™72, Sandia National Laboratories, to Speak on Excellence in National Interests', '\nThursday,        April 28, 2011 2:00 PM          -        3:00 PM                                  Where: JEC 3117                                   Description: Meet Dr. Paul Hommert, 72, President and Director, Sandia National Laboratories along with Dr. Michael Cieslak, 77, 83, Director Nuclear Product EngineeringLecture open to the campus: The impact of engineering and science on national security with a focus on the work of Sandia National Laboratories including how they interact with universities and fund research. Location: JEC 3117, refreshments served                                  Contact: Advancement Events 518-276-6882', '2011-04-27 06:10:10');
-INSERT INTO `rss_articles` VALUES(2031, 'http://news.rpi.edu/update.do?artcenterkey=2862', 'http://news.rpi.edu/update.do?artcenterkey=2862', 'GameFest 2011, May 6-7, Expands the Boundaries of Games and Simulation', '\n          Augmented Reality, Microsoft Kinect, mobile apps, and    so-called "serious games" are all part of     GameFest 2011, to be held May 6-7 at Rensselaer.      ', '2011-04-27 03:24:00');
-INSERT INTO `rss_articles` VALUES(2032, 'http://twitter.com/RPInews/statuses/62956221484900352', 'http://twitter.com/RPInews/statuses/62956221484900352', '#RPInews', '\nRPInews: GameFest at #RPI May 6-7: student designed games including "Tic" to be released on Xbox Live Indie. Learn more at http://bit.ly/e6hQxD', '2011-04-26 09:08:27');
-INSERT INTO `rss_articles` VALUES(2033, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c234fd-0000427acalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c234fd-0000427acalendars@rpi.edu&recurrenceId=', '"Sheer Idiots" Show to Offer Free Night of Improv Comedy', '\nFriday,        May 6, 2011 8:00 PM          -        10:00 PM                                  Where: Rensselaer Union McNeil Room                                   Cost: free                                        Description: Improv comedy                                  Contact: Rensselaer Union 518-276-6505', '2011-04-26 07:20:09');
-INSERT INTO `rss_articles` VALUES(2034, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c45063-00004496calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c45063-00004496calendars@rpi.edu&recurrenceId=', 'UPAC Concerts  to Host Show for Students, Guests', '\nSaturday,        May 7, 2011 7:00 PM          -        9:00 PM                                  Where: Rensselaer Union McNeil Room                                   Cost: varies                                        Description: For RPI students and their guests                                  Contact: Rensselaer Union 518-276-6505', '2011-04-26 07:20:09');
-INSERT INTO `rss_articles` VALUES(2035, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c5b9f4-00004762calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c5b9f4-00004762calendars@rpi.edu&recurrenceId=', 'Rensselyrics Show Scheduled for Evening of May 7', '\nSaturday,        May 7, 2011 8:00 PM          -        11:00 PM                                  Where: Rensselaer Union McNeil Room                                   Description: A Cappella                                  Contact: Rensselaer Union 518-276-6505', '2011-04-26 07:20:09');
-INSERT INTO `rss_articles` VALUES(2036, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92684305-0000000bcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92684305-0000000bcalendars@rpi.edu&recurrenceId=', 'Introduction to Cell Biology Poster Session Slated for May 5', '\nThursday,        May 5, 2011 5:00 PM          -        7:00 PM                                  Where: Heffner Alumni House Great Hall                                   Description: Introduction to Cell Biology students will display and discuss their poster representing their in-class research projects.Please join us and show your support!                                  Contact: George Edick 518-276-8431', '2011-04-26 05:40:10');
-INSERT INTO `rss_articles` VALUES(2037, 'http://www.lrc.rpi.edu/resources/newsroom/pdf/CallForSubjects_04_26_2011.pdf', 'http://www.lrc.rpi.edu/resources/newsroom/pdf/CallForSubjects_04_26_2011.pdf', 'Lighting Research Center Recruiting Subjects Over the Age of 18 to Participate in Paid Nighttime Study', '\nThe LRC is recruiting subjects over the age of 18 to participate in a nighttime study beginning in June comparing the effects of light and sleep deprivation on certain hormone levels. The study will consist of two groups: a control group and a sleep-deprived group.', '2011-05-02 08:50:00');
-INSERT INTO `rss_articles` VALUES(2038, 'http://news.rpi.edu/update.do?artcenterkey=2864', 'http://news.rpi.edu/update.do?artcenterkey=2864', 'Four Student Teams From Rensselaer Polytechnic Institute Win Cash Prizes  In New York State Business Plan Competition  ', '\n          Six student teams from Rensselaer participated in a recent    statewide business plan competition, with four teams winning in    several categories.      ', '2011-05-02 07:35:00');
-INSERT INTO `rss_articles` VALUES(2039, 'http://news.rpi.edu/update.do?artcenterkey=2865', 'http://news.rpi.edu/update.do?artcenterkey=2865', 'Rensselaer Professor Michael O''Rourke Honored for Influential Snow Loading Research', '\n          Structural engineering expert Michael ORourke has won the    prestigious 2011 Walter P. Moore Award from the American    Society of Civil Engineers (ASCE).      ', '2011-05-02 06:33:00');
-INSERT INTO `rss_articles` VALUES(2040, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b110b6aa-00001527calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b110b6aa-00001527calendars@rpi.edu&recurrenceId=', 'RPI Global Medical Brigades 3-on-3 Basketball Tournament Slated for May 7', '\nSaturday,        May 7, 2011 2:00 PM                                  Where: Alumni Sports and Recreation Center (Armory)  15th Street, Troy, NY                                  Cost: $5 per player                                        Description: All the money earned by Global Medical Brigades through this tournament goes to buy medications for our brigade to Honduras in the winter (January 3 - 9, 2012).For this tournament we strongly encourage you to preregister using the form below by midnight on May 5:https://spreadsheets.google.com/spreadsheet/viewform?formkey=dEZ2QlN3NXUwdTlidXZJR0ZhMVg3ZHc6MQ1st Place Team: Three $15 Cheesecake Factory Gift Cards2nd Place Team: Three $5 Ben & Jerry''s Gift Cards                                  Contact: Global Medical Brigades', '2011-05-02 04:35:17');
-INSERT INTO `rss_articles` VALUES(2041, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b0dcc24a-00006722calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b0dcc24a-00006722calendars@rpi.edu&recurrenceId=', '"Rio" Screening, Discussion Scheduled for May 9', '\nMonday,        May 9, 2011 1:30 PM                                  Where: EMPAC Concert Hall                                   Description: Students, faculty, and staff are invited to an on-campus, full-length screening of the hit new animated film "Rio" on Monday, May 9, at 1:30 p.m. in the EMPAC Concert Hall.President Shirley Ann Jackson will be joined by Fox Animation Studios President Vanessa Morrison, Carl Ludwig ''66, CTO and Founder of Blue Sky Studios, "Rio" director Carlos Saldanha, and "Rio" producers Bruce Anderson and John Donkin for a discussion and Q&A session following the screening.                                  Contact: Advancement Events 518-276-6882', '2011-05-02 03:50:15');
-INSERT INTO `rss_articles` VALUES(2042, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f5322b4-012f-55ac4207-00001df4calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f5322b4-012f-55ac4207-00001df4calendars@rpi.edu&recurrenceId=', 'Albany Symphony, Empire State Youth Orchestras to Perform in EMPAC Concert Hall', '\nSunday,        May 22, 2011 8:00 PM          -        9:00 PM                                  Where: EMPAC Concert Hall                                   Description: See the incredible young musicians of the Empire State Youth Orchestra in a creative program that features a Korean drumming virtuoso, members of Albany Pro Musica, and more!                                  Contact: EMPAC 518-276-3921', '2011-05-02 06:05:16');
-INSERT INTO `rss_articles` VALUES(2043, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-1617106e-00007c8dcalendars@rpi.edu&recurrenceId=20110522T000000Z', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-1617106e-00007c8dcalendars@rpi.edu&recurrenceId=20110522T000000Z', 'Public Observing at the Hirsch Observatory', '\nSaturday,        May 21, 2011 8:00 PM          -        10:00 PM                                  Where: Hirsch Observatory, Jonsson-Rowland Science Center                                   Cost: No reservation is needed and there is no cost, just come out and have fun!                                        Description: The Hirsch Observatory is on top of the Jonsson-Rowland Science Center or the JR building.  Parking is available in the College Avenue lot after 5 PM.  Jonathan Cassidy is the program manager and Dr. Heidi Newberg is the faculty manager.The Public Observing program includes:  Looking through telescopes at astronomical objects, Planets, Galaxies, our Moon, and use of educational fun kits on cloudy nights.                                  Contact: Jonathan Cassidy (518) 423-3510', '2011-05-01 06:25:14');
-INSERT INTO `rss_articles` VALUES(2044, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28cae27b-0128-d0dffca3-00005d97calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28cae27b-0128-d0dffca3-00005d97calendars@rpi.edu&recurrenceId=', 'Residence Halls and Apartments close at 5pm for all students not participating in Commencement', '\nFriday,        May 20, 2011 (all day)                                  Where: Campus-wide                                   Description: Residence Halls and Apartments close at 5pm for all students not participating in Commencement                                  Contact: Residence Life 518-276-6284', '2011-04-30 06:10:13');
-INSERT INTO `rss_articles` VALUES(2045, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2a6ce014-012a-7b786434-00003d24calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2a6ce014-012a-7b786434-00003d24calendars@rpi.edu&recurrenceId=', 'Human Resources Professional Development Seminar: Correcting Performance Problems', '\nFriday,        May 20, 2011 8:00 AM          -        12:00 PM                                  Where: Human Resources-Gurley Building                                   Cost: $55.00                                        Description: The pressure for speed, productivity, and bottom-line results has never weighed more heavily on organizations than now. Managers must ensure that everyone takes responsibility for performing his or her job as effectively as possible. The purpose of this seminar is to provide participants with skills for addressing recurring or serious performance problems, getting an individual''s performance back on track, and building motivation for improvement                                  Contact: Will Fahey 518-276-2318', '2011-04-30 06:10:13');
-INSERT INTO `rss_articles` VALUES(2046, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fa06228-012f-a2fdc66d-00005d51calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fa06228-012f-a2fdc66d-00005d51calendars@rpi.edu&recurrenceId=', 'Biocomputation and Bioinformatics Constellation Seminar', '\nFriday,        May 6, 2011 12:00 PM          -        1:00 PM                                  Where: Bruggeman Conference Center  Center for Biotechnology and Interdisciplinary Studies                                  Description: Denis Rousseau, PhD from Dept of Physiology and Biophysics, Albert Einstein College of Medicine, will present a seminar entitiled, "Unraveling the Catalytic Mechanism of Cytochrome c Oxidase: the Terminal Electron Transfer Complex."Host: Angel E. Garcia & Blanca Barquera                                  Contact: Center for Biotechnology and Interdisciplinary Studies 518-276-4259', '2011-04-29 10:50:11');
-INSERT INTO `rss_articles` VALUES(2047, 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2653', 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2653', 'Alumni Association Currently Seeking RAA Award Nominations', '\nThe Rensselaer Alumni Association (RAA) Awards Committee is currently seeking help from all members of the campus community in identifying alumni as candidates for this year''s RAA Awards.  The purpose of these awards is to recognize and reward alumni for outstanding service and commitment to Rensselaer, as well as their contributions to their professions and to their community.        ', '2011-05-03 04:53:00');
-INSERT INTO `rss_articles` VALUES(2048, 'http://twitter.com/RPInews/statuses/65421145570164736', 'http://twitter.com/RPInews/statuses/65421145570164736', '#RPInews', '\nRPInews: WAMC''s Academic Minute on 5-3-2011: Professor Jim Hendler of #RPI on Understanding the World Wide Web: http://t.co/pk4SLpj', '2011-05-03 04:23:11');
-INSERT INTO `rss_articles` VALUES(2049, 'http://news.rpi.edu/update.do?artcenterkey=2866', 'http://news.rpi.edu/update.do?artcenterkey=2866', '"The Ascent" Art Installation/Ride Links EEG Headset and Theatrical Flying Rig', '\n          A team of Rensselaer students has created a system that    pairs an EEG headset with a 3-D theatrical flying harness,    allowing users to "fly" by controlling their thoughts.      ', '2011-05-03 03:48:00');
-INSERT INTO `rss_articles` VALUES(2050, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-298b9f65-0129-ad81b50a-00005c12calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-298b9f65-0129-ad81b50a-00005c12calendars@rpi.edu&recurrenceId=', 'Summer Classes Begin May 23', '\nMonday,        May 23, 2011 (all day)                                  Where: Campus-wide                                   Description: Courses are scheduled for varying lengths of time during the summer session. Check the online class hour schedule for specific information.  Specific session related dates and deadlines are available on the Registrar''s Web Site.                                  Contact: Registrar 518-276-6231', '2011-05-03 06:30:14');
-INSERT INTO `rss_articles` VALUES(2051, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f8bc8af-012f-8e6a5e72-000039bacalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f8bc8af-012f-8e6a5e72-000039bacalendars@rpi.edu&recurrenceId=', 'Rensselaer Union Postal Substation Announces Summer Hours', '\nMonday,        May 23, 2011 12:00 PM          -        4:00 PM                                  Where: Rensselaer Union                                   Description: As of Monday, May 23, the Rensselaer Union Postal Substation will start its summer hours of noon to 4pm, Monday through Friday, excluding holidays.These hours will be in effect through Sunday, August 28.                                  Contact: Rensselaer Union Bookstore 518-276-6555', '2011-05-03 06:30:14');
-INSERT INTO `rss_articles` VALUES(2067, 'http://news.rpi.edu/update.do?artcenterkey=2867', 'http://news.rpi.edu/update.do?artcenterkey=2867', 'Think Big: Rensselaer Polytechnic Students Recognized for Innovative Ideas to "Change the World"', '\n          A credit card water filter, a novel approach to treating    anorexia, affordable lighting for the rural poor, and a stress    prevention smartphone app for college students are among the    winning ideas in the Spring 2011      ', '2011-05-03 08:45:00');
-INSERT INTO `rss_articles` VALUES(2068, 'http://www.arts.rpi.edu/pl/news-archive/graduate-students-sweep-2011-mckinney-writing-contest', 'http://www.arts.rpi.edu/pl/news-archive/graduate-students-sweep-2011-mckinney-writing-contest', 'Graduate Students Sweep 2011 McKinney Writing Contest', '\n', '2011-05-04 08:45:11');
-INSERT INTO `rss_articles` VALUES(2069, 'http://twitter.com/RPInews/statuses/65846031794970624', 'http://twitter.com/RPInews/statuses/65846031794970624', '# RPInews', '\nRPInews: RT @troyrecord New #Watervliet boathouse gets #RPI crew team as tenant - http://bit.ly/j5XyAo', '2011-05-04 08:31:31');
-INSERT INTO `rss_articles` VALUES(2070, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fba21e1-012f-bc38ac95-00003c07calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fba21e1-012f-bc38ac95-00003c07calendars@rpi.edu&recurrenceId=', 'Student Health Center to Offer Free Staff/Faculty Safe Zone Training', '\nThursday,        May 12, 2011 3:00 PM          -        5:00 PM                                  Where: Student Health Center  Academy Hall                                  Description: The RPI Safe Zone Training is an awareness training that addresses the concerns of the lesbian, gay, bisexual, transgender, queer, and ally (LGBTQA) community.  This interactive training addresses a variety of topics, including how to assist someone who is coming out, and concludes with a panel of LGBTQ students on the RPI campus who share their coming out stories and experiences.  RSVP required.  Email Tara Schuster: schust@rpi.edu                                  Contact: Student Health Center 518-276-6287', '2011-05-04 08:20:14');
-INSERT INTO `rss_articles` VALUES(2071, 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2654', 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2654', 'Instructors Encouraged to Request Summer 2011 A/V Classroom Equipment Now', '\nTo ensure equipment and support for the first day of classes, all RPI instructors who are planning to teach for Summer 2011 -- Summer I, Summer II and Summer III -- should begin reserving their classroom audio-visual equipment by filling out MultiMedia Services'' on-line request form.    ', '2011-05-04 06:24:00');
-INSERT INTO `rss_articles` VALUES(2072, 'http://twitter.com/RPInews/statuses/65813846073417728', 'http://twitter.com/RPInews/statuses/65813846073417728', '#RPInews', '\nRT @AcademicMinute: #academicminute Listen to Prof. Jim Hendler of RPI explain the new field of Web Science. http://bit.ly/mztPN8 @RPIne ...', '2011-05-04 06:23:38');
-INSERT INTO `rss_articles` VALUES(2073, 'http://www.lrc.rpi.edu/survey/display/index.asp', 'http://www.lrc.rpi.edu/survey/display/index.asp', 'Help the LRC by Completing a Brief Electronic Display Usage Survey', '\nDo you spend a lot of time working on your computer? How about watching that new flat-screen HDTV? Help the Lighting Research Center by completing a quick survey about the type of displays you use on a daily basis.', '2011-05-04 03:00:00');
-INSERT INTO `rss_articles` VALUES(2074, 'http://www.rpiathletics.com/news/2011/5/4/MHOCK_0504115541.aspx', 'http://www.rpiathletics.com/news/2011/5/4/MHOCK_0504115541.aspx', 'Men''s Hockey to Aide Children''s Hospital ', '\nDonate OnlineTROY,  N.Y. &ndash; The Rensselaer men''s hockey team  will join the Children''s Hospital at Albany Medical Center and local radio stations 99.5 The River, 810 WGY and 103.1 WGY FM in raising money  for the Children''s Hospital through a Radiothon this Thursday and Friday, May 5 and 6.  Members of the Engineers will answer telephones and record orders as donations come through. ', '2011-05-04 02:52:53');
-INSERT INTO `rss_articles` VALUES(2075, 'http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNGYsxiUa2Q-LvoRxzLhFOsfe5dhAg&url=http://www.timesunion.com/business/article/Ferrucci-RPI-grad-named-IBM-Fellow-1364563.php', 'http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNGYsxiUa2Q-LvoRxzLhFOsfe5dhAg&url=http://www.timesunion.com/business/article/Ferrucci-RPI-grad-named-IBM-Fellow-1364563.php', 'From the Albany Times Union: Ferrucci, RPI Grad, Named IBM Fellow', '\nRensselaer Polytechnic Institute graduate David Ferrucci  -- best known for creating IBM''s Watson computer that became a Jeopardy champion -- has become an IBM Fellow, one of the company''s most prestigious honors.', '2011-05-04 07:03:05');
-INSERT INTO `rss_articles` VALUES(2076, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f343c84-012f-351b4393-0000291acalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f343c84-012f-351b4393-0000291acalendars@rpi.edu&recurrenceId=', '11th Annual Rensselaer Colloquium on Teaching & Learning (Day 2)', '\nTuesday,        May 24, 2011 8:30 AM          -        4:00 PM                                  Where: Bruggeman Conference Center  Center for Biotechnology and Interdisciplinary Studies                                  Description: Day 1 (05.23.2011): Morning Keynotes & Afternoon PanelDay 2 (05.24.2011): Morning Workshops & Afternoon Tutorials                                  Contact: Office of Undergraduate Education 518.276.2244', '2011-05-04 06:15:15');
-INSERT INTO `rss_articles` VALUES(2077, 'http://feedproxy.google.com/~r/TheApproach/~3/QLigrjPaP6Q/', 'http://feedproxy.google.com/~r/TheApproach/~3/QLigrjPaP6Q/', 'The Approach: Neat and Nano - Part 1', '\nHeres a candid admission for a gray and cloudy Tuesday afternoon: Im kind of a neat freak. I wash my hands probably more than necessary, dont eat leftovers that are more than a day old, and I put as much stock in the Five Second Rule as I do the Tooth Fairy.So a few weeks back, during an extended tour of the Rensselaer clean room, I felt right at home. This was in large part due to the excellent company: a mix of Rensselaer researchers, students, communications colleagues, and some friends from the local media. The room was also exceptionally  you guessed it  clean. As the photo above attests, fully bunny suits are required for all who enter.The lab boasts 6,000 square-feet of Class 100 clean space. This means the air in the room contains fewer than 100 particles per cubic foot. Particle is defined as anything larger than 0.5 micron in diameter.So youre probably wondering how this compares to any old normal, non-clean room. Clean Room Manager Dave King tells me that the air in a typical building contains 300', '2011-05-03 11:45:13');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `totalwords`
---
-
-CREATE TABLE `totalwords` (
-  `number` int(100) NOT NULL,
-  PRIMARY KEY (`number`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `rss_articles` (`id`, `guid`, `url`, `title`, `description`, `pubdate`) VALUES
+(2007, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b419e54-00006ce0calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b419e54-00006ce0calendars@rpi.edu&recurrenceId=', 'Cisco IP Telephone System Maintenance Scheduled for Friday, April 15', '\nFriday,        April 15, 2011 6:30 AM          -        7:30 AM                                  Where: Campus-wide                                   Description: On Friday April 15, 2011 from 6:30am until 7:30am, maintenance will be performed on the Cisco IP Telephone system.  IP telephone service will not be available during this time, but the IBX telephone system and the campus voice mail system will continue to function.                                  Contact: Telecommunications 518-276-6609 Nancy Williams', '2011-04-12 10:25:05'),
+(2008, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b2e3710-00003841calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4b2e3710-00003841calendars@rpi.edu&recurrenceId=', 'Mathematical Sciences Colloquium -- Dynamics of Multiple Zonal Jets in the Oceans and Atmospheres', '\nThursday,        April 28, 2011 4:00 PM          -        5:00 PM                                  Where: Amos Eaton 214                                   Description: Speaker: Dr. Pavel Berloff (Woods Hole Oceanographic Institution)"Dynamics of multiple zonal jets in the oceans and atmospheres"Abstract: Multiple zonal jets in the atmospheres of giant gas planets have been known for a long time, and, recently, dozens of somewhat similar jets have been discovered in the Earth''s oceans.Host: Yuri Lvov                                  Contact: Fengyan Li 518-276-3201', '2011-04-12 09:30:02'),
+(2009, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a631d61-00007fd5calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a631d61-00007fd5calendars@rpi.edu&recurrenceId=', 'Lally School to Hold Management and Organization Research Seminar', '\nFriday,        April 22, 2011 12:00 PM          -        1:30 PM                                  Where: Pittsburgh 5114                                   Description: Shyam KumarAssistant Professor, The Lally School                                  Contact: Jessica Nash 276-2637', '2011-04-12 05:50:03'),
+(2010, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a53011c-00005fd5calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a53011c-00005fd5calendars@rpi.edu&recurrenceId=', 'Seminar to Discuss Coordination of Emergency Response to Unprecedented Large-Scale Events', '\nWednesday,        April 20, 2011 3:00 PM          -        4:30 PM                                  Where: CII 5003                                   Cost: free                                        Description: SeminarDr. Graham Coates, Durham University, UKCoordination of Emergency Response to Unprecedented Large-Scale Events                                  Contact: Mary S. Wagner 2895', '2011-04-12 05:50:03'),
+(2011, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a19a7ca-00003565calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a19a7ca-00003565calendars@rpi.edu&recurrenceId=', 'Rensselaer Carpooling Service Already Showing Results', '\nWednesday,        April 13, 2011 10:00 AM                                  Where: Various campus buildings/locations                                   Description: As fuel prices continue to rise, in just two weeks Rensselaer carpoolers have saved 16 gallons of gas, 335 vehicle miles, 272 pounds of emissions, and $199 in total savings. Please go to http://www.ipool2.org/en-US to start saving!                                  Contact: Parking and Transportation 518-276-6616', '2011-04-12 04:55:03'),
+(2012, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a13f0a9-00002abbcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f48d600-012f-4a13f0a9-00002abbcalendars@rpi.edu&recurrenceId=', 'Help Sponsor Students for the 15th Annual Student Appreciation Dinner!', '\nTuesday,        April 12, 2011 5:30 PM          -        Tue          ,          April 26, 2011 7:30 PM                                  Where: Russell Sage Dining Hall                                   Cost: $10 per sponsored student                                        Description: This special event on April 26 (Tuesday) honors those Rensselaer students who who are valued on campus for their work as TAs, LAs, RAs, work-study students, student employees, and student leaders and who provide dedicated service to the campus.The deadline for reservations is Monday, April 25. Departments which want to sponsor students for the dinner should contact Patti at ext 2874.                                  Contact: Community Service - DOSO 518-276-3098', '2011-04-12 04:55:03'),
+(2013, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-154a6b18-00004cf5calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-154a6b18-00004cf5calendars@rpi.edu&recurrenceId=', 'Nano 2011 Conference, "Medicine, Science and Engineering," Scheduled for May 2', '\nMonday,        May 2, 2011 8:00 AM          -        5:00 PM                                  Where: Biotech Auditorium                                   Description: Nano 2011 - Medicine, Science and Engineering, 8am-5pm                                  Contact: Alumni Relations 518-276-6205', '2011-04-12 06:05:04'),
+(2014, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-465510d7-00007d59calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-465510d7-00007d59calendars@rpi.edu&recurrenceId=', 'Counseling Center to Offer Suicide Prevention Training', '\nWednesday,        April 27, 2011 10:00 AM          -        12:00 PM                                  Where: Other - See Text                                   Description: Suicide Prevention: Campus Connect Gatekeeper Training Wednesday, April 27, 10 am-12 pm Rensselaer Student Union Room 2424 (Patroon Room) Presenter: Heidi Riello, LCSWCampus Connect is a two-hour interactive program designed to train potential gatekeepers, including students, faculty, and staff, to identify and refer students who are experiencing suicidal or other mental health concerns. Please contact Heidi Riello in the Counseling Center at 276-6479 or spruch@rpi.edu to register.                                  Contact: Counseling Center 518-276-6479', '2011-04-11 11:45:04'),
+(2015, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-45f9a774-00000a0ecalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-45f9a774-00000a0ecalendars@rpi.edu&recurrenceId=', 'Union Executive Board Application 2011 Release', '\nTuesday,        April 12, 2011           -        Fri          ,          April 22, 2011 (all day)                                  Where: Rensselaer Union                                   Description: One of the first and most important jobs for the next President of the Union will be to put together a strong Executive Board to guide the Rensselaer Union through the next fiscal year. Interested students should fill out and submit the attached questionnaire. This is an excellent opportunity for any active RPI student (graduate or undergraduate). The next PU will conduct the interviews and appointments.                                  Contact: Rensselaer Union 518-276-6505', '2011-04-11 09:55:03'),
+(2016, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-453e31fc-00001967calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f43afa0-012f-453e31fc-00001967calendars@rpi.edu&recurrenceId=', 'Parking Garage to Close April 29-May 1', '\nFriday,        April 29, 2011 11:00 AM          -        Sun          ,          May 1, 2011 11:00 AM                                  Where: Various campus buildings/locations                                   Description: The Parking Garage on College Avenue will be closed the weekend of April 29 through May 1 for annual cleaning.  All who park in the garage should please remove their vehicles by 6:00pm on Friday, April 29. Alternate parking will be available in the Academy Hall lot.                                  Contact: Parking and Transportation 518-276-6616', '2011-04-11 06:20:06'),
+(2017, 'http://news.rpi.edu/update.do?artcenterkey=2857', 'http://news.rpi.edu/update.do?artcenterkey=2857', 'Leading Worldwide Health and Wellness Expert and U.S. Surgeon General Regina M. Benjamin Will Speak at 205th Rensselaer Polytechnic Institute Commencement May 28', '\n          U.S. Surgeon General and Vice Admiral Regina M. Benjamin     one of the worlds leading experts on public health and a key    player in the national debate on health care reform  will    deliver the main address at the 205th Rensselaer Polytechnic    Institute Commencement on May 28.      ', '2011-04-20 07:25:00'),
+(2018, 'http://twitter.com/RPInews/statuses/60751805776273408', 'http://twitter.com/RPInews/statuses/60751805776273408', 'RPInews: Smithsonian Leader W. Clough and Retired #RPI Board Chmn.-Alumnus S. Heffner Also Will be Honored at 205th Commencement:http://bit.ly/h2DWHc', '\nRPInews: Smithsonian leader W. Clough and retired #RPI Board Chmn.-alumnus S. Heffner also will be honored at 205th Commencement:http://bit.ly/h2DWHc', '2011-04-20 07:08:53'),
+(2019, 'http://news.rpi.edu/update.do?artcenterkey=2856', 'http://news.rpi.edu/update.do?artcenterkey=2856', 'Rensselaer Secures $1.5 Million From the National Nuclear Security Administration To Launch New Nuclear Safety Research Program and Lab', '\n          The funds will support a new nuclear engineering research    program and laboratory at Rensselaer, dedicated to the careful    measurement and analysis of high-accuracy nuclear interaction    data.      ', '2011-04-20 03:14:00'),
+(2020, 'http://twitter.com/RPInews/statuses/60688913664192512', 'http://twitter.com/RPInews/statuses/60688913664192512', '#RPInews', '\nCongrats to #RPI senior Brent Solina and his company MICROrganic for 2nd place in Loyola Univ. bus. plan competition: http://bit.ly/dPIG55', '2011-04-20 02:58:59'),
+(2021, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28bb53b3-0128-bc6b84ef-00001629calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28bb53b3-0128-bc6b84ef-00001629calendars@rpi.edu&recurrenceId=', 'Spring Classes End after Last Evening Class on May 10', '\nTuesday,        May 10, 2011 (all day)                                  Where: Campus-wide                                   Description: Classes end after last evening class                                  Contact: Registrar 518-276-6231', '2011-04-20 06:20:06'),
+(2022, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f0b09a9-012f-0d6d238d-00004afdcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f0b09a9-012f-0d6d238d-00004afdcalendars@rpi.edu&recurrenceId=', 'Fidelity Investments to Offer Retirement Consultations May 10', '\nTuesday,        May 10, 2011 (all day)                                  Where: HR, Gurley Building, Second Floor                                   Description: Schedule a confidential consultation to help you become better informed and more confident about your workplace retirement savings plan benefits. To schedule an appointment for a confidential one-on-one consultation, please visit the Fidelity website.  TTY service for the hearing impaired is available at 1-800-259-9743, Monday through Friday, 8:00 a.m. to midnight ET.                                  Contact: Human Resources 518-276-6302', '2011-04-20 06:20:06'),
+(2023, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e51dbbd-012e-52daa900-00001e72calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e51dbbd-012e-52daa900-00001e72calendars@rpi.edu&recurrenceId=', 'TIAA-CREF to Offer Retirement Counseling May 10', '\nTuesday,        May 10, 2011 9:00 AM          -        5:00 PM                                  Where: HR, Gurley Building, Second Floor                                   Description: Peter Crehan, Consultant - Individual Client Services, from TIAA-CREF will be on campus on Tuesday, May 10, for one-on-one consultations on a broad range of retirement topics.  Attend this upcoming event to help you become better informed and more confident about Rensselaer''s retirement plan benefits. Consultations will be conducted in 60 minute increments. To schedule your individual retirement counseling, please call TIAA-CREF at 1-800-732-8353.                                  Contact: Human Resources 518-276-6302', '2011-04-20 06:20:06'),
+(2024, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-70a1a719-000041a9calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-70a1a719-000041a9calendars@rpi.edu&recurrenceId=', 'Rensselaer Bengali Community to Hold Spring Festival: Bhoishaki Mela', '\nSaturday,        April 23, 2011 11:00 AM          -        3:00 PM                                  Where: Commons Field                                   Cost: FREE                                        Description: Shubho Noboborsho!! That means Happy New Year in Bengali!! So come help us celebrate the New Year at RBC Spring Festival: Bhoishaki Mela!! We will be serving free food: burgers (beef), hotdogs (turkey), veggie burgers, and we will feature a bhel puri bar! Play games, listen to music, and have fun!! Invite your friends!!We will be in commons field from 11am-3pm this Saturday April 23rd. If it is raining the location will be the Armory.                                  Contact: Jaya Pattem', '2011-04-20 04:45:12'),
+(2025, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-6f3a2ddb-0000664ecalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f6ce27e-012f-6f3a2ddb-0000664ecalendars@rpi.edu&recurrenceId=', 'RAF to Sponsor Lawrence H.R.Thiers Memorial Fly-In', '\nSaturday,        April 23, 2011 10:00 AM          -        5:00 PM                                  Where: Off-campus (see description)                                   Cost: See description                                        Description: Airplanes- Airplanes- Airplanes- come and see all kinds - entertainment, food, raffles- Dinosaur BBQ on sale. Great for kids of all ages. Admissions- $10 for adults; $5 students and free to kids under 5 years of age. Schenectady County Airport- route 50- Schenectady (at Richmor Aviation) See web site for directions. Rides provided to students if needed, check web site for information.                                  Contact: Rensselaer Union 518-276-6505', '2011-04-19 10:15:08'),
+(2026, 'http://us1.campaign-archive.com/?u=9fda259e30370acf119e27745&id=15a543efcc', 'http://us1.campaign-archive.com/?u=9fda259e30370acf119e27745&id=15a543efcc', 'EMPAC to Offer Summer Workshops in Music and Audio', '\nEMPAC will be offering two unique one-week workshops this summer, each suited for advanced undergrads, graduate students, and professionals.', '2011-04-19 07:31:09'),
+(2027, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-9845a57f-00007ebbcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-9845a57f-00007ebbcalendars@rpi.edu&recurrenceId=', 'Rensselyrics to Hold Spring Invitational Concert', '\nSaturday,        May 7, 2011 8:00 PM          -        10:00 PM                                  Where: Chapel + Cultural Center  2125 Burdett Avenue, Troy, NY                                  Cost: $4 in advance or $5 at the door                                        Description: The Chapel + Cultural Center at RPI is proud to present:The Rensselyrics Spring Invitational Concert. Tickets are on sale for $4.00 at DCC Great Hall and the RPI Student Union West Lobby.Tickets will also be sold at the door for $5.00 on the evening of the performance.The Rensselyrics will be performing dynamic, contemporary,a cappella songs with guest performances by The Chordials of Cornell University and The Golden Notes of St. Rose College.                                  Contact: Anne Tory 518-274-7793', '2011-04-27 09:05:11'),
+(2028, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-985416aa-0000204dcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-985416aa-0000204dcalendars@rpi.edu&recurrenceId=', 'MSE Seminar -- Opto-Electronic Properties of Solution Processable Chemically Derived Graphene', '\nMonday,        May 16, 2011 11:00 AM          -        12:00 PM                                  Where: Folsom Library Fischbach Room                                   Description: "Opto-electronic properties of solution processable chemically derived graphene"Manish Chhowalla, Materials Science and Engineering, Rutgers University                                  Contact: Materials Science and Engineering 518-276-6372', '2011-04-27 09:05:11'),
+(2029, 'http://feedproxy.google.com/~r/TheApproach/~3/ffsdOsfsmI8/', 'http://feedproxy.google.com/~r/TheApproach/~3/ffsdOsfsmI8/', '3Ã‚Â° with Dan Lewis', '\nProfessor Dan Lewis, in the Department of Materials Science and Engineering, recently won an NSF CAREER Award for his research into the structure and performance of metals and ceramics. He also leads the Fuel Cell and Hydrogen Research Lab at Rensselaer. We asked Dan about his work:Q: So, whats a fuel cell?A: A fuel cell is an energy conversion device the produces electrical power and heat for use in many different applications. Unlike batteries, as long as fuel is supplied, the fuel cell will continue to operate.When will fuel cells and hydrogen fuel start to be integrated into commercialized products?They already are in some products! For example, some truck manufacturers are using fuel cells for auxiliary power needs rather than using the diesel engine. This is done for increased fuel efficiency. Other manufacturers are producing fuel cell systems to produce electricity and hot water for homes. The most notable company is Bloom Energy. They are building a business in supplying power for industrial custome', '2011-04-27 06:57:52'),
+(2030, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-97b1ce58-000054c1calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f961569-012f-97b1ce58-000054c1calendars@rpi.edu&recurrenceId=', 'Dr. Paul Hommert Ã¢Â€Â™72, Sandia National Laboratories, to Speak on Excellence in National Interests', '\nThursday,        April 28, 2011 2:00 PM          -        3:00 PM                                  Where: JEC 3117                                   Description: Meet Dr. Paul Hommert, 72, President and Director, Sandia National Laboratories along with Dr. Michael Cieslak, 77, 83, Director Nuclear Product EngineeringLecture open to the campus: The impact of engineering and science on national security with a focus on the work of Sandia National Laboratories including how they interact with universities and fund research. Location: JEC 3117, refreshments served                                  Contact: Advancement Events 518-276-6882', '2011-04-27 06:10:10'),
+(2031, 'http://news.rpi.edu/update.do?artcenterkey=2862', 'http://news.rpi.edu/update.do?artcenterkey=2862', 'GameFest 2011, May 6-7, Expands the Boundaries of Games and Simulation', '\n          Augmented Reality, Microsoft Kinect, mobile apps, and    so-called "serious games" are all part of     GameFest 2011, to be held May 6-7 at Rensselaer.      ', '2011-04-27 03:24:00'),
+(2032, 'http://twitter.com/RPInews/statuses/62956221484900352', 'http://twitter.com/RPInews/statuses/62956221484900352', '#RPInews', '\nRPInews: GameFest at #RPI May 6-7: student designed games including "Tic" to be released on Xbox Live Indie. Learn more at http://bit.ly/e6hQxD', '2011-04-26 09:08:27'),
+(2033, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c234fd-0000427acalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c234fd-0000427acalendars@rpi.edu&recurrenceId=', '"Sheer Idiots" Show to Offer Free Night of Improv Comedy', '\nFriday,        May 6, 2011 8:00 PM          -        10:00 PM                                  Where: Rensselaer Union McNeil Room                                   Cost: free                                        Description: Improv comedy                                  Contact: Rensselaer Union 518-276-6505', '2011-04-26 07:20:09'),
+(2034, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c45063-00004496calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c45063-00004496calendars@rpi.edu&recurrenceId=', 'UPAC Concerts  to Host Show for Students, Guests', '\nSaturday,        May 7, 2011 7:00 PM          -        9:00 PM                                  Where: Rensselaer Union McNeil Room                                   Cost: varies                                        Description: For RPI students and their guests                                  Contact: Rensselaer Union 518-276-6505', '2011-04-26 07:20:09'),
+(2035, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c5b9f4-00004762calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92c5b9f4-00004762calendars@rpi.edu&recurrenceId=', 'Rensselyrics Show Scheduled for Evening of May 7', '\nSaturday,        May 7, 2011 8:00 PM          -        11:00 PM                                  Where: Rensselaer Union McNeil Room                                   Description: A Cappella                                  Contact: Rensselaer Union 518-276-6505', '2011-04-26 07:20:09'),
+(2036, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92684305-0000000bcalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f90efb7-012f-92684305-0000000bcalendars@rpi.edu&recurrenceId=', 'Introduction to Cell Biology Poster Session Slated for May 5', '\nThursday,        May 5, 2011 5:00 PM          -        7:00 PM                                  Where: Heffner Alumni House Great Hall                                   Description: Introduction to Cell Biology students will display and discuss their poster representing their in-class research projects.Please join us and show your support!                                  Contact: George Edick 518-276-8431', '2011-04-26 05:40:10'),
+(2037, 'http://www.lrc.rpi.edu/resources/newsroom/pdf/CallForSubjects_04_26_2011.pdf', 'http://www.lrc.rpi.edu/resources/newsroom/pdf/CallForSubjects_04_26_2011.pdf', 'Lighting Research Center Recruiting Subjects Over the Age of 18 to Participate in Paid Nighttime Study', '\nThe LRC is recruiting subjects over the age of 18 to participate in a nighttime study beginning in June comparing the effects of light and sleep deprivation on certain hormone levels. The study will consist of two groups: a control group and a sleep-deprived group.', '2011-05-02 08:50:00'),
+(2038, 'http://news.rpi.edu/update.do?artcenterkey=2864', 'http://news.rpi.edu/update.do?artcenterkey=2864', 'Four Student Teams From Rensselaer Polytechnic Institute Win Cash Prizes  In New York State Business Plan Competition  ', '\n          Six student teams from Rensselaer participated in a recent    statewide business plan competition, with four teams winning in    several categories.      ', '2011-05-02 07:35:00'),
+(2039, 'http://news.rpi.edu/update.do?artcenterkey=2865', 'http://news.rpi.edu/update.do?artcenterkey=2865', 'Rensselaer Professor Michael O''Rourke Honored for Influential Snow Loading Research', '\n          Structural engineering expert Michael ORourke has won the    prestigious 2011 Walter P. Moore Award from the American    Society of Civil Engineers (ASCE).      ', '2011-05-02 06:33:00'),
+(2040, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b110b6aa-00001527calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b110b6aa-00001527calendars@rpi.edu&recurrenceId=', 'RPI Global Medical Brigades 3-on-3 Basketball Tournament Slated for May 7', '\nSaturday,        May 7, 2011 2:00 PM                                  Where: Alumni Sports and Recreation Center (Armory)  15th Street, Troy, NY                                  Cost: $5 per player                                        Description: All the money earned by Global Medical Brigades through this tournament goes to buy medications for our brigade to Honduras in the winter (January 3 - 9, 2012).For this tournament we strongly encourage you to preregister using the form below by midnight on May 5:https://spreadsheets.google.com/spreadsheet/viewform?formkey=dEZ2QlN3NXUwdTlidXZJR0ZhMVg3ZHc6MQ1st Place Team: Three $15 Cheesecake Factory Gift Cards2nd Place Team: Three $5 Ben & Jerry''s Gift Cards                                  Contact: Global Medical Brigades', '2011-05-02 04:35:17'),
+(2041, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b0dcc24a-00006722calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fafd52b-012f-b0dcc24a-00006722calendars@rpi.edu&recurrenceId=', '"Rio" Screening, Discussion Scheduled for May 9', '\nMonday,        May 9, 2011 1:30 PM                                  Where: EMPAC Concert Hall                                   Description: Students, faculty, and staff are invited to an on-campus, full-length screening of the hit new animated film "Rio" on Monday, May 9, at 1:30 p.m. in the EMPAC Concert Hall.President Shirley Ann Jackson will be joined by Fox Animation Studios President Vanessa Morrison, Carl Ludwig ''66, CTO and Founder of Blue Sky Studios, "Rio" director Carlos Saldanha, and "Rio" producers Bruce Anderson and John Donkin for a discussion and Q&A session following the screening.                                  Contact: Advancement Events 518-276-6882', '2011-05-02 03:50:15'),
+(2042, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f5322b4-012f-55ac4207-00001df4calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f5322b4-012f-55ac4207-00001df4calendars@rpi.edu&recurrenceId=', 'Albany Symphony, Empire State Youth Orchestras to Perform in EMPAC Concert Hall', '\nSunday,        May 22, 2011 8:00 PM          -        9:00 PM                                  Where: EMPAC Concert Hall                                   Description: See the incredible young musicians of the Empire State Youth Orchestra in a creative program that features a Korean drumming virtuoso, members of Albany Pro Musica, and more!                                  Contact: EMPAC 518-276-3921', '2011-05-02 06:05:16'),
+(2043, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-1617106e-00007c8dcalendars@rpi.edu&recurrenceId=20110522T000000Z', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2e140f6f-012e-1617106e-00007c8dcalendars@rpi.edu&recurrenceId=20110522T000000Z', 'Public Observing at the Hirsch Observatory', '\nSaturday,        May 21, 2011 8:00 PM          -        10:00 PM                                  Where: Hirsch Observatory, Jonsson-Rowland Science Center                                   Cost: No reservation is needed and there is no cost, just come out and have fun!                                        Description: The Hirsch Observatory is on top of the Jonsson-Rowland Science Center or the JR building.  Parking is available in the College Avenue lot after 5 PM.  Jonathan Cassidy is the program manager and Dr. Heidi Newberg is the faculty manager.The Public Observing program includes:  Looking through telescopes at astronomical objects, Planets, Galaxies, our Moon, and use of educational fun kits on cloudy nights.                                  Contact: Jonathan Cassidy (518) 423-3510', '2011-05-01 06:25:14'),
+(2044, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28cae27b-0128-d0dffca3-00005d97calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-28cae27b-0128-d0dffca3-00005d97calendars@rpi.edu&recurrenceId=', 'Residence Halls and Apartments close at 5pm for all students not participating in Commencement', '\nFriday,        May 20, 2011 (all day)                                  Where: Campus-wide                                   Description: Residence Halls and Apartments close at 5pm for all students not participating in Commencement                                  Contact: Residence Life 518-276-6284', '2011-04-30 06:10:13'),
+(2045, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2a6ce014-012a-7b786434-00003d24calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2a6ce014-012a-7b786434-00003d24calendars@rpi.edu&recurrenceId=', 'Human Resources Professional Development Seminar: Correcting Performance Problems', '\nFriday,        May 20, 2011 8:00 AM          -        12:00 PM                                  Where: Human Resources-Gurley Building                                   Cost: $55.00                                        Description: The pressure for speed, productivity, and bottom-line results has never weighed more heavily on organizations than now. Managers must ensure that everyone takes responsibility for performing his or her job as effectively as possible. The purpose of this seminar is to provide participants with skills for addressing recurring or serious performance problems, getting an individual''s performance back on track, and building motivation for improvement                                  Contact: Will Fahey 518-276-2318', '2011-04-30 06:10:13'),
+(2046, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fa06228-012f-a2fdc66d-00005d51calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fa06228-012f-a2fdc66d-00005d51calendars@rpi.edu&recurrenceId=', 'Biocomputation and Bioinformatics Constellation Seminar', '\nFriday,        May 6, 2011 12:00 PM          -        1:00 PM                                  Where: Bruggeman Conference Center  Center for Biotechnology and Interdisciplinary Studies                                  Description: Denis Rousseau, PhD from Dept of Physiology and Biophysics, Albert Einstein College of Medicine, will present a seminar entitiled, "Unraveling the Catalytic Mechanism of Cytochrome c Oxidase: the Terminal Electron Transfer Complex."Host: Angel E. Garcia & Blanca Barquera                                  Contact: Center for Biotechnology and Interdisciplinary Studies 518-276-4259', '2011-04-29 10:50:11'),
+(2047, 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2653', 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2653', 'Alumni Association Currently Seeking RAA Award Nominations', '\nThe Rensselaer Alumni Association (RAA) Awards Committee is currently seeking help from all members of the campus community in identifying alumni as candidates for this year''s RAA Awards.  The purpose of these awards is to recognize and reward alumni for outstanding service and commitment to Rensselaer, as well as their contributions to their professions and to their community.        ', '2011-05-03 04:53:00'),
+(2048, 'http://twitter.com/RPInews/statuses/65421145570164736', 'http://twitter.com/RPInews/statuses/65421145570164736', '#RPInews', '\nRPInews: WAMC''s Academic Minute on 5-3-2011: Professor Jim Hendler of #RPI on Understanding the World Wide Web: http://t.co/pk4SLpj', '2011-05-03 04:23:11'),
+(2049, 'http://news.rpi.edu/update.do?artcenterkey=2866', 'http://news.rpi.edu/update.do?artcenterkey=2866', '"The Ascent" Art Installation/Ride Links EEG Headset and Theatrical Flying Rig', '\n          A team of Rensselaer students has created a system that    pairs an EEG headset with a 3-D theatrical flying harness,    allowing users to "fly" by controlling their thoughts.      ', '2011-05-03 03:48:00'),
+(2050, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-298b9f65-0129-ad81b50a-00005c12calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-298b9f65-0129-ad81b50a-00005c12calendars@rpi.edu&recurrenceId=', 'Summer Classes Begin May 23', '\nMonday,        May 23, 2011 (all day)                                  Where: Campus-wide                                   Description: Courses are scheduled for varying lengths of time during the summer session. Check the online class hour schedule for specific information.  Specific session related dates and deadlines are available on the Registrar''s Web Site.                                  Contact: Registrar 518-276-6231', '2011-05-03 06:30:14'),
+(2051, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f8bc8af-012f-8e6a5e72-000039bacalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f8bc8af-012f-8e6a5e72-000039bacalendars@rpi.edu&recurrenceId=', 'Rensselaer Union Postal Substation Announces Summer Hours', '\nMonday,        May 23, 2011 12:00 PM          -        4:00 PM                                  Where: Rensselaer Union                                   Description: As of Monday, May 23, the Rensselaer Union Postal Substation will start its summer hours of noon to 4pm, Monday through Friday, excluding holidays.These hours will be in effect through Sunday, August 28.                                  Contact: Rensselaer Union Bookstore 518-276-6555', '2011-05-03 06:30:14'),
+(2067, 'http://news.rpi.edu/update.do?artcenterkey=2867', 'http://news.rpi.edu/update.do?artcenterkey=2867', 'Think Big: Rensselaer Polytechnic Students Recognized for Innovative Ideas to "Change the World"', '\n          A credit card water filter, a novel approach to treating    anorexia, affordable lighting for the rural poor, and a stress    prevention smartphone app for college students are among the    winning ideas in the Spring 2011      ', '2011-05-03 08:45:00'),
+(2068, 'http://www.arts.rpi.edu/pl/news-archive/graduate-students-sweep-2011-mckinney-writing-contest', 'http://www.arts.rpi.edu/pl/news-archive/graduate-students-sweep-2011-mckinney-writing-contest', 'Graduate Students Sweep 2011 McKinney Writing Contest', '\n', '2011-05-04 08:45:11'),
+(2069, 'http://twitter.com/RPInews/statuses/65846031794970624', 'http://twitter.com/RPInews/statuses/65846031794970624', '# RPInews', '\nRPInews: RT @troyrecord New #Watervliet boathouse gets #RPI crew team as tenant - http://bit.ly/j5XyAo', '2011-05-04 08:31:31'),
+(2070, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fba21e1-012f-bc38ac95-00003c07calendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2fba21e1-012f-bc38ac95-00003c07calendars@rpi.edu&recurrenceId=', 'Student Health Center to Offer Free Staff/Faculty Safe Zone Training', '\nThursday,        May 12, 2011 3:00 PM          -        5:00 PM                                  Where: Student Health Center  Academy Hall                                  Description: The RPI Safe Zone Training is an awareness training that addresses the concerns of the lesbian, gay, bisexual, transgender, queer, and ally (LGBTQA) community.  This interactive training addresses a variety of topics, including how to assist someone who is coming out, and concludes with a panel of LGBTQ students on the RPI campus who share their coming out stories and experiences.  RSVP required.  Email Tara Schuster: schust@rpi.edu                                  Contact: Student Health Center 518-276-6287', '2011-05-04 08:20:14'),
+(2071, 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2654', 'http://prod3.server.rpi.edu:80/oth/update.do?artcenterkey=2654', 'Instructors Encouraged to Request Summer 2011 A/V Classroom Equipment Now', '\nTo ensure equipment and support for the first day of classes, all RPI instructors who are planning to teach for Summer 2011 -- Summer I, Summer II and Summer III -- should begin reserving their classroom audio-visual equipment by filling out MultiMedia Services'' on-line request form.    ', '2011-05-04 06:24:00'),
+(2072, 'http://twitter.com/RPInews/statuses/65813846073417728', 'http://twitter.com/RPInews/statuses/65813846073417728', '#RPInews', '\nRT @AcademicMinute: #academicminute Listen to Prof. Jim Hendler of RPI explain the new field of Web Science. http://bit.ly/mztPN8 @RPIne ...', '2011-05-04 06:23:38'),
+(2073, 'http://www.lrc.rpi.edu/survey/display/index.asp', 'http://www.lrc.rpi.edu/survey/display/index.asp', 'Help the LRC by Completing a Brief Electronic Display Usage Survey', '\nDo you spend a lot of time working on your computer? How about watching that new flat-screen HDTV? Help the Lighting Research Center by completing a quick survey about the type of displays you use on a daily basis.', '2011-05-04 03:00:00'),
+(2074, 'http://www.rpiathletics.com/news/2011/5/4/MHOCK_0504115541.aspx', 'http://www.rpiathletics.com/news/2011/5/4/MHOCK_0504115541.aspx', 'Men''s Hockey to Aide Children''s Hospital ', '\nDonate OnlineTROY,  N.Y. &ndash; The Rensselaer men''s hockey team  will join the Children''s Hospital at Albany Medical Center and local radio stations 99.5 The River, 810 WGY and 103.1 WGY FM in raising money  for the Children''s Hospital through a Radiothon this Thursday and Friday, May 5 and 6.  Members of the Engineers will answer telephones and record orders as donations come through. ', '2011-05-04 02:52:53'),
+(2075, 'http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNGYsxiUa2Q-LvoRxzLhFOsfe5dhAg&url=http://www.timesunion.com/business/article/Ferrucci-RPI-grad-named-IBM-Fellow-1364563.php', 'http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNGYsxiUa2Q-LvoRxzLhFOsfe5dhAg&url=http://www.timesunion.com/business/article/Ferrucci-RPI-grad-named-IBM-Fellow-1364563.php', 'From the Albany Times Union: Ferrucci, RPI Grad, Named IBM Fellow', '\nRensselaer Polytechnic Institute graduate David Ferrucci  -- best known for creating IBM''s Watson computer that became a Jeopardy champion -- has become an IBM Fellow, one of the company''s most prestigious honors.', '2011-05-04 07:03:05'),
+(2076, 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f343c84-012f-351b4393-0000291acalendars@rpi.edu&recurrenceId=', 'http://events.rpi.edu:80/event/eventView.do?calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00f18254-2f343c84-012f-351b4393-0000291acalendars@rpi.edu&recurrenceId=', '11th Annual Rensselaer Colloquium on Teaching & Learning (Day 2)', '\nTuesday,        May 24, 2011 8:30 AM          -        4:00 PM                                  Where: Bruggeman Conference Center  Center for Biotechnology and Interdisciplinary Studies                                  Description: Day 1 (05.23.2011): Morning Keynotes & Afternoon PanelDay 2 (05.24.2011): Morning Workshops & Afternoon Tutorials                                  Contact: Office of Undergraduate Education 518.276.2244', '2011-05-04 06:15:15'),
+(2077, 'http://feedproxy.google.com/~r/TheApproach/~3/QLigrjPaP6Q/', 'http://feedproxy.google.com/~r/TheApproach/~3/QLigrjPaP6Q/', 'The Approach: Neat and Nano - Part 1', '\nHeres a candid admission for a gray and cloudy Tuesday afternoon: Im kind of a neat freak. I wash my hands probably more than necessary, dont eat leftovers that are more than a day old, and I put as much stock in the Five Second Rule as I do the Tooth Fairy.So a few weeks back, during an extended tour of the Rensselaer clean room, I felt right at home. This was in large part due to the excellent company: a mix of Rensselaer researchers, students, communications colleagues, and some friends from the local media. The room was also exceptionally  you guessed it  clean. As the photo above attests, fully bunny suits are required for all who enter.The lab boasts 6,000 square-feet of Class 100 clean space. This means the air in the room contains fewer than 100 particles per cubic foot. Particle is defined as anything larger than 0.5 micron in diameter.So youre probably wondering how this compares to any old normal, non-clean room. Clean Room Manager Dave King tells me that the air in a typical building contains 300', '2011-05-03 11:45:13');
 
 --
 -- Dumping data for table `totalwords`
 --
 
-INSERT INTO `totalwords` VALUES(41922);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(64) NOT NULL,
-  `cluster` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2018 ;
+INSERT INTO `totalwords` (`number`) VALUES
+(41922);
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` VALUES(2014, 'souzad', 2014);
-INSERT INTO `users` VALUES(2015, '4db89326a131d', 2014);
-INSERT INTO `users` VALUES(2016, '4dc347f5bd9be', 0);
-INSERT INTO `users` VALUES(2017, 'karnaa2', 0);
+INSERT INTO `users` (`id`, `username`, `cluster`) VALUES
+(2014, 'souzad', 2014),
+(2015, '4db89326a131d', 2014),
+(2016, '4dc347f5bd9be', 0),
+(2017, 'karnaa2', 0);
