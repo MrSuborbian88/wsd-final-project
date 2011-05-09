@@ -1,4 +1,5 @@
 <?php
+ //Function to find the center of the largest cluster
  function find_center($distances, $threshold)
  {
  $center = -1;
@@ -30,10 +31,6 @@
  }
   return $cluster;
  }
- function test($a)
- {
-  unset($a[1]);
- }
  include 'jaccard_similarity.php';
  set_time_limit(1000000);
  require_once('dbcon.php');
@@ -41,8 +38,7 @@
  $sql = 'UPDATE users SET cluster = 0;';
  mysql_query($sql);
  echo mysql_error(); 
-
-
+ //Get all users and keywords
  $sql = 'SELECT id FROM users';
  $user_result = mysql_query($sql);
  $user_row = mysql_fetch_array($user_result);
@@ -61,6 +57,7 @@
   $user_keywords[$user_row['id']] = $keywords;
   $user_row = mysql_fetch_array( $user_result );
  }
+ //Calculate User Distances
  $user_distances = array();
  foreach ($user_keywords as $user1 => $keywords1)
  {
@@ -71,9 +68,11 @@
   }
   $user_distances[$user1] = $distances;
  }
+  //Find all clusters and update in database
   $total_clusters = 0;
   $threshold = .1;
   $center = 0;
+  //Increase threshold until cluster is found
   while($center <= 0 && $threshold < 1)
   {
    $center = find_center($user_distances, $threshold);
@@ -82,14 +81,10 @@
   while($center > 0 && count($user_distances) > 0 && $threshold < 1)
   {
    $user_cluster = get_cluster_users($user_distances, $threshold, $center);
-/*
-	print_r( $user_cluster);
-	echo "<br />";
-*/
+   //cluster is too small, increase threshold
    if(count($user_cluster) <= 1)
      {
 	$threshold += .1;
-//	echo strval(count($user_cluster) ) . "<br />";           
      }
    else
    {
@@ -111,5 +106,6 @@
    }	
    }
   }
+  //echo out total number of clusters found
   echo $total_clusters;
 ?>
