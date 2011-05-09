@@ -1,4 +1,5 @@
 <?php
+ //Script inserts the sample data into the database
  require_once('../dbcon.php');
 
 $row = 1;

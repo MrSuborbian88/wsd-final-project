@@ -17,6 +17,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
   <div id="header">
   <h1>Morning Mail Recommender <span class = "span_header">RENSSELAER POLYTECHNIC INSTITUTE - Troy, NY, USA</span>
   <?php
+    //Get login/cookie information
     if (phpCAS::isAuthenticated())
 	{
          $user_name=phpCAS::getUser();
@@ -40,6 +41,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
   </div>
   <div id="content">
   <?php
+ //If it's a new user, insert into database
  $existing_user = mysql_query('SELECT * FROM users WHERE username=\''.$user_name.'\'');
  echo mysql_error();
  if(((!$existing_user || (mysql_num_rows($existing_user)==0)) && $user_name != ''))
@@ -48,6 +50,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
    mysql_query($sql);
    echo mysql_error();
  }
+ //Get userid and cluster (for recommendation)
  $cluster = -1;
  $user_id = -1;
  $sql = 'SELECT id, cluster FROM users WHERE username=\'' . $user_name .'\';';
@@ -60,6 +63,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
 	$row = mysql_fetch_array( $results );
  }
  $cookie_id = -1;
+ //Get cookie id to insert 
  $sql = 'SELECT id, cluster FROM users WHERE username=\'' . $cookie_name .'\';';
  $results = mysql_query($sql);
  $row = mysql_fetch_array( $results);
@@ -68,7 +72,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
         $cookie_id = $row['id'];
 	$row = mysql_fetch_array( $results );
  }
- //Insert cookie links as user links
+ //Insert cookie all cookie clicks as user clicks
  $sql = "INSERT INTO clicks(article_id,user_id, clicktime) SELECT article_id, ". strval($user_id) . ", c.clicktime FROM clicks c WHERE c.user_id = " . strval($cookie_id) . " AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = " . strval($user_id) . ");";
  mysql_query($sql);
  //Get Most Recent Articles
@@ -103,12 +107,15 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
  }
  else
  {
+ //Get most popular links in the cluster that the user hasn't clicked on
  $sql = 'SELECT article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id WHERE EXISTS (SELECT 1 FROM users u WHERE u.cluster = '.strval($cluster).') AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = '.strval($user_id).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10;';
  $results = mysql_query($sql);
+ //if no links exist, get the most popular links that the user hasn't clicked on
  if(mysql_num_rows($results)<=0)
  {
   $sql = 'SELECT c.article_id, a.title, a.url, a.description, count(*) FROM clicks c INNER JOIN rss_articles a ON c.article_id = a.id AND NOT EXISTS (SELECT 1 FROM clicks cc WHERE cc.article_id = c.article_id AND cc.user_id = '.strval($user_id).') GROUP BY c.article_id ORDER BY count(*) DESC LIMIT 10;';
   $results = mysql_query($sql);
+  //if no popular links exist, get most recent that the user hasn't clicked on
   if(mysql_num_rows($results)<=0)
   {
     $sql = 'SELECT a.id AS article_id, a.title, a.url, a.description, 0 FROM rss_articles a WHERE NOT EXISTS (SELECT 1 FROM clicks c WHERE a.id = c.article_id AND c.user_id = ' . strval($user_id) .') ORDER BY pubdate DESC LIMIT 10;';
@@ -152,7 +159,7 @@ setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not se
  }
  else
  {
- //Get user's most recent clicks
+ //Get user's 5 most recent clicks
  $sql = 'SELECT DISTINCT user_id, article_id FROM clicks WHERE user_id = \'' . strval($user_id) . '\' ORDER BY clicktime DESC LIMIT 5;';
  $results = mysql_query($sql);
  $row = mysql_fetch_array($results);
