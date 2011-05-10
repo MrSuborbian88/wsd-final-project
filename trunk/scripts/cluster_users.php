@@ -33,7 +33,7 @@
  }
  include 'jaccard_similarity.php';
  set_time_limit(1000000);
- require_once('dbcon.php');
+ require_once('../dbcon.php');
  //reset clusters
  $sql = 'UPDATE users SET cluster = 0;';
  mysql_query($sql);
