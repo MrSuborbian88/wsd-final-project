@@ -7,7 +7,7 @@ $relevant = .005;
 $tolerance = .05;
 
 require_once('frequency.php');
-require_once('dbcon.php');
+require_once('../../dbcon.php');
 
 
 function keywords ($check = 0)
