@@ -3,7 +3,7 @@
  Inserts RSS articles
  into the rss_articles table.
  ************************/
- require_once('../dbcon.php');
+ require_once('dbcon.php');
  $rss_address = 'http://morningmail.rpi.edu/rss';
  $rss = simplexml_load_file($rss_address);
 

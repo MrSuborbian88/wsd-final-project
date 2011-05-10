@@ -1,6 +1,6 @@
 <?php include('CAS-1.2.1/CAS.php');
  phpCAS::client(CAS_VERSION_2_0,'login.rpi.edu',443,'/cas');
- require_once('dbcon.php');
+ require_once('../dbcon.php');
 if (!isset($_COOKIE['user_id'])) {
 setcookie("user_id", uniqid(), time()+(86400*1000000), "/") or die("Could not set cookie");
 }
