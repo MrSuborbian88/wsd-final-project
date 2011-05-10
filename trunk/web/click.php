@@ -1,5 +1,5 @@
 <?php
-require_once('dbcon.php');
+require_once('../dbcon.php');
 
 $article = mysql_real_escape_string($_POST['id']);
 $user = mysql_real_escape_string($_POST['user']);
