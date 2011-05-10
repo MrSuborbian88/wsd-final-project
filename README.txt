@@ -38,8 +38,8 @@ database - contains structure and data for the database
 scripts - contains php scripts to do various functions of our system
  keywords - contains php scripts to generate keywords for articles
   frequency.php - function that returns the frequency of words given a url
-  keywords.php - ???
-  keywords-update.php - ???
+  keywords.php - generates keywords in the db for the most recent x articles updating frequencies along the way
+  keywords-update.php - updates keywords for articles after the fact (nightly for example) does not update frequencies (b/c they have already been seen).
  cluster_users.php - updates user clusters in the database
  collect_articles.php - 
  dump.csv - sample click data
